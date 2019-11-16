@@ -13,6 +13,7 @@ While it's impossible to personally thank everyone in the community, I do want t
 * CorpNewt
 * Midi
 * Dids
+* Dhinak G
 * Alexandred
 * Hackintosh Slav
 * osy

@@ -67,6 +67,3 @@ $ tar -xvf Payload
 
 The USB adapter should be detected by macOS upon reboot into the installer.
 
-* * * 
-
-

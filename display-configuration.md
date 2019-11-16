@@ -78,7 +78,7 @@ Note: \* Denotes the default configured by Whatevergreen.  \*\* Denotes the reco
 | Intel Iris Pro Graphics 5200 | 0d26000e | 0e00260d | 4 | 96MB | 34MB | 1536MB | LVDS1 DP2 HDMI1 |
 | Intel Iris Pro Graphics 5200 | 0d26000f | 0f00260d | 1 | 96MB | 34MB | 1536MB | LVDS1 |
 
-\#\#\#\# Intel Broadwell
+####  Intel Broadwell
 
 | iGPU | ig-platform-id | device-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |

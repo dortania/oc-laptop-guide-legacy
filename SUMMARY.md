@@ -8,6 +8,9 @@
 * [Just Enough GIT](just-enough-git.md)
 * [What's an EFI?](whats-an-efi.md)
 * [What about KEXTs?](what-about-kexts.md)
+
+## Building EFI
+
 * [Preparing to Install macOS](preparing-to-install-macos.md)
 * [Preparing USB Media](preparing-usb-media.md)
 * [CLOVER Template](clover-template.md)
@@ -25,9 +28,15 @@
 * [Enabling WIFI & Bluetooth](enabling-wifi-and-bluetooth.md)
 * [Setting up Ethernet Adapters](setting-up-ethernet-adapters.md)
 * [Configuring your Audio Device](configuring-your-audio-device.md)
+
+## Battery/Power Management
+
 * [Locate that Missing Battery](locate-that-missing-battery.md)
 * [Correcting Sleep Problems](correcting-sleep-problems.md)
 * [Optimizing Battery Life](optimizing-battery-life.md)
+
+## Extra Functionality
+
 * [Enabling FileVault](enabling-filevault.md)
 * [Display Rotation](display-rotation.md)
 * [Dual booting​ with Bluetooth Devices](dual-booting-with-bluetooth-devices.md)

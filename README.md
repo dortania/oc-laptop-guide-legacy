@@ -8,5 +8,5 @@ If you've answered yes to all of those questions, congratulations you may have w
 
 Oh, you're still here?  GREAT!  Over the next few days or weeks \(possibly months\) you will learn all of the ins and outs of what makes macOS work on a Laptop.  This guide, should you choose to continue reading will help you by providing some basic information, and pointers to help you as you embark on your journey.
 
-So..what are you waiting for?  Click the box at the bottom of the page to continue and let's get started!
+Alright, what are you waiting for?  Click the box at the bottom of the page to continue and let's get started!
 

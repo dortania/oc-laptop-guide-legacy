@@ -32,5 +32,5 @@
 * [Display Rotation](display-rotation.md)
 * [Dual booting​ with Bluetooth Devices](dual-booting-with-bluetooth-devices.md)
 * [Extra Functionality](extra-functionality.md)
-* [Credits](credits.md)
+* [Credits & License](credits-and-license.md)
 

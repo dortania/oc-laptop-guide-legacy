@@ -35,7 +35,7 @@
 * [Correcting Sleep Problems](correcting-sleep-problems.md)
 * [Optimizing Battery Life](optimizing-battery-life.md)
 
-## Extra Functionality
+## Extras
 
 * [Enabling FileVault](enabling-filevault.md)
 * [Display Rotation](display-rotation.md)

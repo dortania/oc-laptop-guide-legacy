@@ -1,18 +1,54 @@
-# Configuration Templates
+# CLOVER Template
 
-### Using Rehabman's Laptop Templates
+### Using the Vanilla Guide Laptop Template
 
-Rehabman provides a number of pre-configured config.plist samples for laptops.  These configuration files are ordered by CPU and GPU generation and model.  These plists help take some of the pain out of installing macOS on a laptop, click out to the repository and download the config.plist that most closely resembles your configuration.  Here are a few important things you'll need to know when using these configs.
+Linked below is a generic config.plist for laptops which is intended to help take some of the pain out of installing macOS on a laptop.  Here are a few important things you'll need to know when using this template.
 
-* The templates are generic and are not one size fits all solutions!  Do not expect them to just work.
+* The template is generic and must be edited to suit your configuration. Do not expect it to just work.
 * Not all of the patches are enabled by default, so review the entire template. Only enable what you need and disable what you don't.
-* You will need to expand upon these templates after installation to enable most of the hardware in your system.
+* You may need to expand upon this template after installation to enable some of the hardware in your system.
 
-You can find these templates at RehabMan's Laptop Clover repository.
+You can find this template in the Vanilla Laptop Guide artifacts repository.
 
-[Clover Laptop Configs @ Github](https://github.com/RehabMan/OS-X-Clover-Laptop-Config)
+[Vanilla Laptop Guide Artifacts Repository @ Github](https://github.com/fewtarius/laptop-guide-artifacts)
 
-Once you have your config copy it to the CLOVER folder in your EFI, saving it as config.plist.  You will need to make some changes to customize it for your system.
+Once you have your config copy it to the CLOVER folder in your EFI, saving it as config.plist.  Remember, you will need to make some changes to customize it for your system.  The location of config.plist should match the tree view below.
+
+```text
+EFI
+└── CLOVER
+    └── config.plist
+```
+
+### Patch Overview
+
+#### ACPI Patches
+
+| Patch | Default | Function |
+| :--- | :--- | :--- |
+| change APSS to APXX | Disabled | May be required for poewr management. |
+| change \_DSM to XDSM | Disabled | Renames device specific methods.  May be necessary for VoodooI2C. |
+| change EHC1 to EH01 | Disabled | Patch USB 2.0 methods for macOS. |
+| change EHC2 to EH02 | Disabled | Patch USB 2.0 methods for macOS. |
+| change \_OSI to XOSI | Enabled | Rename \_OSI.  Pair with SSDT-XOSI.aml found later in the guide. |
+| change XHC1 to XHC | Enabled | Patch USB 3.0 methods for macOS. |
+| change SAT0 to SATA | Disabled | Patch SATA for macOS. |
+| change LPC to LPCB | Disabled | Patch low pin count bus for macOS. |
+| change \_REG to XREG in EC0 | Disabled | May be necessary for battery status. |
+| ALS: change Method\(RALS,0,S\) XALS | Disabled | May be necessary for ambient light sensor |
+
+### Kernel Patches
+
+| Patch | Default | Function |
+| :--- | :--- | :--- |
+| MSR 0xE2 \_xcpm\_idle instant reboot\(c\) Pike R. Alpha | Enabled | Prevents instant reboot on systems without the ability to disable the MSR parameter in your BIOS. |
+
+### Kext Patches
+
+| Patch | Default | Function |
+| :--- | :--- | :--- |
+| Enable TRIM for SSD | Enabled | Enables native trim support for SATA SSDs |
+| Prevent Apple I2C kexts from attaching to I2C controllers, credit CoolStar | Enabled | Helper to allow VoodooI2C to start before Apple native I2C drivers. \(Two patches\) |
 
 ### The Config.plist in a Nutshell
 

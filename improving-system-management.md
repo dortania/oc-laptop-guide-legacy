@@ -17,17 +17,18 @@ Once you have the package downloaded, mount your EFI partition and delete SMCHel
 Once that's done, move over to C/k/O and make sure there are no instance of FakeSMC.  That's a VirtualSMC competitor, we don't need that.  Copy all of the VirtualSMC kexts into the directory.   When you're done it should look something like this.
 
 ```text
-.
-├── drivers
-│       └──UEFI
-│           └── VirtualSmc.efi
-└── kexts
-    └── Other
-        ├── SMCBatteryManager.kext
-        ├── SMCLightSensor.kext
-        ├── SMCProcessor.kext
-        ├── SMCSuperIO.kext
-        └── VirtualSMC.kext
+EFI
+└── CLOVER
+    ├── drivers
+    │       └──UEFI
+    │           └── VirtualSmc.efi
+    └── kexts
+        └── Other
+            ├── SMCBatteryManager.kext
+            ├── SMCLightSensor.kext
+            ├── SMCProcessor.kext
+            ├── SMCSuperIO.kext
+            └── VirtualSMC.kext
 ```
 
 Simple, right?  I thought so too.  Download VirtualSMC, as we'll need it as we prepare the install media.

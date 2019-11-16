@@ -30,5 +30,18 @@ The table below lists helpers that you may have found on the web while you were 
 | OsxAptioFixDrv | This helper was deprecated by AptioMemoryFix. |
 | OsxAptioFix2Drv-**free2000** | This memory helper should never be used for any reason.  It was created to test a specific correction, and not to be used by end users.  It will corrupt your data, and may also cause hardware failure. |
 
+### Inserting the Memory Fix into the EFI
 
+Now that you have your memory fix, add it to your CLOVER EFI folder.  The layout should match the tree view below.
+
+```text
+
+EFI
+└── CLOVER
+    └── drivers
+        └──UEFI
+           ├──FwRuntimeServices.efi
+           └──OcQuirks.efi
+
+```
 

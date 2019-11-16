@@ -8,9 +8,15 @@ Most laptop keyboards are PS/2 devices.  Yep, it's 2019 and PS/2 is still a thin
 
 [VoodooPS2 Project Page](https://github.com/acidanthera/VoodooPS2)
 
-Download the latest release and add it to CLOVER placing the VoodooPS2Controller kext in your C/k/O folder.
+Download the latest release and add it to CLOVER placing the VoodooPS2Controller kext in your C/k/O folder.  The path should match the tree below.
 
-Whenever you reboot, you should have a working keyboard!
+```text
+EFI
+└── CLOVER
+    └── kexts
+        └── Other
+            └── VoodooPS2Controller.kext
+```
 
 ### Touchpads
 
@@ -88,12 +94,25 @@ With the hotpatching out of the way, now it's time to install VoodooI2C.  Genera
 
 #### Kexts and Satellites
 
+When configuring VoodooI2C, it is important to only apply the kexts that you need.  Generally, most users will need VoodooI2C.kext and VoodooI2CHID.kext.  The remaining satellites are for a small number of specific devices.  Even if you have an Elan or Synaptics touchpad, you should try the HID kext first.  If you do learn that you need a different satallite kext, remove the HID kext before applying it.
+
 * VoodooI2C - This is the primary device driver that implements Apple's Trackpad protocols.
 * VoodooI2CHID - Implements the Microsoft HID device specification.
 * VoodooI2CElan - Implements support for Elan proprietary devices.
 * VoodooI2CSynaptics - Implements support for Synaptics proprietary devices.
 * VoodooI2CFTE - Implements support for the FTE1001 touchpad.
 * VoodooI2CUPDDEngine - Implements Touchbase driver support.
+
+The VoodooI2C configuration should match the tree view below.
+
+```text
+EFI
+└── CLOVER
+    └── kexts
+        └── Other
+            ├── VoodooI2C.kext
+            └── VoodooI2CHID.kext
+```
 
 I know that you've kind of breezed through this one, but we don't want to make it too easy, so here's some required reading.
 

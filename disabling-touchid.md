@@ -4,3 +4,15 @@ When using the SMBIOS of a recent Macbook Pro with TouchID, you may notice quite
 
 [Download NoTouchID @ Github](https://github.com/al3xtjames/NoTouchID)
 
+The location of the kext should match the tree view below.
+
+```text
+EFI
+└── CLOVER
+    └── kexts
+        └── Other
+            └── NoTouchID.kext
+```
+
+Finished? Great!
+

@@ -1,4 +1,4 @@
-# Preparing to Install macOS
+# Preparing USB Media
 
 ## Prepare macOS for Installation
 
@@ -81,18 +81,8 @@ EFI
     ├── CLOVERX64.efi
     ├── drivers
     │   └── UEFI
-    │       ├── ApfsDriverLoader.efi
-    │       ├── FwRuntimeServices.efi
-    │       ├── OcQuirks.efi
-    │       ├── HFSPlus.efi
-    │       └── VirtualSmc.efi
     ├── kexts
     │   └── Other
-    │       ├── SMCBatteryManager.kext
-    │       ├── SMCLightSensor.kext
-    │       ├── SMCProcessor.kext
-    │       ├── SMCSuperIO.kext
-    │       └── VirtualSMC.kext
     ├── themes
     └── tools (optional)
         ├── Shell32.efi

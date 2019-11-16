@@ -10,90 +10,15 @@ As mentioned previously, macOS has a very strict USB configuration by default, a
 
 Mount up your EFI partition if it isn't already and then we'll merge these patches using your favorite text editor \(remember, I prefer [Atom](https://atom.io)\). 
 
-Add the patches to the array found at KernelAndKextPatches/KextsToPatch.  Save and close the file.
+Add the patches to an array called KextsToPatch under KernelAndKextPatches.  If the array does not exist, go ahead and create it.  Save and close the file.
 
-```text
-            <dict>
-                <key>Comment</key>
-                <string>USB port limit patch #1 10.14.x modify by DalianSky(credit ydeng)</string>
-                <key>Disabled</key>
-                <false/>
-                <key>Find</key>
-                <data>
-                g/sPDw==
-                </data>
-                <key>InfoPlistPatch</key>
-                <false/>
-                <key>MatchOS</key>
-                <string>10.14.x</string>
-                <key>Name</key>
-                <string>com.apple.iokit.IOUSBHostFamily</string>
-                <key>Replace</key>
-                <data>
-                g/s/Dw==
-                </data>
-            </dict>
-            <dict>
-                <key>Comment</key>
-                <string>USB port limit patch #2 10.14.x modify by DalianSky(credit PMHeart)</string>
-                <key>Disabled</key>
-                <false/>
-                <key>Find</key>
-                <data>
-                g+MP0w==
-                </data>
-                <key>InfoPlistPatch</key>
-                <false/>
-                <key>MatchOS</key>
-                <string>10.14.x</string>
-                <key>Name</key>
-                <string>com.apple.iokit.IOUSBHostFamily</string>
-                <key>Replace</key>
-                <data>
-                g+M/0w==
-                </data>
-            </dict>
-            <dict>
-                <key>Comment</key>
-                <string>USB Port limit patch #3 10.14.x modify by DalianSky(credits PMheart)</string>
-                <key>Disabled</key>
-                <false/>
-                <key>Find</key>
-                <data>
-                g/sPDw==
-                </data>
-                <key>InfoPlistPatch</key>
-                <false/>
-                <key>MatchOS</key>
-                <string>10.14.x</string>
-                <key>Name</key>
-                <string>com.apple.driver.usb.AppleUSBXHCI</string>
-                <key>Replace</key>
-                <data>
-                g/s/Dw==
-                </data>
-            </dict>
-            <dict>
-                <key>Comment</key>
-                <string>USB Port limit patch #4 10.14.x modify by DalianSky(credits PMheart)</string>
-                <key>Disabled</key>
-                <false/>
-                <key>Find</key>
-                <data>
-                g/8PDw==
-                </data>
-                <key>InfoPlistPatch</key>
-                <false/>
-                <key>MatchOS</key>
-                <string>10.14.x</string>
-                <key>Name</key>
-                <string>com.apple.driver.usb.AppleUSBXHCI</string>
-                <key>Replace</key>
-                <data>
-                g/8/Dw==
-                </data>
-            </dict>
-```
+| Comment | Disabled | Find | Replace | InfoPlistPatch | Name |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| USB port limit patch \#1 10.14.x modify by DalianSky\(credit ydeng\) | False | 83FB0F0F | 83FB3F0F | False | com.apple.iokit.IOUSBHostFamily |
+| USB port limit patch \#2 10.14.x modify by DalianSky\(credit PMHeart\) | False | 83E30FD3 | 83E33FD3 | False | com.apple.iokit.IOUSBHostFamily |
+| USB Port limit patch \#3 10.14.x modify by DalianSky\(credits PMheart\) | False | 83FB0F0F | 83FB3F0F | False | com.apple.iokit.IOUSBHostFamily |
+| USB Port limit patch \#4 10.14.x modify by DalianSky\(credits PMheart\) | False | 83FF0F0F | 83FF3F0F | False | com.apple.iokit.IOUSBHostFamily |
+| USB Port limit patch \#5 10.15.x modify by DalianSky\(credits PMheart\) | False | 83F90F0F | 83F93F0F | False | com.apple.iokit.IOUSBHostFamily |
 
 ## Information About Port Types
 

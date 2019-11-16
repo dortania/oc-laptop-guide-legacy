@@ -35,7 +35,7 @@ Simple, right?  I thought so too.  Download VirtualSMC, as we'll need it as we p
 
 [VirtualSMC Documentation @ Github](https://github.com/acidanthera/VirtualSMC/tree/master/Docs)
 
-### FakeSMC
+## FakeSMC
 
 Like VirtualSMC, FakeSMC is another System Management Controller emulator.  It operates similar to VirtualSMC but it uses plugins to provide additional functionality to macOS.  It is also older, and should only be used when VirtualSMC is found to be incompatible with your hardware.
 
@@ -51,7 +51,7 @@ Installing FakeSMC is easy, you can find it on the Clover ISO that we'll downloa
         └── FakeSMC.kext
 ```
 
-### SMC Emulator Conflicts
+## SMC Emulator Conflicts
 
 VirtualSMC and FakeSMC conflict with each other, so you should never have both installed in your EFI at the same time.  Chose one or the other, and if both are present remove the SMC emulator that you are not going to use.
 

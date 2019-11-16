@@ -12,7 +12,7 @@ EFI
     │   └── patched
     │       ├── SSDT-GPI0.aml
     │       ├── SSDT-PNLF.aml
-    │ .     └── SSDT-XOSI.aml
+    │       └── SSDT-XOSI.aml
     ├── CLOVERX64.efi
     ├── config.plist
     ├── drivers

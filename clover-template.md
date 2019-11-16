@@ -1,6 +1,6 @@
 # CLOVER Template
 
-### Using the Vanilla Guide Laptop Template
+### Using the Vanilla Laptop Guide Template
 
 Linked below is a generic config.plist for laptops which is intended to help take some of the pain out of installing macOS on a laptop.  Here are a few important things you'll need to know when using this template.
 
@@ -74,7 +74,7 @@ Before continuing, you need a bit of knowledge about the config.plist which is a
 $ /usr/libexec/PlistBuddy --help
 ```
 
-## OK OK, but What Do All of Those Keys and Values Mean?!
+### OK OK, but What Do All of Those Keys and Values Mean?!
 
 Well, there are so many CLOVER parameters that it's just too much to cover here, so instead you should have a look at their WIKI.
 

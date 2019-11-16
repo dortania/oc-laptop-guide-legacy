@@ -66,7 +66,7 @@ Now that you have the .tar.gz package, extract it with The Unarchiver or your ar
 
 _Note: This method assumes you are using a Mac, and your target system uses UEFI.  If you are using Windows or Linux, review the_ [_Preparing your Installer Media section_](https://internet-install.gitbook.io/macos-internet-install/preparing-your-installer.../preparing-your-installer-media...) _of the Vanilla Internet install guide instead._
 
-### Create the Clover Structure
+## Create the CLOVER Structure
 
 The tree view below describes the typical layout of a CLOVER UEFI installation.  Use the CLOVER iso image to create this structure within your EFI partition by making directories and copying files from the ISO.  Do not add anything more than what's listed in the tree view below for now.
 

@@ -55,7 +55,7 @@ UEFI drivers should be installed to CLOVER/drivers/UEFI
 
 Another great question!  For many years computers used a basic data structure to identify where your data was stored, and how to boot your operating system.  This method added a small amount of data to the very start of your hard drive.  Beginning in 2004 and adopted later by vendors, Intel established a new method of booting a computer called UEFI that was 32bit and provided significantly greater flexibility.  If you have support for UEFI, you should use it.  If you don't however, CLOVER will still accomodate you.  You will also access your CLOVER directory the same way, the major difference is how the system recognizes and bootstraps the CLOVER bootloader.
 
-As Legacy are well..Legacy..these types of installations usually require a lot of additional work which is not covered by this guide.  
+As Legacy is well..Legacy..these types of installations usually require a lot of additional work which is not covered by this guide.  
 
 ## 
 

@@ -19,11 +19,14 @@
 * [Display Configuration](display-configuration.md)
 * [Setting up Input Devices](setting-up-input-devices.md)
 * [Choosing a MacBook SMBIOS](choosing-a-macbook-smbios.md)
-* [Disabling TouchID](disabling-touchid.md)
+* [Fixing IRQ Conflicts](fixing-irq-conflicts.md)
 * [Pre-Installation Review](pre-installation-review.md)
 * [Installing macOS](installing-macos.md)
+
+## Post Install
+
 * [Adding CLOVER to Your Boot Drive](adding-clover-to-the-bios.md)
-* [Fixing IRQ Conflicts](fixing-irq-conflicts.md)
+* [Disabling TouchID](disabling-touchid.md)
 * [Configuring USB Ports](configuring-usb-ports.md)
 * [Enabling WIFI & Bluetooth](enabling-wifi-and-bluetooth.md)
 * [Setting up Ethernet Adapters](setting-up-ethernet-adapters.md)

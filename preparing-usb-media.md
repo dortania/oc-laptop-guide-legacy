@@ -2,7 +2,7 @@
 
 ## Prepare macOS for Installation
 
-For this step, you'll need a USB thumb drive that's 16GB or larger.  Plug the stick into another Mac before continuing.  This procedure will erase the USB drive, so save any files to another location before proceeding.
+For this step, you'll need a USB thumb drive that's 16GB or larger, and if possible it should be USB 2.0.  Plug the stick into another Mac before continuing.  This procedure will erase the USB drive, so save any files to another location before proceeding.
 
 ### Create the Target Partition
 

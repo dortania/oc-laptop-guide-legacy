@@ -36,6 +36,16 @@ Installing AppleALC is simple.  You just need to download the AppleALC kext from
 
 [Download AppleALC @ Github](https://github.com/acidanthera/AppleALC)
 
+Your new AppleALC kext path should look like it does in the tree below.
+
+```text
+EFI
+└── CLOVER
+    └── kexts
+        └── Other
+            └── AppleALC.kext
+```
+
 Before rebooting, let's configure it!
 
 ## Configuring AppleALC
@@ -67,4 +77,14 @@ This nets the best benefit for you and for everyone else because you'll end up w
 VoodooHDA is an alternative to AppleALC, and it works pretty well but rather than adding native support, VoodooHDA provides its own audio solution.  Installing it is pretty straightforward.  Simply download the kext, preference pane, and settings loader and add them to your system.  The kext goes in C/k/O, if you have AppleALC installed you'll want to remove it.  Open \(execute\) the preferences pane and it should prompt you to install, if it doesn't drag it onto System Preferences and it'll install that way.  The settings loader should be installed to Applications, and you should run it once to enable it.  They can be downloaded here.
 
 [Download VoodooHDA @ SourceForge](https://sourceforge.net/projects/voodoohda/)
+
+As with AppleALC, it should follow the same pattern in the tree.
+
+```text
+EFI
+└── CLOVER
+    └── kexts
+        └── Other
+            └── VoodooHDA.kext
+```
 

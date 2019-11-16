@@ -49,21 +49,6 @@ Now that you've added the XOSI SSDT patch, you need to add a patch to Clover.  O
 | Find | Data | 5f4f5349 |
 | Replace | Data | 584f5349  |
 
-If you open the config.plist in a text editor the patch should look like this:
-
-```text
-<dict>
-        <key>Comment</key>
-        <string>_OSI to XOSI</string>
-        <key>Disabled</key>
-        <false/>
-        <key>Find</key>
-        <data>X09TSQ==</data>
-        <key>Replace</key>
-        <data>WE9TSQ==</data>
-</dict>
-```
-
 Save config.plist and close the editor.
 
 #### SSDT-GPI0

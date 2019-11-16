@@ -85,6 +85,16 @@ WIFI configuration is pretty straightforward, you only need an injector kext to 
 
 [Download AirportBrcmFixup @ Github](https://github.com/acidanthera/AirportBrcmFixup)
 
+The location of the kext should match the tree below.
+
+```text
+EFI
+└── CLOVER
+    └── kexts
+        └── Other
+            └── AirportBrcmFixup.kext
+```
+
 ### Setting up Bluetooth
 
 Internal Bluetooth devices are almost as easy, but they do require being configured as internal USB devices.  If you haven't mapped your USB ports yet, do that first.  Unless you're using a native Apple card you will need to download BrcmPatchRam from the Acidanthera repo.  Within this package you will find several kexts.  These kexts are detailed in the table below.
@@ -100,6 +110,18 @@ Internal Bluetooth devices are almost as easy, but they do require being configu
 Once you've determined the kexts that you'll need, add them to C/k/O and reboot.  If you're unsure, start with BrcmBluetoothInjector.kext.  If your Bluetooth device isn't working after a reboot, you need a firmwareloader.  Add the appropriate BrcmPatchRAM?.kext along with BrcmFirmwareData.kext.  Leave BrcmBluetoothInjector.kext as well as it is also required. 
 
 [Download BrcmPatchRam @ Github](https://github.com/acidanthera/BrcmPatchRAM)
+
+When finished, the kexts should be located in your EFI as indicated in the tree below.
+
+```text
+EFI
+└── CLOVER
+    └── kexts
+        └── Other
+            ├── BrcmBluetoothInjector.kext
+            ├── BrcmPatchRAM{2,3}.kext
+            └── BrcmFirmwareData.kext
+```
 
 If you need additional help with installing and configuring WIFI and Bluetooth, you should read Toleda's Broadcom WiFi/Bluetooth guide which is linked below.
 

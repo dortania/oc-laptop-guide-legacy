@@ -26,7 +26,7 @@ EFI
     │   └── Other
     │       ├── NoTouchID.kext
     │       ├── SMCBatteryManager.kext
-    │       ├── SMCLightSensor.kext
+    │       ├── SMCLightSensor.kext (if applicable)
     │       ├── SMCProcessor.kext
     │       ├── SMCSuperIO.kext
     │       ├── VirtualSMC.kext

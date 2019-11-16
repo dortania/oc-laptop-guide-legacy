@@ -15,6 +15,7 @@
 * [SMC Emulation](improving-system-management.md)
 * [Display Configuration](display-configuration.md)
 * [Setting up Input Devices](setting-up-input-devices.md)
+* [Choosing a MacBook SMBIOS](choosing-a-macbook-smbios.md)
 * [Disabling TouchID](disabling-touchid.md)
 * [Pre-Installation Review](pre-installation-review.md)
 * [Installing macOS](installing-macos.md)

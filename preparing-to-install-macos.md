@@ -8,6 +8,7 @@ The next few sections will walk you through the basics of creating bootable medi
 * Set up a System Management Controller emulator.
 * Configure your GPU and display to work with macOS.
 * Set up your laptop input devices for macOS compatibility.
+* Selecting a Macbook model and generating unique identifiers
 
 
 

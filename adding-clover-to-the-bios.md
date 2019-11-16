@@ -2,19 +2,19 @@
 
 ## Add CLOVER to Your Boot Drive
 
-At this point, you should be booting into macOS using your USB stick. So, how do we put CLOVER on your hard drive/ssd? Simple, we just need to copy it. This process is relatively painless, but we're going to need to use the terminal so open that now.
+At this point, you should be booting into macOS using your USB stick.  So, how do we put CLOVER on your hard drive/ssd?  Simple, we just need to copy it.  This process is relatively painless, but we're going to need to use the terminal so open that now.
 
-First, we need to mount your USB EFI partition, and the EFI partition on your hard drive or SSD. Remember how we learned about using Disk Utility from the command line in the "[What's an EFI?](../whats-an-efi.md)" section? Good, because we're doing it twice.
+First, we need to mount your USB EFI partition, and the EFI partition on your hard drive or SSD.  Remember how we learned about using Disk Utility from the command line in the "[What's an EFI?](whats-an-efi.md)" section?  Good, because we're doing it twice.
 
 #### Mount the USB EFI
 
-Let's find out which device is our USB stick. We'll use the following command for this:
+Let's find out which device is our USB stick.  We'll use the following command for this:
 
 ```text
 $ diskutil list
 ```
 
-Thumb drives are classified as "external" devices, so they're easy to locate. Find the device that matches your USB stick. Our example device is /dev/disk4 and our EFI is the second partition.
+Thumb drives are classified as "external" devices, so they're easy to locate.  Find the device that matches your USB stick.  Our example device is /dev/disk4 and our EFI is the second partition.
 
 ```text
 /dev/disk4 (external, physical):
@@ -24,14 +24,14 @@ Thumb drives are classified as "external" devices, so they're easy to locate. Fi
    2:                  Apple_HFS macOS Install           15.7 GB    disk4s2
 ```
 
-Now that we know where our USB's EFI is, let's mount it. First we'll create a folder, and then we'll mount it. We'll call the folder 'USBEFI'.
+Now that we know where our USB's EFI is, let's mount it.  First we'll create a folder, and then we'll mount it.  We'll call the folder 'USBEFI'.
 
 ```text
 $ sudo mkdir /Volumes/USBEFI
 $ sudo diskutil mount -mountPoint /Volumes/USBEFI /dev/disk4s1
 ```
 
-Alright, now we'll repeat the process for the internal EFI. This time we'll look for an internal physical disk that contains the internal drive's EFI.
+Alright, now we'll repeat the process for the internal EFI.  This time we'll look for an internal physical disk that contains the internal drive's EFI.
 
 ```text
 $ diskutil list
@@ -65,7 +65,7 @@ $ diskutil unmount /Volumes/SYSEFI
 Volume SYSEFI on disk0s1 unmounted
 ```
 
-That's it! Unmount your USB stick in Finder, and reboot without it. You may need to go into your BIOS and set Clover first in your boot order. If you're able to boot into CLOVER, you can skip the next section and move onto [Display Configuration](../building-efi/display-configuration.md).
+That's it!  Unmount your USB stick in Finder, and reboot without it.  You may need to go into your BIOS and set Clover first in your boot order.  If you're able to boot into CLOVER, you can skip the next section and move onto [Display Configuration](display-configuration.md).
 
 ## Adding CLOVER to your BIOS
 

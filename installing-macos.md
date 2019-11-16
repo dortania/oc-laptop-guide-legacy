@@ -26,5 +26,20 @@ Now that your media has been formatted, it's time to install macOS!  Select Rein
 
 ![](.gitbook/assets/screen-shot-2019-11-09-at-9.32.17-pm.png)
 
+### Prohibited Sign & Broken Text
 
+If while booting macOS you come across a boot failure with a prohibited symbol and broken text, that means macOS could not find the root device while booting.  It may look similar to the image below.
+
+![](.gitbook/assets/screen-shot-2019-11-16-at-3.26.57-pm.png)
+
+This is a very common problem, and it's usually related to the USB device or the USB port that the device is plugged into.  The first thing to try is moving the USB from one port to another, repeating until you're back where you started.  You don't need to reboot, just move the stick and wait a few seconds to see if macOS finds it and progresses.  If not, there are a few things you can do to try and fix it.
+
+The first thing to try is adding UsbInjectAll which you can find by jumping ahead in the guide to the Inject all the ports section of the [Configuring USB Ports](configuring-usb-ports.md) page.  Don't worry about anything else on the page for now, you only want to add USBInjectAll.  If you're still having trouble leave UsbInjectAll in your EFI and try the following boot arguments.
+
+| Boot Option | Function |
+| :--- | :--- |
+| -uia\_exclude\_hs  | Exclude USB 2.0 ports.  If you only have a USB 3.0 thumb drive, try this first. |
+| -uia\_exclude\_ss | Exclude USB 3.0 ports.  If you only have USB 3.0 ports, disable the super speed aspect so they run as USB 2.0. |
+
+That will hopefully get you all fixed up!  Remember to remove those options after the installation completes.
 

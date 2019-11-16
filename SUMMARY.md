@@ -18,6 +18,9 @@
 * [SMC Emulation](smc-emulation.md)
 * [Display Configuration](display-configuration.md)
 * [Setting up Input Devices](setting-up-input-devices.md)
+
+### Test
+
 * [Choosing a MacBook SMBIOS](choosing-a-macbook-smbios.md)
 * [Fixing IRQ Conflicts](fixing-irq-conflicts.md)
 * [Pre-Installation Review](pre-installation-review.md)

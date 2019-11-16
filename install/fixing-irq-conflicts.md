@@ -1,6 +1,6 @@
 # Fixing IRQ Conflicts
 
-The table below contains some common fixes that help to eliminate any potential IRQ conflicts that may be preventing your touchpad and audio device from working properly.   Enable them in config.plist under ACPI/DSDT/Fixes.
+The table below contains some common fixes that help to eliminate any potential IRQ conflicts that may be preventing your touchpad and audio device from working properly. Enable them in config.plist under ACPI/DSDT/Fixes.
 
 | Fix | Type | Parameter | Description |
 | :--- | :--- | :--- | :--- |

@@ -2,9 +2,9 @@
 
 ## Pairing with Windows and macOS
 
-Hackintosh users often dual boot with Windows and want to use their keyboards, mice, and other Bluetooth devices regardless of the OS they've booted.  While it seems like an impossible task, it's actually relatively simple by sharing the macOS paring keys with Windows the same way Bootcamp does on a real Mac.
+Hackintosh users often dual boot with Windows and want to use their keyboards, mice, and other Bluetooth devices regardless of the OS they've booted. While it seems like an impossible task, it's actually relatively simple by sharing the macOS paring keys with Windows the same way Bootcamp does on a real Mac.
 
-First things first, you have to pair the device in Windows.  I know that seems a little weird, but this is required so Windows has the registry keys that we need to update later.  After that, boot into macOS and pair it there.
+First things first, you have to pair the device in Windows. I know that seems a little weird, but this is required so Windows has the registry keys that we need to update later. After that, boot into macOS and pair it there.
 
 Once it's paired, you will need to get the link keys from the bluetooth plist in macOS. If you're unsure which link key is which, you can find the MAC address of your device by option-clicking the Bluetooth applet in your menu bar and expanding the connected device you want to share. To get the keys, run the following command in terminal:
 
@@ -12,7 +12,7 @@ Once it's paired, you will need to get the link keys from the bluetooth plist in
 $ sudo defaults read /private/var/root/Library/Preferences/com.apple.Bluetoothd.plist LinkKeys
 ```
 
-To find the link key for the device, match the devices MAC address in the output.  The value assigned to the MAC address is the link key.  It may look something like this:
+To find the link key for the device, match the devices MAC address in the output. The value assigned to the MAC address is the link key. It may look something like this:
 
 ```text
 {
@@ -37,5 +37,5 @@ HKLM\SYSTEM\CurrentControlSet\Services\BTHPORT\Parameters\Keys
 
 Replace the existing key matching the device's MAC address with the key that you converted in the earlier step. Restart the machine with the device turned on.
 
-_Note: If you're using an Apple device such as a Keyboard or Trackpad, do not plug the device into your computer for charging.  Doing so will cause the link keys to change requiring you to repeat this process again._
+_Note: If you're using an Apple device such as a Keyboard or Trackpad, do not plug the device into your computer for charging. Doing so will cause the link keys to change requiring you to repeat this process again._
 

@@ -12,7 +12,7 @@ The first thing you're going to want to do is install VirtualSMC if you have not
 
 ### Installing AppleSupportPkg
 
-Next you're going to need to download AppleSupportPkg.  It contains all of the remaining items that you'll need to get FileVault up and running.  Use version 2.0.9 as more recent versions have been merged into OpenCore.
+Next you're going to need to download AppleSupportPkg.  It contains all of the remaining items that you'll need to get FileVault up and running.  Use version **2.0.9** as more recent versions have been merged into OpenCore.
 
 [Download AppleSupportPkg @ Github](https://github.com/acidanthera/AppleSupportPkg)
 
@@ -33,12 +33,15 @@ Now, copy the following files from AppleSupportPkg to CLOVER/drivers/UEFI.
 Excluding the EFI drivers necessary for booting, your EFI folder should look like this.
 
 ```text
-.
-├── ApfsDriverLoader.efi
-├── AppleGenericInput.efi
-├── AppleUiSupport.efi
-├── VBoxHfs.efi
-└── VirtualSmc.efi
+EFI
+└── CLOVER
+    └── drivers
+        └── UEFI
+            ├── ApfsDriverLoader.efi
+            ├── AppleGenericInput.efi
+            ├── AppleUiSupport.efi
+            ├── VBoxHfs.efi
+            └── VirtualSmc.efi
 ```
 
 Finally, reboot.  If everything comes up OK, go ahead and enable FileVault.

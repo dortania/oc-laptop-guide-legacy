@@ -1,9 +1,10 @@
 # Table of contents
 
-## Before you start
-
 * [Getting Started](README.md)
 * [A Guide to Build Guides](a-guide-to-build-guides.md)
+
+## Before you start
+
 * [Know Your Hardware](know-your-hardware.md)
 * [BIOS Configuration](bios-configuration.md)
 

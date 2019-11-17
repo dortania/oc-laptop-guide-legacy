@@ -17,13 +17,13 @@
 
 ## Building USB
 
-* [Preparing to Install macOS](preparing-to-install-macos.md)
-* [Preparing USB Media](preparing-usb-media.md)
+* [Preparing to Install macOS](preparing-usb-media.md)
 * [macOS Memory Allocation](macos-memory-allocation.md)
 * [SMC Emulation](smc-emulation.md)
 * [CLOVER Template](clover-template.md)
 * [Display Configuration](display-configuration.md)
 * [Setting up Input Devices](setting-up-input-devices.md)
+* [Disabling TouchID](disabling-touchid.md)
 * [Choosing a MacBook SMBIOS](choosing-a-macbook-smbios.md)
 * [Fixing IRQ Conflicts](fixing-irq-conflicts.md)
 * [Pre-Installation Review](pre-installation-review.md)
@@ -32,7 +32,6 @@
 ## Post Install
 
 * [Adding CLOVER to Your Boot Drive](adding-clover-to-the-bios.md)
-* [Disabling TouchID](disabling-touchid.md)
 * [Configuring USB Ports](configuring-usb-ports.md)
 * [Enabling WIFI & Bluetooth](enabling-wifi-and-bluetooth.md)
 * [Setting up Ethernet Adapters](setting-up-ethernet-adapters.md)

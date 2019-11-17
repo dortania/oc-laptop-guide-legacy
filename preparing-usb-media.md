@@ -1,4 +1,4 @@
-# Preparing USB Media
+# Preparing to Install macOS
 
 ## Prepare macOS for Installation
 

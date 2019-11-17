@@ -1,21 +1,26 @@
 # Table of contents
 
+## Before you start
+
 * [Getting Started](README.md)
+* [A Guide to Build Guides](a-guide-to-build-guides.md)
 * [Know Your Hardware](know-your-hardware.md)
 * [BIOS Configuration](bios-configuration.md)
-* [A Guide to Build Guides](a-guide-to-build-guides.md)
+
+## Useful Skills/Terminology
+
 * [A Little UNIX Never Hurt Anyone!](a-little-unix-never-hurt-anyone.md)
 * [Just Enough GIT](just-enough-git.md)
 * [What's an EFI?](whats-an-efi.md)
 * [What about KEXTs?](what-about-kexts.md)
 
-## Building EFI
+## Building USB
 
 * [Preparing to Install macOS](preparing-to-install-macos.md)
 * [Preparing USB Media](preparing-usb-media.md)
-* [CLOVER Template](clover-template.md)
 * [macOS Memory Allocation](macos-memory-allocation.md)
 * [SMC Emulation](smc-emulation.md)
+* [CLOVER Template](clover-template.md)
 * [Display Configuration](display-configuration.md)
 * [Setting up Input Devices](setting-up-input-devices.md)
 * [Choosing a MacBook SMBIOS](choosing-a-macbook-smbios.md)

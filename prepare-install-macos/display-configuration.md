@@ -40,8 +40,8 @@ We can instruct Whatevergreen to patch your GPU by passing specific parameters t
 
 | Key | Function |
 | :--- | :--- |
-| AAPL,ig-platform-id | This is the platform identifier of the GPU you are spoofing.  \(required\) |
-| device-id | This is the device identifier of the GPU you are spoofing. \(required\) |
+| AAPL,device-id | This is the platform identifier of the GPU you are spoofing.  \(required\) |
+| ig-platform-id | This is the device identifier of the GPU you are spoofing. \(required\) |
 | framebuffer-patch-enable | This switch enables framebuffer patching.  It is required when setting framebuffer patches such as fbmem and stolenmem. |
 | framebuffer-fbmem | This patches framebuffer memory, and is used when you cannot configure DVMT to 64MB in the BIOS.  Do not use if the DVMT BIOS option is available. |
 | framebuffer-stolenmem | This patches framebuffer stolen memory, and is used when you cannot configure DVMT to 64MB in the BIOS.  Do not use if the DVMT BIOS option is available. |
@@ -56,7 +56,7 @@ Note: \* Denotes the default configured by Whatevergreen.  \*\* Denotes the reco
 
 #### Intel Ivy Bridge
 
-| iGPU | ig-platform-id | device-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
+| iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Intel HD Graphics 4000 | 01660001 | 01006601 | 4 | 96MB | 24MB | 1536MB | LVDS1 HDMI1 DP2 |
 | Intel HD Graphics 4000 | 01660002 | 02006601 | 1 | 64MB | 24MB | 1536MB | LVDS1 |
@@ -67,7 +67,7 @@ Note: \* Denotes the default configured by Whatevergreen.  \*\* Denotes the reco
 
 #### Intel Haswell
 
-| iGPU | ig-platform-id | device-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
+| iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Intel HD Graphics 4400 | 0a16000c | 0c00160a | 3 | 64MB | 34MB | 1536MB | LVDS1 DP2 |
 | Intel HD Graphics 5000\*\* | 0a260005 | 0500260a | 3 | 32MB | 19MB | 1536MB | LVDS1 DP2 |
@@ -80,7 +80,7 @@ Note: \* Denotes the default configured by Whatevergreen.  \*\* Denotes the reco
 
 ####  Intel Broadwell
 
-| iGPU | ig-platform-id | device-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
+| iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Unlisted iGPU | 16060002 | 02000616 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
 | Unlisted iGPU | 160e0001 | 01000e16 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
@@ -95,7 +95,7 @@ Note: \* Denotes the default configured by Whatevergreen.  \*\* Denotes the reco
 
 #### Intel Skylake
 
-| iGPU | ig-platform-id | device-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
+| iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Intel HD Graphics 530 | 19120000 | 00001219 | 3 | 34MB | 21MB | 1536MB | DUMMY1 DP2 |
 | Intel HD Graphics 520\* | 19160000 | 00001619 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
@@ -115,7 +115,7 @@ Note: \* Denotes the default configured by Whatevergreen.  \*\* Denotes the reco
 
 #### Intel Kaby Lake, KBL-R, & Amber Lake
 
-| iGPU | ig-platform-id | device-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
+| iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Intel HD Graphics 620 | 59160000 | 00001659 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
 | Intel HD Graphics 620 | 59160009 | 09001659 | 3 | 38MB | 0MB | 1536MB | LVDS1 DP2 |
@@ -133,7 +133,7 @@ Note: \* Denotes the default configured by Whatevergreen.  \*\* Denotes the reco
 
 #### Intel Coffee Lake
 
-| iGPU | ig-platform-id | device-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
+| iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Intel UHD Graphics 630 | 3E000000 | 0000003E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
 | Intel UHD Graphics 630 | 3E920000 | 0000923E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
@@ -202,4 +202,3 @@ Once you are in the application, click Settings \(Bottom right\) followed by the
 ![](../.gitbook/assets/screen-shot-2019-08-23-at-8.15.58-pm.png)
 
 All set?  Great!
-

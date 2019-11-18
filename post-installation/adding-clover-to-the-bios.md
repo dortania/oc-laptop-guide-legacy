@@ -4,7 +4,7 @@
 
 At this point, you should be booting into macOS using your USB stick.  So, how do we put CLOVER on your hard drive/ssd?  Simple, we just need to copy it.  This process is relatively painless, but we're going to need to use the terminal so open that now.
 
-First, we need to mount your USB EFI partition, and the EFI partition on your hard drive or SSD.  Remember how we learned about using Disk Utility from the command line in the "[What's an EFI?](whats-an-efi.md)" section?  Good, because we're doing it twice.
+First, we need to mount your USB EFI partition, and the EFI partition on your hard drive or SSD.  Remember how we learned about using Disk Utility from the command line in the "[What's an EFI?](../useful-skills-terminology/whats-an-efi.md)" section?  Good, because we're doing it twice.
 
 #### Mount the USB EFI
 
@@ -65,7 +65,7 @@ $ diskutil unmount /Volumes/SYSEFI
 Volume SYSEFI on disk0s1 unmounted
 ```
 
-That's it!  Unmount your USB stick in Finder, and reboot without it.  You may need to go into your BIOS and set Clover first in your boot order.  If you're able to boot into CLOVER, you can skip the next section and move onto [Display Configuration](display-configuration.md).
+That's it!  Unmount your USB stick in Finder, and reboot without it.  You may need to go into your BIOS and set Clover first in your boot order.  If you're able to boot into CLOVER, you can skip the next section and move onto [Display Configuration](../prepare-install-macos/display-configuration.md).
 
 ## Adding CLOVER to your BIOS
 

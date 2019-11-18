@@ -199,7 +199,7 @@ If you're using a system configured to act like a 2015 or earlier Macbook/Macboo
 
 Once you are in the application, click Settings \(Bottom right\) followed by the Options button next to Hardware Acceleration engine.   If everything is working properly all of the boxes should be checked.
 
-![](.gitbook/assets/screen-shot-2019-08-23-at-8.15.58-pm.png)
+![](../.gitbook/assets/screen-shot-2019-08-23-at-8.15.58-pm.png)
 
 All set?  Great!
 

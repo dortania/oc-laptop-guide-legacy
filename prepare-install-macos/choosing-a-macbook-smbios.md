@@ -36,7 +36,7 @@ XXXXXXXXXXXX | XXXXXXXXXXXXXXXXX
 
 As you can see, there are two data points in the output.  On the left of the pipe is the generated serial number.  To the right, the board serial number.  Before using the generated serial number, test each one at Apple using the link below to make sure it is infact invalid.  If you receive anything but the output below, discard that serial number and try again.
 
-![](.gitbook/assets/screen-shot-2019-11-16-at-1.38.05-pm.png)
+![](../.gitbook/assets/screen-shot-2019-11-16-at-1.38.05-pm.png)
 
 [Check Your Service and Support Coverage at Apple](https://checkcoverage.apple.com)
 

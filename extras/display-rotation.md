@@ -22,7 +22,7 @@ First download the latest version of DisplayRotation.
 
 Use the keyboard shortcuts or application wrappers to change orientation of your display.
 
-![](.gitbook/assets/screenshot.png)
+![](../.gitbook/assets/screenshot.png)
 
 
 

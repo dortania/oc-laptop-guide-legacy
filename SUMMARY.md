@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Getting Started](README.md)
+* [Credits & License](extras/credits-and-license.md)
 * [A Guide to Build Guides](a-guide-to-build-guides.md)
 
 ## Before you start
@@ -49,5 +50,4 @@
 * [Display Rotation](extras/display-rotation.md)
 * [Dual booting​ with Bluetooth Devices](extras/dual-booting-with-bluetooth-devices.md)
 * [Extra Functionality](extras/extra-functionality.md)
-* [Credits & License](extras/credits-and-license.md)
 

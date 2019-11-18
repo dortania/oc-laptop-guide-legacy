@@ -1,5 +1,7 @@
 # Credits & License
 
+## Credits
+
 While it's impossible to personally thank everyone in the community, I do want to specifically thank the following people for their help and their contributions to myself and to the community.  This guide would not have been possible without their guidance, their knowledge, and their work.
 
 * CorpNewt

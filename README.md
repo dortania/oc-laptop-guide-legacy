@@ -8,7 +8,7 @@ If you've answered yes to all of those questions, congratulations you may have w
 
 Oh, you're still here?  GREAT!  Over the next few days or weeks \(possibly months\) you will learn all of the ins and outs of what makes macOS work on a Laptop.  This guide, should you choose to continue reading will help you by providing some basic information, and pointers to help you as you embark on your journey.
 
-On that note, while it's impossible to personally thank everyone in the community; I do want to specifically thank the following people for their help and their contributions to myself, to this guide, and to the community.  This guide would not have been possible without their guidance, their knowledge, and their help.
+On that note, while it's impossible to personally thank everyone in the community; I do want to specifically thank the following people for their help and their contributions to myself, to this guide, and to the community.  This guide would not have been possible without their guidance, and their knowledge.
 
 * CorpNewt
 * Midi

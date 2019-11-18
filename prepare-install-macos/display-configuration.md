@@ -1,18 +1,18 @@
 # Display Configuration
 
-Configuring a laptop's integrated GPU is a lot like configuring a desktop's integrated GPU.  You usually start by disabling the dedicated GPU if you have one.  This section will talk about the methods that you would use for each component of GPU configuration and how to test that it's working, but there are better guides that already exist to help with the heavy lifting.
+Configuring a laptop's integrated GPU is a lot like configuring a desktop's integrated GPU. You usually start by disabling the dedicated GPU if you have one. This section will talk about the methods that you would use for each component of GPU configuration and how to test that it's working, but there are better guides that already exist to help with the heavy lifting.
 
-### Configuring your Display Adapter \(GPU\)
+## Configuring your Display Adapter \(GPU\)
 
-Depending on your laptop, you may have very little to do to configure your iGPU, or you could have to add an elaborate set of patches to configure stuff like DVMT.  The most important thing you'll want here is the WhateverGreen kext and it's dependency, LILU.  Lilu is a patching mechanism that's used by multiple kernel extensions, and WhateverGreen is responsible for patching your display adapter\(s\).
+Depending on your laptop, you may have very little to do to configure your iGPU, or you could have to add an elaborate set of patches to configure stuff like DVMT. The most important thing you'll want here is the WhateverGreen kext and it's dependency, LILU. Lilu is a patching mechanism that's used by multiple kernel extensions, and WhateverGreen is responsible for patching your display adapter\(s\).
 
-If you haven't already added WhateverGreen to your CLOVER EFI, better do that now before continuing.  You can get it here.
+If you haven't already added WhateverGreen to your CLOVER EFI, better do that now before continuing. You can get it here.
 
 [Download WhateverGreen](https://github.com/acidanthera/WhateverGreen/releases)
 
-#### First things first, disable that dGPU!
+### First things first, disable that dGPU!
 
-There are two ways to disable a dGPU in a laptop, the short way and the not so short way.  We'll start with the short way because it is really simple.  If you don't have a dGPU \(NVidia/ATI dedicated graphics\) you can skip this part and jump straight to configuring your display adapter instead.
+There are two ways to disable a dGPU in a laptop, the short way and the not so short way. We'll start with the short way because it is really simple. If you don't have a dGPU \(NVidia/ATI dedicated graphics\) you can skip this part and jump straight to configuring your display adapter instead.
 
 To disable your dGPU the short way, add the following to the Boot/Arguments section of your config.plist.
 
@@ -20,23 +20,23 @@ To disable your dGPU the short way, add the following to the Boot/Arguments sect
 -wegnoegpu
 ```
 
-This command instructs Whatevergreen to disable all internal and external dedicated GPUs.  Don't reboot yet, because we still need to get Whatevergreen!
+This command instructs Whatevergreen to disable all internal and external dedicated GPUs. Don't reboot yet, because we still need to get Whatevergreen!
 
-Mission complete?  Great!  If it doesn't work out the way you would expect, come back and move on the the not so short method using Hackintosh Slav's wonderful guide.
+Mission complete? Great! If it doesn't work out the way you would expect, come back and move on the the not so short method using Hackintosh Slav's wonderful guide.
 
 [How to disable your unsupported GPU for MacOS](https://khronokernel-4.gitbook.io/disable-unsupported-gpus/)
 
-Got it all fixed up?  Excellent!  Now that this is behind us, it's time to configure your iGPU.
+Got it all fixed up? Excellent! Now that this is behind us, it's time to configure your iGPU.
 
-#### iGPU Configuration
+### iGPU Configuration
 
-Apple uses Intel graphics cards that have features other GPUs in Intel's line up don't have.  For example, with a Hackintosh laptop it is generally not possible to use DRM as FairPlay 2.0 is not supported.  Unfortunately it also means that macOS requires that you patch macOS to believe you have a different GPU than you really do.  Since these GPUs fall within the same family, we can use the data provided within the macOS Intel driver to build a patch that enables your GPU with full acceleration.
+Apple uses Intel graphics cards that have features other GPUs in Intel's line up don't have. For example, with a Hackintosh laptop it is generally not possible to use DRM as FairPlay 2.0 is not supported. Unfortunately it also means that macOS requires that you patch macOS to believe you have a different GPU than you really do. Since these GPUs fall within the same family, we can use the data provided within the macOS Intel driver to build a patch that enables your GPU with full acceleration.
 
-A prerequisite to configuring your iGPU is knowing which GPU you actually have.  If you don't already know, look up your CPU using Intel's Ark utility.  Once you find your CPU pay attention to the code name, and the graphics adapter.  This information will be useful as you configure your GPU patches.
+A prerequisite to configuring your iGPU is knowing which GPU you actually have. If you don't already know, look up your CPU using Intel's Ark utility. Once you find your CPU pay attention to the code name, and the graphics adapter. This information will be useful as you configure your GPU patches.
 
-#### iGPU Patching
+### iGPU Patching
 
-We can instruct Whatevergreen to patch your GPU by passing specific parameters to macOS in your config.plist.  The table below describes the patches that we will be utilizing.
+We can instruct Whatevergreen to patch your GPU by passing specific parameters to macOS in your config.plist. The table below describes the patches that we will be utilizing.
 
 | Key | Function |
 | :--- | :--- |
@@ -46,15 +46,15 @@ We can instruct Whatevergreen to patch your GPU by passing specific parameters t
 | framebuffer-fbmem | This patches framebuffer memory, and is used when you cannot configure DVMT to 64MB in the BIOS.  Do not use if the DVMT BIOS option is available. |
 | framebuffer-stolenmem | This patches framebuffer stolen memory, and is used when you cannot configure DVMT to 64MB in the BIOS.  Do not use if the DVMT BIOS option is available. |
 
-These parameters contain the basics to get you started.  If you need more advanced patching to enable your framebuffer, review the [Whatevergreen Intel GPU FAQ](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md).  The Framebuffer patches are included in the config.plist provided with this guide, however they are disabled.  To enable them remove the \# symbol from the beginning of the key.
+These parameters contain the basics to get you started. If you need more advanced patching to enable your framebuffer, review the [Whatevergreen Intel GPU FAQ](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md). The Framebuffer patches are included in the config.plist provided with this guide, however they are disabled. To enable them remove the \# symbol from the beginning of the key.
 
-#### iGPU Patches
+### iGPU Patches
 
-Now you are ready to configure your patches.  Use the table below to select the patch that most closely resembles the configuration from Ark.
+Now you are ready to configure your patches. Use the table below to select the patch that most closely resembles the configuration from Ark.
 
-Note: \* Denotes the default configured by Whatevergreen.  \*\* Denotes the recommended configuration.  These recommendations may or may not work for you.  Experiment with different configurations until you find the one that best suits your needs.
+Note: \* Denotes the default configured by Whatevergreen. \*\* Denotes the recommended configuration. These recommendations may or may not work for you. Experiment with different configurations until you find the one that best suits your needs.
 
-#### Intel Ivy Bridge
+### Intel Ivy Bridge
 
 | iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -65,7 +65,7 @@ Note: \* Denotes the default configured by Whatevergreen.  \*\* Denotes the reco
 | Intel HD Graphics 4000 | 01660008 | 08006601 | 3 | 64MB | 16MB | 1536MB | LVDS1 DP2 |
 | Intel HD Graphics 4000 | 01660009 | 09006601 | 3 | 64MB | 16MB | 1536MB | LVDS1 DP2 |
 
-#### Intel Haswell
+### Intel Haswell
 
 | iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -78,7 +78,7 @@ Note: \* Denotes the default configured by Whatevergreen.  \*\* Denotes the reco
 | Intel Iris Pro Graphics 5200 | 0d26000e | 0e00260d | 4 | 96MB | 34MB | 1536MB | LVDS1 DP2 HDMI1 |
 | Intel Iris Pro Graphics 5200 | 0d26000f | 0f00260d | 1 | 96MB | 34MB | 1536MB | LVDS1 |
 
-####  Intel Broadwell
+### Intel Broadwell
 
 | iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -93,7 +93,7 @@ Note: \* Denotes the default configured by Whatevergreen.  \*\* Denotes the reco
 | Intel HD Graphics 6000\* | 16260006 | 06002616 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
 | Intel Iris Graphics 6100 | 162b0002 | 02002b16 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
 
-#### Intel Skylake
+### Intel Skylake
 
 | iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -113,7 +113,7 @@ Note: \* Denotes the default configured by Whatevergreen.  \*\* Denotes the reco
 | Intel Iris Pro Graphics 580 | 193b0000 | 00003b19 | AAA7GQ== | 3 | 34MB | 21MB | 1536MB |
 | Intel Iris Pro Graphics 580 | 193b0005 | 05003b19 | BQA7GQ== | 4 | 34MB | 21MB | 1536MB |
 
-#### Intel Kaby Lake, KBL-R, & Amber Lake
+### Intel Kaby Lake, KBL-R, & Amber Lake
 
 | iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -131,7 +131,7 @@ Note: \* Denotes the default configured by Whatevergreen.  \*\* Denotes the reco
 | Intel UHD Graphics 617\*\* | 87C00000 | 0000C087 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
 | Intel UHD Graphics 617 | 87C00005 | 0500C087 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
 
-#### Intel Coffee Lake
+### Intel Coffee Lake
 
 | iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -147,19 +147,19 @@ Note: \* Denotes the default configured by Whatevergreen.  \*\* Denotes the reco
 | Intel Iris Plus Graphics 655\* | 3EA50009 | 0900A53E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
 | Unlisted iGPU | 3EA60005 | 0500A63E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
 
-### CLOVER Resolution
+## CLOVER Resolution
 
-After completing Whatevergreen patching, it's a good time to set the default resolution on CLOVER.  Open your config.plist and browse to GUI.  Set the ScreenResolution string to the native resolution of your laptop.  If you aren't sure, look up your laptop's specs on the manufacturer website.
+After completing Whatevergreen patching, it's a good time to set the default resolution on CLOVER. Open your config.plist and browse to GUI. Set the ScreenResolution string to the native resolution of your laptop. If you aren't sure, look up your laptop's specs on the manufacturer website.
 
 Now that you have your GPU sorted, let's move on to the backlight.
 
-### Panel Backlight
+## Panel Backlight
 
-Whatevergreen will enable your panel backlight, but to do so you usually have to provide configuration.  There are two methods supported by Whatevergreen.  Try one and if it doesn't work or your brightness keys are not working, disable it and try the other.
+Whatevergreen will enable your panel backlight, but to do so you usually have to provide configuration. There are two methods supported by Whatevergreen. Try one and if it doesn't work or your brightness keys are not working, disable it and try the other.
 
-#### Method 1 - AddPNLF
+### Method 1 - AddPNLF
 
-This method is the simplest, and only requires a plist editor.  Use the table below to add/enable AddPNLF, SetIntelBacklight, and SetIntelMaxBacklight to your config.plist.
+This method is the simplest, and only requires a plist editor. Use the table below to add/enable AddPNLF, SetIntelBacklight, and SetIntelMaxBacklight to your config.plist.
 
 | Path | Property | Type | Value |
 | :--- | :--- | :--- | :--- |
@@ -167,38 +167,39 @@ This method is the simplest, and only requires a plist editor.  Use the table be
 | Devices/ | SetIntelBacklight | Bool | True |
 | Devices/ | SetIntelMaxBacklight | Bool | True |
 
-#### Method 2 - SSDT-PNLF
+### Method 2 - SSDT-PNLF
 
-We'll do that by compiling PNLF SSDT from the Whatevergreen source repository and placing it in CLOVER/ACPI/patched.  First, save the dsl to your home directory.
+We'll do that by compiling PNLF SSDT from the Whatevergreen source repository and placing it in CLOVER/ACPI/patched. First, save the dsl to your home directory.
 
 \*\*\*\*[SSDT-PNLF.dsl @ Github](https://raw.githubusercontent.com/acidanthera/WhateverGreen/master/Manual/SSDT-PNLF.dsl)
 
-Now that you've saved the file, you'll need to compile it.  For that, we need to download maciASL.
+Now that you've saved the file, you'll need to compile it. For that, we need to download maciASL.
 
 [maciASL Project @ Github](https://github.com/acidanthera/MaciASL)
 
-Run maciASL, and open the SSDT-PNLF.dsl that you created previously.  Save the file to CLOVER/ACPI/patched/SSDT-PNLF.aml
+Run maciASL, and open the SSDT-PNLF.dsl that you created previously. Save the file to CLOVER/ACPI/patched/SSDT-PNLF.aml
 
 Before rebooting, review your config.plist and make sure patch GFX0 to IGPU and AddPNLF are disabled if they exist.
 
-### Verifying Metal Support
+## Verifying Metal Support
 
-This one's easy, just click Apple &gt; About This Mac &gt; System Report, and click Graphics/Displays.  You should see a line that looks like this.
+This one's easy, just click Apple &gt; About This Mac &gt; System Report, and click Graphics/Displays. You should see a line that looks like this.
 
 ```text
-  Metal:	Supported, feature set macOS GPUFamily2 v1
+  Metal:    Supported, feature set macOS GPUFamily2 v1
 ```
 
 If you don't see it, you may have some additional work to do.
 
-### Verifying HEVC Encoding
+## Verifying HEVC Encoding
 
-If you're using a system configured to act like a 2015 or earlier Macbook/Macbook Pro, stop here because it's not supported.  Otherwise you can verify that it's working after macOS is installed by installing VideoProc \(Free version is fine\).  VideoProc can be used to test H264 encoding and decoding as it should be supported even if HEVC isn't.
+If you're using a system configured to act like a 2015 or earlier Macbook/Macbook Pro, stop here because it's not supported. Otherwise you can verify that it's working after macOS is installed by installing VideoProc \(Free version is fine\). VideoProc can be used to test H264 encoding and decoding as it should be supported even if HEVC isn't.
 
 [Download VideoProc](https://www.videoproc.com)
 
-Once you are in the application, click Settings \(Bottom right\) followed by the Options button next to Hardware Acceleration engine.   If everything is working properly all of the boxes should be checked.
+Once you are in the application, click Settings \(Bottom right\) followed by the Options button next to Hardware Acceleration engine. If everything is working properly all of the boxes should be checked.
 
 ![](../.gitbook/assets/screen-shot-2019-08-23-at-8.15.58-pm.png)
 
-All set?  Great!
+All set? Great!
+

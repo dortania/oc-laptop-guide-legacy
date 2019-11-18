@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Getting Started](README.md)
-* [Credits & License](extras/credits-and-license.md)
+* [Credits & License](credits-and-license.md)
 * [A Guide to Build Guides](a-guide-to-build-guides.md)
 
 ## Before you start

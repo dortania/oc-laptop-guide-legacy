@@ -46,7 +46,7 @@ The process will take a while to complete, when it finishes the macOS installati
 $ ./BuildmacOSInstallApp.command
 ```
 
-Press enter in the terminal window after dragging and dropping the installation folder, and the script will build the application that we'll use to write our media files to the USB stick. Once that process completes, verify the name of your USB volume and use the createinstallmedia command to write the installation files to the USB stick. Be sure of the volume path before continuing.
+Press enter in the terminal window after dragging and dropping the installation folder, and the script will build the application that we'll use to write our media files to the USB stick. Once that process completes, find the "Install macOS {MacOS Version}.app" in the same folder and drag it to Applications.  Next verify the name of your USB volume and use the createinstallmedia command to write the installation files to the USB stick. Be sure of the volume path before continuing.  If you're using a macOS different than the example update the Install\ macOS\ Mojave.app reference to the version of macOS that you're creating the media for.
 
 ```text
 $ sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/{USB VOLUME}

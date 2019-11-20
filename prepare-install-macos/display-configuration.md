@@ -40,8 +40,8 @@ We can instruct Whatevergreen to patch your GPU by passing specific parameters t
 
 | Key | Function |
 | :--- | :--- |
-| AAPL,device-id | This is the platform identifier of the GPU you are spoofing.  \(required\) |
-| ig-platform-id | This is the device identifier of the GPU you are spoofing. \(required\) |
+| AAPL,ig-platform-id | This is the platform identifier of the GPU you are spoofing.  \(required\) |
+| device-id | This is the device identifier of the GPU you are spoofing. \(required\) |
 | framebuffer-patch-enable | This switch enables framebuffer patching.  It is required when setting framebuffer patches such as fbmem and stolenmem. |
 | framebuffer-fbmem | This patches framebuffer memory, and is used when you cannot configure DVMT to 64MB in the BIOS.  Do not use if the DVMT BIOS option is available. |
 | framebuffer-stolenmem | This patches framebuffer stolen memory, and is used when you cannot configure DVMT to 64MB in the BIOS.  Do not use if the DVMT BIOS option is available. |

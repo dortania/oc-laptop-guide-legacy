@@ -26,7 +26,7 @@ EFI
 
 | Patch | Default | Function |
 | :--- | :--- | :--- |
-| change APSS to APXX | Disabled | May be required for poewr management. |
+| change APSS to APXX | Disabled | May be required for power management. |
 | change \_DSM to XDSM | Disabled | Renames device specific methods.  May be necessary for VoodooI2C. |
 | change EHC1 to EH01 | Disabled | Patch USB 2.0 methods for macOS. |
 | change EHC2 to EH02 | Disabled | Patch USB 2.0 methods for macOS. |

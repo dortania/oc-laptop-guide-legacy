@@ -110,8 +110,8 @@ Note: \* Denotes the default configured by Whatevergreen. \*\* Denotes the recom
 | Intel Iris Graphics 540 | 19260007 | 07002619 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
 | Intel Iris Graphics 550 | 19270000 | 00002719 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
 | Intel Iris Graphics 550 | 19270004 | 04002719 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Pro Graphics 580 | 193b0000 | 00003b19 | AAA7GQ== | 3 | 34MB | 21MB | 1536MB |
-| Intel Iris Pro Graphics 580 | 193b0005 | 05003b19 | BQA7GQ== | 4 | 34MB | 21MB | 1536MB |
+| Intel Iris Pro Graphics 580 | 193b0000 | 00003b19 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Pro Graphics 580 | 193b0005 | 05003b19 | 4 | 34MB | 21MB | 1536MB | LVDS1 DP3 |
 
 ### Intel Kaby Lake, KBL-R, & Amber Lake
 

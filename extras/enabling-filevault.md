@@ -8,7 +8,7 @@ FileVault is Apple's solution to whole disk encryption.  Once enabled, it will u
 
 You should never just enable FileVault on a Hackintosh without first installing the prerequisites. Doing so will encrypt your disk, and CLOVER won't have the extensions that it needs to help you decrypt it, leaving you stuck.  You can add the extensions to a USB drive later, but let's avoid that scenario altogether by setting it up now.
 
-The first thing you're going to want to do is install VirtualSMC if you have not done so yet.  You can learn more about that by clicking [here](https://fewt.gitbook.io/laptopguide/improving-system-management#about-virtualsmc).
+The first thing you're going to want to do is install VirtualSMC if you have not done so yet.  You can learn more about that by clicking [here](../prepare-install-macos/smc-emulation.md).
 
 ### Installing AppleSupportPkg
 

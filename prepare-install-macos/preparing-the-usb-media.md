@@ -58,11 +58,11 @@ Press yes to overwrite the volume, and the utility should format and write the i
 
 Installing Clover is a relatively simple process, and most guides recommend using the Clover installer. We're going to instead walk down the manual path of installing Clover to your EFI. This process works for thumb drives and for installation onto your SSD/HDD and it will prepare your EFI for changes made in subsequent sections.
 
-First thing first, you should download the latest Clover from the Clover Build Repository. Be sure to download the .tar.gz package.
+First thing first, you should download the latest Clover from the Clover Build Repository. Be sure to download the .tar.lzma package.
 
 [Download Clover @ CBR](https://cloverdb.com)
 
-Now that you have the .tar.gz package, extract it with The Unarchiver or your archive tool of choice. Mount the extracted ISO image by double clicking it.
+Now that you have the .tar.lzma package, extract it with The Unarchiver or your archive tool of choice. Mount the extracted ISO image by double clicking it.
 
 _Note: This method assumes you are using a Mac, and your target system uses UEFI. If you are using Windows or Linux, review the_ [_Preparing your Installer Media section_](https://internet-install.gitbook.io/macos-internet-install/preparing-your-installer.../preparing-your-installer-media...) _of the Vanilla Internet install guide instead._
 

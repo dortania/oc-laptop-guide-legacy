@@ -21,7 +21,7 @@ Like most devices, MacBooks have unique identifiers that need to match the model
 [Download MacInfoPkg @ Github](https://github.com/acidanthera/MacInfoPkg)
 
 ```text
-$ ./macserial --model macserial --model MacBookPro11,1
+$ ./macserial --model MacBookPro11,1
 XXXXXXXXXXXX | XXXXXXXXXXXXXXXXX
 XXXXXXXXXXXX | XXXXXXXXXXXXXXXXX
 XXXXXXXXXXXX | XXXXXXXXXXXXXXXXX

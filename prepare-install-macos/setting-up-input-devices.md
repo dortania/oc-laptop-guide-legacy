@@ -40,7 +40,7 @@ Run maciASL, and open the SSDT-XOSI.dsl that you created previously.  Save the f
 
 #### \_OSI to XOSI Rename
 
-Now that you've added the XOSI SSDT patch, you need to add a patch to Clover.  Open your config.plist with your plist editor of choice and add the following patch under ACPI/DSDT/Patches.
+Now that you've added the XOSI SSDT patch, you need to add a patch to Clover.  Open your config.plist with your plist editor of choice and add the following patch under ACPI/DSDT/Patches.  If you're using the guide template this rename already exists so just make sure it's enabled.
 
 | Key | Type | Value |
 | :--- | :--- | :--- |

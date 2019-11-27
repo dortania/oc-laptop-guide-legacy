@@ -10,7 +10,7 @@ As mentioned previously, macOS has a very strict USB configuration by default, a
 
 Mount up your EFI partition if it isn't already and then we'll merge these patches using your favorite text editor \(remember, I prefer [Atom](https://atom.io)\). 
 
-Add the patches to an array called KextsToPatch under KernelAndKextPatches.  If the array does not exist, go ahead and create it.  Save and close the file.
+Add the patches to an array called KextsToPatch under KernelAndKextPatches.  If the array does not exist, go ahead and create it.  Save and close the file.  If you're using the guide template these patches already exist so just make sure they're enabled.
 
 | Comment | Disabled | Find | Replace | InfoPlistPatch | Name |
 | :--- | :--- | :--- | :--- | :--- | :--- |

@@ -36,7 +36,7 @@ A prerequisite to configuring your iGPU is knowing which GPU you actually have. 
 
 ### iGPU Patching
 
-We can instruct Whatevergreen to patch your GPU by passing specific parameters to macOS in your config.plist. The table below describes the patches that we will be utilizing.
+We can instruct Whatevergreen to patch your GPU by passing specific parameters to macOS in your config.plist. The table below describes the patches that we will be utilizing. These parameters can be found in config.plist under Devices/Properties.
 
 | Key | Function |
 | :--- | :--- |

@@ -24,6 +24,7 @@ EFI
     │       └── VirtualSmc.efi
     ├── kexts
     │   └── Other
+    │       ├── Lilu.kext
     │       ├── NoTouchID.kext
     │       ├── SMCBatteryManager.kext
     │       ├── SMCLightSensor.kext (if applicable)

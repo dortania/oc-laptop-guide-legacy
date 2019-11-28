@@ -19,6 +19,7 @@ EFI
     │   └── UEFI
     │       ├── ApfsDriverLoader.efi
     │       ├── FwRuntimeServices.efi
+    │       ├── FSInject.efi
     │       ├── OcQuirks.efi
     │       ├── HFSPlus.efi
     │       └── VirtualSmc.efi

@@ -81,6 +81,8 @@ EFI
     ├── CLOVERX64.efi
     ├── drivers
     │   └── UEFI
+    │       ├── HFSPlus.efi
+    │       └── FSInject.efi
     ├── kexts
     │   └── Other
     ├── themes

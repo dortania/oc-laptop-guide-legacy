@@ -48,5 +48,5 @@
 * [Enabling FileVault](extras/enabling-filevault.md)
 * [Display Rotation](extras/display-rotation.md)
 * [Dual booting​ with Bluetooth Devices](extras/dual-booting-with-bluetooth-devices.md)
-* [Extra Functionality](extras/extra-functionality.md)
+* [ASUS Function Keys](extras/asussmc.md)
 

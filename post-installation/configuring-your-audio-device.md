@@ -58,9 +58,9 @@ If you don't find your codec listed, you might find that it's just a rebranded v
 
 Once you have a list of layouts, but you don't know which is the right one you can test them one by one.  Just configure the layout id in config.plist with your favorite plist editor and reboot.  If audio works, congratulations!  Otherwise, repeat until you've found it.
 
-Open up your plist editor and the config.plist, then browse to Boot/Arguments and set the layout id.  It should look something like this.
+Open up your plist editor and the config.plist, then browse to Devices/Properties and set the layout-id parameter to your layout id.  It should look something like this.
 
-![](../.gitbook/assets/screen-shot-2019-11-16-at-4.23.34-pm.png)
+![Devices/Properties/layout-id](../.gitbook/assets/screen-shot-2019-11-28-at-8.00.04-am.png)
 
 ## None of the Layout IDs Worked!
 

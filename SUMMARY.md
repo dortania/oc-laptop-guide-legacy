@@ -25,7 +25,6 @@
 * [Setting up Input Devices](prepare-install-macos/setting-up-input-devices.md)
 * [Disabling TouchID](prepare-install-macos/disabling-touchid.md)
 * [Choosing a MacBook SMBIOS](prepare-install-macos/choosing-a-macbook-smbios.md)
-* [Fixing IRQ Conflicts](prepare-install-macos/fixing-irq-conflicts.md)
 * [Pre-Installation Review](prepare-install-macos/pre-installation-review.md)
 * [Installing the Operating System](prepare-install-macos/installing-the-operating-system.md)
 

@@ -2,19 +2,19 @@
 
 ## Add CLOVER to Your Boot Drive
 
-At this point, you should be booting into macOS using your USB stick.  So, how do we put CLOVER on your hard drive/ssd?  Simple, we just need to copy it.  This process is relatively painless, but we're going to need to use the terminal so open that now.
+At this point, you should be booting into macOS using your USB stick. So, how do we put CLOVER on your hard drive/ssd? Simple, we just need to copy it. This process is relatively painless, but we're going to need to use the terminal so open that now.
 
-First, we need to mount your USB EFI partition, and the EFI partition on your hard drive or SSD.  Remember how we learned about using Disk Utility from the command line in the "[What's an EFI?](../useful-skills-terminology/whats-an-efi.md)" section?  Good, because we're doing it twice.
+First, we need to mount your USB EFI partition, and the EFI partition on your hard drive or SSD. Remember how we learned about using Disk Utility from the command line in the "[What's an EFI?](../useful-skills-terminology/whats-an-efi.md)" section? Good, because we're doing it twice.
 
 #### Mount the USB EFI
 
-Let's find out which device is our USB stick.  We'll use the following command for this:
+Let's find out which device is our USB stick. We'll use the following command for this:
 
 ```text
 $ diskutil list
 ```
 
-Thumb drives are classified as "external" devices, so they're easy to locate.  Find the device that matches your USB stick.  Our example device is /dev/disk4 and our EFI is the second partition.
+Thumb drives are classified as "external" devices, so they're easy to locate. Find the device that matches your USB stick. Our example device is /dev/disk4 and our EFI is the second partition.
 
 ```text
 /dev/disk4 (external, physical):
@@ -24,14 +24,14 @@ Thumb drives are classified as "external" devices, so they're easy to locate.  F
    2:                  Apple_HFS macOS Install           15.7 GB    disk4s2
 ```
 
-Now that we know where our USB's EFI is, let's mount it.  First we'll create a folder, and then we'll mount it.  We'll call the folder 'USBEFI'.
+Now that we know where our USB's EFI is, let's mount it. First we'll create a folder, and then we'll mount it. We'll call the folder 'USBEFI'.
 
 ```text
 $ sudo mkdir /Volumes/USBEFI
 $ sudo diskutil mount -mountPoint /Volumes/USBEFI /dev/disk4s1
 ```
 
-Alright, now we'll repeat the process for the internal EFI.  This time we'll look for an internal physical disk that contains the internal drive's EFI.
+Alright, now we'll repeat the process for the internal EFI. This time we'll look for an internal physical disk that contains the internal drive's EFI.
 
 ```text
 $ diskutil list
@@ -65,7 +65,7 @@ $ diskutil unmount /Volumes/SYSEFI
 Volume SYSEFI on disk0s1 unmounted
 ```
 
-That's it!  Unmount your USB stick in Finder, and reboot without it.  You may need to go into your BIOS and set Clover first in your boot order.  If you're able to boot into CLOVER, you can skip the next section and move onto [Display Configuration](../prepare-install-macos/display-configuration.md).
+That's it! Unmount your USB stick in Finder, and reboot without it. You may need to go into your BIOS and set Clover first in your boot order. If you're able to boot into CLOVER, you can skip the next section and move onto [Display Configuration](../prepare-install-macos/display-configuration.md).
 
 ## Adding CLOVER to your BIOS
 
@@ -84,9 +84,13 @@ Most newer computers will pick up Clover automatically, but if it doesn't appear
 * First, use _map_ to find your devices.
 * Once you have an idea of your device, select it by typing _DEVICE:_ replacing device with the actual device. Ex. FS0:
 * Use _ls_ to determine the content of the device. It should contain an EFI folder. Use caution to make sure this device is not your USB stick.
-* Use _bcfg boot dump_ to view your currently configured boot devices \(you may see your USB in this list for validation\).
-  * _Note the index entry of the last entry, it may be 01, 02, etc. Increment that number for the next step. We'll assume it's 02._
-* Use _bcfg boot add 03 FS0:\EFI\BOOT\BOOTX64.EFI Clover_ to add an entry to your boot map.
+* Use `bcfg boot dump` to view your currently configured boot devices \(you may see your USB in this list for validation\).
+* Use `bcfg boot add 00 FS0:\EFI\BOOT\BOOTX64.EFI Clover`to add an entry to your boot map.
+  * 00 is the boot order ranking, 00 being the very first one, and it increments by one, 01 being the second, 02 being the third and so on.
 * Rerun the boot dump command to verify.
 * Reboot.
+
+{% hint style="warning" %}
+Note that on some laptops with weird BIOS configurations \(like InysideH2O on ACER or HP, and especially VAIO laptops\), this may have no effect on boot priority and would still boot windows if it's still installed. You can check [Fix Clovy Clovy in r/Hackintosh Multiboot guide](https://hackintosh-multiboot.gitbook.io/hackintosh-multiboot/uefi/fix-clovy-clovy).
+{% endhint %}
 

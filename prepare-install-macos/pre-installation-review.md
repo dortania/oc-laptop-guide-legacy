@@ -1,6 +1,6 @@
 # Pre-Installation Review
 
-Congratulations!  If you've made it this far you should be ready to install macOS.  Before we do, take one last look at your EFI configuration to make sure it matches the tree view below.
+Congratulations! If you've made it this far you should be ready to install macOS. Before we do, take one last look at your EFI configuration to make sure it matches the tree view below.
 
 ```text
 EFI
@@ -31,6 +31,7 @@ EFI
     │       ├── SMCLightSensor.kext (if applicable)
     │       ├── SMCProcessor.kext
     │       ├── SMCSuperIO.kext
+    │       ├── USBInjectAll.kext
     │       ├── VirtualSMC.kext
     │       ├── VoodooI2C.kext
     │       ├── VoodooI2CHID.kext
@@ -43,5 +44,5 @@ EFI
         └── bdmesg.efi
 ```
 
-Looks good?  Great!  Let's start the installation!
+Looks good? Great! Let's start the installation!
 

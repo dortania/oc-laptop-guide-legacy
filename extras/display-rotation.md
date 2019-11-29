@@ -1,8 +1,8 @@
 # Display Rotation
 
-MacOS does not provide a facility to rotate your display outside of System Preferences.  To work around this, we'll use a display rotation helper.
+MacOS does not provide a facility to rotate your display outside of System Preferences. To work around this, we'll use a display rotation helper.
 
-### Install the Display Rotation Helper
+## Install the Display Rotation Helper
 
 First download the latest version of DisplayRotation.
 
@@ -18,11 +18,9 @@ First download the latest version of DisplayRotation.
    * **Rotate 270 Degrees:** Command+Option+Control+Right Arrow
 5. Open each application with right-click + Open beginning with Standard Rotation.  If you get stuck, use the standard rotation shortcut to reset the display orientation.
 
-### Changing Display Orientation
+## Changing Display Orientation
 
 Use the keyboard shortcuts or application wrappers to change orientation of your display.
 
 ![](../.gitbook/assets/screenshot.png)
-
-
 

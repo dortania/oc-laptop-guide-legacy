@@ -4,27 +4,31 @@
 
 For this step, you'll need a USB thumb drive that's 16GB or larger, and if possible it should be USB 2.0. Plug the stick into another Mac before continuing. This procedure will erase the USB drive, so save any files to another location before proceeding.
 
+{% hint style="info" %}
+This method assumes you are using a **Mac** or a **macOS environment system**, and your target system uses UEFI. If you are using Windows or Linux, review the [Preparing your Installer Media section](https://internet-install.gitbook.io/macos-internet-install/preparing-your-installer.../preparing-your-installer-media...) of the Vanilla Internet install guide instead.
+{% endhint %}
+
 ### Create the Target Partition
 
-Now that you have CLOVER downloaded, we'll create an EFI partition on a thumb drive to use for booting macOS.
+To start, we need to prepare the target partitions where CLOVER \(the boot manager, down bellow\) and macOS Installer will be copied to.
 
-* Plug the USB stick into your computer, and open Disk Utility.
-* In Disk Utility, select View and then Show All Devices.
+* Plug the USB stick into your computer, and open **Disk Utility**.
+* In Disk Utility, select **View** and then **Show All Devices**.
 
 ![](../.gitbook/assets/screen-shot-2019-11-03-at-8.16.28-am.png)
 
 * Select your Thumb Drive, and then Erase.
-* Erase the drive using a macOS Extended partition, and GUID partition map.
+* Erase the drive using a **macOS Extended** partition, and **GUID partition map**.
 
 ![](../.gitbook/assets/screen-shot-2019-11-03-at-8.20.01-am.png)
 
 * Once the drive is formatted, select it again followed by Partition.
-* Click the + symbol to add a partition, and create the following additional partition.
-  * Name: EFI
+* Click the `+` symbol to add a partition, and create the following additional partition.
+  * Name: CLOVER
   * Format: MS-DOS \(FAT\)
-  * Size: 200 MB
+  * Size: 200 MB 
 
-![](../.gitbook/assets/screen-shot-2019-11-03-at-8.22.18-am.png)
+![](../.gitbook/assets/screen-shot-2019-11-29-at-1.08.22-pm.png)
 
 The EFI partition should be mounted automatically once formatted.
 
@@ -34,19 +38,19 @@ To prepare our USB media, we'll use a tool called gibMacOS written by CorpNewt. 
 
 [Download gibMacOs @ Github](https://github.com/corpnewt/gibMacOS)
 
-Once it's downloaded, extract it and run the gibMacOS.command to download the installation media. Use the -v command to specify the version of macOS we're downloading. For our example, we'll download Mojave 10.14.6.
+Once it's downloaded, extract it and run the **gibMacOS.command** to download the installation media. Use the `-v` command to _specify the version of macOS_ we're downloading. For our example, we'll download Mojave 10.14.6.
 
 ```text
 $ ./gibMacOS.command -v 10.14.6
 ```
 
-The process will take a while to complete, when it finishes the macOS installation files can be found in the gibMacOS/macOS Downloads/publicrelease directory. Now that it's downloaded, we can build the application using a script that's included with gibMacOS. To do this, we'll run the script and then drag the folder containing the installation media into the terminal window.
+The process will take a while to complete, when it finishes the macOS installation files can be found in the `gibMacOS/macOS Downloads/publicrelease` directory. Now that it's downloaded, we can build the application using a script that's included with gibMacOS. To do this, we'll run the script and then drag the folder containing the installation media into the terminal window.
 
 ```text
 $ ./BuildmacOSInstallApp.command
 ```
 
-Press enter in the terminal window after dragging and dropping the installation folder, and the script will build the application that we'll use to write our media files to the USB stick. Once that process completes, find the "Install macOS {MacOS Version}.app" in the same folder and drag it to Applications.  Next verify the name of your USB volume and use the createinstallmedia command to write the installation files to the USB stick. Be sure of the volume path before continuing.  If you're using a macOS different than the example update the Install\ macOS\ Mojave.app reference to the version of macOS that you're creating the media for.
+Press enter in the terminal window after dragging and dropping the installation folder, and the script will build the application that we'll use to write our media files to the USB stick. Once that process completes, find the "Install macOS {MacOS Version}.app" in the same folder and drag it to Applications. Next verify the name of your USB volume and use the createinstallmedia command to write the installation files to the USB stick. Be sure of the volume path before continuing. If you're using a macOS different than the example update the Install macOS Mojave.app reference to the version of macOS that you're creating the media for.
 
 ```text
 $ sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/{USB VOLUME}
@@ -63,8 +67,6 @@ First thing first, you should download the latest Clover from the Clover Build R
 [Download Clover @ CBR](https://cloverdb.com)
 
 Now that you have the .tar.lzma package, extract it with The Unarchiver or your archive tool of choice. Mount the extracted ISO image by double clicking it.
-
-_Note: This method assumes you are using a Mac, and your target system uses UEFI. If you are using Windows or Linux, review the_ [_Preparing your Installer Media section_](https://internet-install.gitbook.io/macos-internet-install/preparing-your-installer.../preparing-your-installer-media...) _of the Vanilla Internet install guide instead._
 
 ## Create the CLOVER Structure
 
@@ -93,7 +95,7 @@ EFI
         └── bdmesg.efi
 ```
 
-Now you're ready for the rest of the guide. Don't try and boot CLOVER yet. The structure is in place, but it is missing many components required for booting.
+Now you're ready for the rest of the guide. **Don't try and boot CLOVER yet**. The structure is in place, but it is missing many components required for booting.
 
 That's it!
 

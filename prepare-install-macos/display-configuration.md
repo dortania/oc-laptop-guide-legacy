@@ -43,8 +43,8 @@ We can instruct Whatevergreen to patch your GPU by passing specific parameters t
 | AAPL,ig-platform-id | This is the platform identifier of the GPU you are spoofing.  \(required\) |
 | device-id | This is the device identifier of the GPU you are spoofing. \(required\) |
 | framebuffer-patch-enable | This switch enables framebuffer patching.  It is required when setting framebuffer patches such as fbmem and stolenmem. |
-| framebuffer-fbmem | This patches framebuffer memory, and is used when you cannot configure DVMT to 64MB in the BIOS.  Do not use if the DVMT BIOS option is available. |
-| framebuffer-stolenmem | This patches framebuffer stolen memory, and is used when you cannot configure DVMT to 64MB in the BIOS.  Do not use if the DVMT BIOS option is available. |
+| framebuffer-fbmem | This patches framebuffer memory, and is used when you cannot configure DVMT to 64MB in the BIOS.  _Do not use if the DVMT BIOS option is available._ |
+| framebuffer-stolenmem | This patches framebuffer stolen memory, and is used when you cannot configure DVMT to 64MB in the BIOS.  _Do not use if the DVMT BIOS option is available._ |
 
 These parameters contain the basics to get you started. If you need more advanced patching to enable your framebuffer, review the [Whatevergreen Intel GPU FAQ](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md). The Framebuffer patches are included in the config.plist provided with this guide, however they are disabled. To enable them remove the \# symbol from the beginning of the key.
 
@@ -52,7 +52,11 @@ These parameters contain the basics to get you started. If you need more advance
 
 Now you are ready to configure your patches. Use the table below to select the patch that most closely resembles the configuration from Ark.
 
-Note: \* Denotes the default configured by Whatevergreen. \*\* Denotes the recommended configuration. These recommendations may or may not work for you. Experiment with different configurations until you find the one that best suits your needs.
+{% hint style="info" %}
+`*` Denotes the default configured by Whatevergreen.
+
+`**` Denotes the recommended configuration. These recommendations may or may not work for you. Experiment with different configurations until you find the one that best suits your needs.
+{% endhint %}
 
 ### Intel Ivy Bridge
 
@@ -64,6 +68,12 @@ Note: \* Denotes the default configured by Whatevergreen. \*\* Denotes the recom
 | Intel HD Graphics 4000 | 01660004 | 04006601 | 1 | 32MB | 16MB | 1536MB | LVDS1 |
 | Intel HD Graphics 4000 | 01660008 | 08006601 | 3 | 64MB | 16MB | 1536MB | LVDS1 DP2 |
 | Intel HD Graphics 4000 | 01660009 | 09006601 | 3 | 64MB | 16MB | 1536MB | LVDS1 DP2 |
+
+#### Usual values
+
+* 01660003 for 1366x768 display laptops
+* 01660004 for 1600x900 display laptops or higher
+* 01660009 for laptops with eDP internal display
 
 ### Intel Haswell
 

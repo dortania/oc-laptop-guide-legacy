@@ -28,11 +28,7 @@ I get it, you want your Hackintosh to be able to access the internet and connect
     </tr>
   </thead>
   <tbody></tbody>
-</table>| BCM94360HMB | MHF4 | [AzureWave AW-CB160H](https://wikidevi.com/wiki/AzureWave_AW-CB160H) |
-| :--- | :--- | :--- |
-
-
-| Chipset | Antenna | Models |
+</table>| Chipset | Antenna | Models |
 | :--- | :--- | :--- |
 
 
@@ -50,11 +46,7 @@ I get it, you want your Hackintosh to be able to access the internet and connect
     </tr>
   </thead>
   <tbody></tbody>
-</table>| BCM943602BAED | MHF4 | [Dell DW1830](https://wikidevi.com/wiki/Dell_Wireless_1830_%28DW1830%29) \(A/E key\) |
-| :--- | :--- | :--- |
-
-
-### Apple Native WIFI Cards
+</table>### Apple Native WIFI Cards
 
 Wireless cards manufactured by Apple are natively supported, however they use a proprietary 12+6 connector which requires an adapter to function in an mPCIe or m.2 socket. Before purchasing ensure your laptop has sufficient space for the card + adapter, and make sure to purchase the appropriate 12+6 to mPCIE or m.2 adapter.
 

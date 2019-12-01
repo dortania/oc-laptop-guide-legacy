@@ -44,7 +44,7 @@ You can also add to this list:
 
 ### WIFI cards
 
-Do you have an Intel, Atheros, Realtek, or Broadcom device that isn't a BCM94352Z, BCM943602BAED, or BCM94352HMB? Replace it with an m.2 or Mini PCIe device based one of those three cards. The Dell DW1560, DW1830, Lenovo 04X6020, and Azurewave BCM94352HMB are good choices. The DW1820A _\*\*_works on some desktop Hackintoshes but it is incompatible with laptop Hacks.
+Do you have an Intel, Atheros, Realtek, or Broadcom device that isn't a BCM94352Z, BCM943602BAED, or BCM94352HMB? Replace it with an m.2 or Mini PCIe device based one of those three cards. The Dell DW1560, DW1830, Lenovo 04X6020, and Azurewave BCM94352HMB are good choices. The DW1820A \_\*\*\_works on some desktop Hackintoshes but it is incompatible with laptop Hacks.
 
 If you are installing an earlier version of macOS than Mojave, Atheros 94XX and 95XX Mini PCIe cards are supported. These cards can be used on Mojave by adding support back to macOS, but this configuration is not supported by this guide as this method could stop working at any time or could cause stability issues.
 

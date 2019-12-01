@@ -56,11 +56,7 @@ A lot of guides out there sacrifice security for convenience, and they often neg
     </tr>
   </thead>
   <tbody></tbody>
-</table>|  |  |  |
-| :--- | :--- | :--- |
-
-
-You'll come across this often in guides, there are a few things to ask yourself before aborting.
+</table>You'll come across this often in guides, there are a few things to ask yourself before aborting.
 
 * Does the configuration include the user's DSDT and serial numbers?  This is an indicator that the writer either didn't take the time to clean up before publishing, or they didn't know enough about their Hackintosh to know they should.  Abort.
 * Does the configuration include everything you need for a working hackintosh?  If it does, ask yourself when was the last time it was updated?  If there's a large gap between the publish date and the current date, abort.  If it's maintained, it might be OK.  Check the sources before continuing.

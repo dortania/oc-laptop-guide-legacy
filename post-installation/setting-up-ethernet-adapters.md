@@ -35,9 +35,7 @@ The table below contains a list of kexts that may support your ethernet adapter.
     </tr>
   </thead>
   <tbody></tbody>
-</table>USB Ethernet adapters may work when connected, so you want to check Network Preferences, or System Information after plugging it in and see if it is detected automatically. If it isn't, you may need to either install the support package for your device or extract the kext and add it to C/k/O. The support page for your device should have an installable driver. The table below lists USB Ethernet chipsets and where to find drivers.
-
-| Vendor | Chipset & Driver |
+</table>| Vendor | Chipset & Driver |
 | :--- | :--- |
 | ASIX | [AX88179](https://www.asix.com.tw/download.php?sub=driverdetail&PItemID=131) |
 

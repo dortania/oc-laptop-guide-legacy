@@ -218,59 +218,8 @@ DefinitionBlock("", "SSDT", 2, "hack", "_LANCPRW", 0)
 #ifndef NO_DEFINITIONBLOCK
 }
 #endif
-//EOF
+//EO
 ```
-
-### Patch Method \#4 \_PRW
-
-Search your DSDT for PRW. If you find Method \(\_PRW, 0, NotSerialized\), use these patches.
-
-Use your favorite plist editor to add this patch to the ACPI/DSDT/Patches array in config.plist.
-
-| Key | Type | Value |
-| :--- | :--- | :--- |
-| Comment | String | change Method \_PRW to XPRW, pair with SSDT-\_PRW.aml |
-| Disabled | Bool | False |
-| Find | Data | 5F505257 |
-| Replace | Data | 58505257 |
-
-Compile this patch with maciASL and save as CLOVER/ACPI/patches/SSDT-LANCPRW.aml.
-
-```text
-// For solving instant wake by hooking _PRW
-
-#ifndef NO_DEFINITIONBLOCK
-DefinitionBlock("", "SSDT", 2, "hack", "_PRW", 0)
-{
-#endif
-    External(XPRW, MethodObj)
-    External(RMCF.DWOU, IntObj)
-
-    // In DSDT, native _PRW is renamed to XPRW with Clover binpatch.
-    // As a result, calls to _PRW land here.
-    // The purpose of this implementation is to avoid "instant wake"
-    // by returning 0 in the second position (sleep state supported)
-    // of the return package.
-    Method(_PRW, 2)
-    {
-        For (,,)
-        {
-            // when RMCF.DWOU is provided and is zero, patch disabled
-            If (CondRefOf(\RMCF.DWOU)) { If (!\RMCF.DWOU) { Break }}
-            // either RMCF.DWOU not provided, or is non-zero, patch is enabled
-            If (0x6d == Arg0) { Return (Package() { 0x6d, 0, }) }
-            If (0x69 == Arg0) { Return (Package() { 0x69, 0, }) }
-            Break
-        }
-        Return (XPRW(Arg0, Arg1))
-    }
-#ifndef NO_DEFINITIONBLOCK
-}
-#endif
-//EOF
-```
-
-## 
 
 ## Laptop Still Have Insomnia?
 

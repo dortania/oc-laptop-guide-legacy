@@ -229,7 +229,7 @@ Use your favorite plist editor to add this patch to the ACPI/DSDT/Patches array 
 
 | Key | Type | Value |
 | :--- | :--- | :--- |
-| Comment | String | change Method\_PRW to XPRW, pair with SSDT-\_PRW.aml |
+| Comment | String | change Method \_PRW to XPRW, pair with SSDT-\_PRW.aml |
 | Disabled | Bool | False |
 | Find | Data | 5F505257 |
 | Replace | Data | 58505257 |

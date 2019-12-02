@@ -4,18 +4,21 @@ I get it, you want your Hackintosh to be able to access the internet and connect
 
 ## Supported WIFI/Bluetooth Combo Cards
 
-### Mini PCIe Adapters
-
-| Chipset | Antenna | Models |
-| :--- | :--- | :--- |
-
+### **Mini PCIe Adapters**
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">BCM94352HMB</th>
-      <th style="text-align:left">U.FL</th>
-      <th style="text-align:left">
+      <th style="text-align:left">Chipset</th>
+      <th style="text-align:left">Antenna</th>
+      <th style="text-align:left">Models</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">BCM94352HMB</td>
+      <td style="text-align:left">U.FL</td>
+      <td style="text-align:left">
         <p><a href="https://wikidevi.com/wiki/AzureWave_AW-CE123H">AzureWave AW-CE123H</a>
         </p>
         <p><a href="https://wikidevi.com/wiki/Dell_Wireless_1550_(DW1550)">Dell DW1550</a>
@@ -24,29 +27,46 @@ I get it, you want your Hackintosh to be able to access the internet and connect
         </p>
         <p><a href="https://wikidevi.com/wiki/Lite-On_WCBN606BH_(Lenovo)">Lenovo WCBN606BH</a>
         </p>
-      </th>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table>| Chipset | Antenna | Models |
-| :--- | :--- | :--- |
-
+    <tr>
+      <td style="text-align:left">BCM94360HMB</td>
+      <td style="text-align:left">MHF4</td>
+      <td style="text-align:left"><a href="https://wikidevi.com/wiki/AzureWave_AW-CB160H">AzureWave AW-CB160H</a>
+      </td>
+    </tr>
+  </tbody>
+</table>### PCIe m.2 Adapters
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">BCM94352Z</th>
-      <th style="text-align:left">MHF4</th>
-      <th style="text-align:left">
+      <th style="text-align:left">Chipset</th>
+      <th style="text-align:left">Antenna</th>
+      <th style="text-align:left">Models</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">BCM94352Z</td>
+      <td style="text-align:left">MHF4</td>
+      <td style="text-align:left">
         <p><a href="https://wikidevi.com/wiki/Dell_Wireless_1560_(DW1560)">Dell DW1560</a> (A/E
           key)</p>
         <p><a href="https://wikidevi.com/wiki/Broadcom_BCM94352Z">Lenovo 04X6020</a> (E
           key)</p>
-      </th>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table>### Apple Native WIFI Cards
+    <tr>
+      <td style="text-align:left">BCM943602BAED</td>
+      <td style="text-align:left">MHF4</td>
+      <td style="text-align:left"><a href="https://wikidevi.com/wiki/Dell_Wireless_1830_(DW1830)">Dell DW1830</a> (A/E
+        key)</td>
+    </tr>
+  </tbody>
+</table>_Note: The while the DW1820A is compatible with many Hackintosh desktops, they are generally incompatible with Hackintosh laptops._
+
+### Apple Native WIFI Cards
 
 Wireless cards manufactured by Apple are natively supported, however they use a proprietary 12+6 connector which requires an adapter to function in an mPCIe or m.2 socket. Before purchasing ensure your laptop has sufficient space for the card + adapter, and make sure to purchase the appropriate 12+6 to mPCIE or m.2 adapter.
 

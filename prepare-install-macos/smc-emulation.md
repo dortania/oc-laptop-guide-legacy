@@ -36,9 +36,7 @@ EFI
             └── VirtualSMC.kext
 ```
 
-Simple, right? I thought so too. Download VirtualSMC, as we'll need it as we prepare the install media.
-
-[VirtualSMC Documentation @ Github](https://github.com/acidanthera/VirtualSMC/tree/master/Docs)
+Simple, right? I thought so too.
 
 ## FakeSMC
 

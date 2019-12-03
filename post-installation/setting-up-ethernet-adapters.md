@@ -6,36 +6,42 @@ If your laptop has an Ethernet adapter, or you have a USB dongle that you'd like
 
 The table below contains a list of kexts that may support your ethernet adapter. Before adding them, research to make sure your device is supported! If it is, add the kext to C/k/O and reboot.
 
-| Vendor | Kext |
-| :--- | :--- |
-
-
-| Atheros | [AtherosE2200Ethernet](https://github.com/Mieze/AtherosE2200Ethernet) |
-| :--- | :--- |
-
-
-| Broadcom | [BCM5722D](https://github.com/chris1111/BCM5722D) |
-| :--- | :--- |
-
-
-| Intel | [IntelMausiEthernet](https://github.com/Mieze/IntelMausiEthernet) |
-| :--- | :--- |
-
-
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Realtek</th>
-      <th style="text-align:left">
+      <th style="text-align:left">Vendor</th>
+      <th style="text-align:left">Kext</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">Atheros</td>
+      <td style="text-align:left"><a href="https://github.com/Mieze/AtherosE2200Ethernet">AtherosE2200Ethernet</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Broadcom</td>
+      <td style="text-align:left"><a href="https://github.com/chris1111/BCM5722D">BCM5722D</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Intel</td>
+      <td style="text-align:left"><a href="https://github.com/Mieze/IntelMausiEthernet">IntelMausiEthernet</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Realtek</td>
+      <td style="text-align:left">
         <p><a href="https://github.com/Mieze/RealtekRTL8100">RealtekRTL8100</a> (10/100
           Cards)</p>
         <p><a href="https://github.com/Mieze/RTL8111_driver_for_OS_X">RealtekRTL8111</a> (GbE
           Cards)</p>
-      </th>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table>| Vendor | Chipset & Driver |
+  </tbody>
+</table>### USB Ethernet
+
+| Vendor | Driver |
 | :--- | :--- |
 | ASIX | [AX88179](https://www.asix.com.tw/download.php?sub=driverdetail&PItemID=131) |
 

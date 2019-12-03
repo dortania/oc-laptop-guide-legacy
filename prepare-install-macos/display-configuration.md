@@ -181,7 +181,7 @@ This method is the simplest, and only requires a plist editor. Use the table bel
 
 We'll do that by compiling PNLF SSDT from the Whatevergreen source repository and placing it in CLOVER/ACPI/patched. First, save the dsl to your home directory.
 
-\*\*\*\*[SSDT-PNLF.dsl @ Github](https://raw.githubusercontent.com/acidanthera/WhateverGreen/master/Manual/SSDT-PNLF.dsl)
+[SSDT-PNLF.dsl @ Github](https://raw.githubusercontent.com/acidanthera/WhateverGreen/master/Manual/SSDT-PNLF.dsl)
 
 Now that you've saved the file, you'll need to compile it. For that, we need to download maciASL.
 

@@ -19,20 +19,20 @@ I get it, you want your Hackintosh to be able to access the internet and connect
       <td style="text-align:left">BCM94352HMB</td>
       <td style="text-align:left">U.FL</td>
       <td style="text-align:left">
-        <p><a href="https://wikidevi.com/wiki/AzureWave_AW-CE123H">AzureWave AW-CE123H</a>
+        <p><a href="https://web.archive.org/web/20191003003404/https://wikidevi.com/wiki/AzureWave_AW-CE123H">AzureWave AW-CE123H</a>
         </p>
-        <p><a href="https://wikidevi.com/wiki/Dell_Wireless_1550_(DW1550)">Dell DW1550</a>
+        <p><a href="https://web.archive.org/web/20191003014022/https://wikidevi.com/wiki/Dell_Wireless_1550_(DW1550)">Dell DW1550</a>
         </p>
-        <p><a href="https://wikidevi.com/wiki/HP_TPC-Q013">HP TPC-Q013</a>
+        <p><a href="https://web.archive.org/web/20191002211005/https://wikidevi.com/wiki/HP_TPC-Q013">HP TPC-Q013</a>
         </p>
-        <p><a href="https://wikidevi.com/wiki/Lite-On_WCBN606BH_(Lenovo)">Lenovo WCBN606BH</a>
+        <p><a href="https://web.archive.org/web/20191003063651/https://wikidevi.com/wiki/Lite-On_WCBN606BH_(Lenovo)">Lenovo WCBN606BH</a>
         </p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">BCM94360HMB</td>
       <td style="text-align:left">MHF4</td>
-      <td style="text-align:left"><a href="https://wikidevi.com/wiki/AzureWave_AW-CB160H">AzureWave AW-CB160H</a>
+      <td style="text-align:left"><a href="https://web.archive.org/web/20191020204026/https://wikidevi.com/wiki/AzureWave_AW-CB160H">AzureWave AW-CB160H</a>
       </td>
     </tr>
   </tbody>
@@ -51,16 +51,16 @@ I get it, you want your Hackintosh to be able to access the internet and connect
       <td style="text-align:left">BCM94352Z</td>
       <td style="text-align:left">MHF4</td>
       <td style="text-align:left">
-        <p><a href="https://wikidevi.com/wiki/Dell_Wireless_1560_(DW1560)">Dell DW1560</a> (A/E
+        <p><a href="https://web.archive.org/web/20191003014024/https://wikidevi.com/wiki/Dell_Wireless_1560_(DW1560)">Dell DW1560</a> (A/E
           key)</p>
-        <p><a href="https://wikidevi.com/wiki/Broadcom_BCM94352Z">Lenovo 04X6020</a> (E
+        <p><a href="https://web.archive.org/web/20191003030111/https://wikidevi.com/wiki/Broadcom_BCM94352Z">Lenovo 04X6020</a> (E
           key)</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">BCM943602BAED</td>
       <td style="text-align:left">MHF4</td>
-      <td style="text-align:left"><a href="https://wikidevi.com/wiki/Dell_Wireless_1830_(DW1830)">Dell DW1830</a> (A/E
+      <td style="text-align:left"><a href="https://web.archive.org/web/20191020204443/https://wikidevi.com/wiki/Dell_Wireless_1830_(DW1830)">Dell DW1830</a> (A/E
         key)</td>
     </tr>
   </tbody>
@@ -72,9 +72,9 @@ Wireless cards manufactured by Apple are natively supported, however they use a 
 
 | Chipset | Antenna |
 | :--- | :--- |
-| [BCM94360CS2](https://wikidevi.com/wiki/Broadcom_BCM94360CS2) | MHF4 |
-| [BCM943224PCIEBT2](https://wikidevi.com/wiki/Broadcom_BCM943224PCIEBT2) | MHF4 |
-| [BCM94360CD](https://wikidevi.com/wiki/Broadcom_BCM94360CD) | M.FL |
+| [BCM94360CS2](https://web.archive.org/web/20191003030122/https://wikidevi.com/wiki/Broadcom_BCM94360CS2) | MHF4 |
+| [BCM943224PCIEBT2](https://web.archive.org/web/20191002215550/https://wikidevi.com/wiki/Broadcom_BCM943224PCIEBT2) | MHF4 |
+| [BCM94360CD](https://web.archive.org/web/20191020204211/https://wikidevi.com/wiki/Broadcom_BCM94360CD) | M.FL |
 
 _Note: Be sure to use an adapter that is suited for your WLAN socket and only install to the WLAN socket. Other m.2 sockets may not have all of the paths needed for WIFI and Bluetooth to function. WWAN sockets may be USB or not available without modded BIOS._
 

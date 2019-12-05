@@ -12,7 +12,7 @@ It's not quite as simple as choosing an SMBIOS from a table, as there are lots o
 | :--- | :--- |
 | Apple MacBook Pro "Core i5" 2.6 13" Mid-2014 | MacBookPro11,1 |
 
-Add the model id of your chosen device to your config.plist. Remember that the model id is case sensitive so be sure to add it exactly as it is listed.
+Add the model id of your chosen device as the value of the ProductName parameter in your config.plist. Remember that the model id is case sensitive so be sure to add it exactly as it is listed.
 
 ## Serial Number Generation
 

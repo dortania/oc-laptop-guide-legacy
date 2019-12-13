@@ -32,6 +32,8 @@ I get it, you want your Hackintosh to be able to access the internet and connect
 | :--- | :--- | :--- |
 
 
+### PCIe m.2 Adapters
+
 | Chipset | Antenna | Models |
 | :--- | :--- | :--- |
 

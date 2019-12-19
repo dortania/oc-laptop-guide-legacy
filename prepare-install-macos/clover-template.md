@@ -48,6 +48,14 @@ The table below contains some common fixes that help to eliminate any potential 
 | FixRTC | Bool | YES | Excludes IRQ from RTC device. |
 | FixHPET | Bool | YES | Adds IRQ to HPET device. |
 
+## Misc Fixes
+
+Below you'll find bundled fixes that you may need to enable to correct the problems defined in the table below.  These fixes are defaulted to off.
+
+| Fix | Type | Parameter | Description |
+| :--- | :--- | :--- | :--- |
+| FixShutdown | Bool | Yes | Enable if your system restarts when told to shut down and/or when the system resumes from sleep and all other fixes do not correct it. |
+
 ## Kernel Patches
 
 | Patch | Default | Function |

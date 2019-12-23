@@ -41,7 +41,7 @@ I get it, you want your Hackintosh to be able to access the internet and connect
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">BCM94352Z</th>
+      <th style="text-align:left">BCM94352Z .</th>
       <th style="text-align:left">MHF4</th>
       <th style="text-align:left">
         <p><a href="https://web.archive.org/web/20191003014024/https://wikidevi.com/wiki/Dell_Wireless_1560_(DW1560)">Dell DW1560</a> (A/E

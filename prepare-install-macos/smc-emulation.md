@@ -30,9 +30,9 @@ EFI
         └── Other
             ├── lilu.kext
             ├── SMCBatteryManager.kext
-            ├── SMCLightSensor.kext    // if you have a light sensor
+            ├── SMCLightSensor.kext    // Only use if you have a light sensor.
             ├── SMCProcessor.kext
-            ├── SMCSuperIO.kext        // for various sensors, may not be needed
+            ├── SMCSuperIO.kext        // IO status reporting, causes panics on some systems.
             └── VirtualSMC.kext
 ```
 

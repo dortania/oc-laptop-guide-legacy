@@ -28,9 +28,9 @@ EFI
     │       ├── Lilu.kext
     │       ├── NoTouchID.kext
     │       ├── SMCBatteryManager.kext
-    │       ├── SMCLightSensor.kext (if applicable)
+    │       ├── SMCLightSensor.kext // Only use if you have a light sensor.
     │       ├── SMCProcessor.kext
-    │       ├── SMCSuperIO.kext
+    │       ├── SMCSuperIO.kext // IO status reporting, causes panics on some systems.
     │       ├── USBInjectAll.kext
     │       ├── VirtualSMC.kext
     │       ├── VoodooI2C.kext

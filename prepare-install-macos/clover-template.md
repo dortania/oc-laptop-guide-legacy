@@ -10,7 +10,7 @@ Linked below is a generic config.plist for laptops which is intended to help tak
 
 You can find this template in the Vanilla Laptop Guide artifacts repository.
 
-[Vanilla Laptop Guide Artifacts Repository @ Github](https://github.com/fewtarius/laptop-guide-artifacts)
+[Vanilla Laptop Guide Artifacts Repository @ Github](https://github.com/hackintosh-guides/laptop-guide-artifacts)
 
 Once you have your config copy it to the CLOVER folder in your EFI, saving it as config.plist. Remember, you will need to make some changes to customize it for your system. The location of config.plist should match the tree view below.
 

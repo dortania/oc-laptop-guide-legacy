@@ -7,7 +7,7 @@ Audio devices are much simpler to configure than they used to be thanks to the d
 If you do need a codec dump for whatever reason, boot from your Linux live USB and find the nearest terminal or command line. The following command will display the details of your codec on screen with a pause so you can read it.
 
 ```text
-# cat /proc/asound/card0/codec#0 | less
+cat /proc/asound/card0/codec#0 | less
 ```
 
 The first line should provide your codec. It will look something like this:
@@ -19,7 +19,7 @@ Codec: Realtek ALC294
 If you would like to save the codec to a file so you can reference it again when you're back in macOS, cat it to a file instead and save the file to the boot partition of the USB drive, on another USB drive, or somewhere on your network.
 
 ```text
-# cat /proc/asound/card0/codec#0 > /mnt/MyOtherUSBDrive/codec.txt
+cat /proc/asound/card0/codec#0 > /mnt/MyOtherUSBDrive/codec.txt
 ```
 
 Now that you're familiar with your codec, let's install AppleALC.

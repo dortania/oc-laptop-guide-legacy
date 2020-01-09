@@ -33,7 +33,7 @@ As before it isn't persistent, so you'll want to add it to your profile if you w
 Another command that you can use to track energy usage is called powermetrics. It is a macOS built-in command that will provide more in-depth stats on what your CPU is actually doing.
 
 ```text
-$ sudo powermetrics --show-process-energy
+sudo powermetrics --show-process-energy
 ```
 
 ### Coconut Battery

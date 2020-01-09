@@ -9,7 +9,7 @@ First things first, you have to pair the device in Windows. I know that seems a 
 Once it's paired, you will need to get the link keys from the bluetooth plist in macOS. If you're unsure which link key is which, you can find the MAC address of your device by option-clicking the Bluetooth applet in your menu bar and expanding the connected device you want to share. To get the keys, run the following command in terminal:
 
 ```text
-$ sudo defaults read /private/var/root/Library/Preferences/com.apple.Bluetoothd.plist LinkKeys
+sudo defaults read /private/var/root/Library/Preferences/com.apple.Bluetoothd.plist LinkKeys
 ```
 
 To find the link key for the device, match the devices MAC address in the output. The value assigned to the MAC address is the link key. It may look something like this:

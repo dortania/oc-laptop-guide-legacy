@@ -57,8 +57,8 @@ If you need to add the driver to CLOVER to boot, you will need to extract the ke
 * Follow the steps below.
 
 ```text
-$ cd {package}.pkg
-$ tar -xvf Payload
+cd {package}.pkg
+tar -xvf Payload
 ```
 
 * Copy the extracted kext to C/k/O

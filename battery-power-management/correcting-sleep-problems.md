@@ -11,9 +11,9 @@ That's right..if you're using USBInjectAll in its default configuration, or you 
 Hibernation isn't well supported on hackintoshes, and in some cases it doesn't work at all. We can mitigate this problem by configuring macOS to use standby mode which will preserve what's in memory on sleep but will not write it out to disk and power off the machine.
 
 ```text
-# sudo pmset hibernatemode 0
-# sudo pmset standby 0
-# sudo pmset autopoweroff 0
+sudo pmset hibernatemode 0
+sudo pmset standby 0
+sudo pmset autopoweroff 0
 ```
 
 ## Finding Wake Reasons for Correction
@@ -21,7 +21,7 @@ Hibernation isn't well supported on hackintoshes, and in some cases it doesn't w
 Before talking about the remaining items that cause wakeups, we need to talk about how to tell what's waking your system up. There are a couple of very common reasons and the correction is similar for all of them. To find out what's waking your system, put it to sleep. Do it right now. Alright, it's probably already woken up so let's take a look at the log.
 
 ```text
-$ pmset -g log | grep -e "Wake.*due to "
+pmset -g log | grep -e "Wake.*due to "
 ```
 
 Yep, that's a ton of data. You're looking for a couple of specific things though and they should be pretty close to the bottom of the log.

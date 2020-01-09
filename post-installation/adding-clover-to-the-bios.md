@@ -11,7 +11,7 @@ First, we need to mount your USB EFI partition, and the EFI partition on your ha
 Let's find out which device is our USB stick. We'll use the following command for this:
 
 ```text
-$ diskutil list
+diskutil list
 ```
 
 Thumb drives are classified as "external" devices, so they're easy to locate. Find the device that matches your USB stick. Our example device is /dev/disk4 and our EFI is the second partition.
@@ -27,14 +27,14 @@ Thumb drives are classified as "external" devices, so they're easy to locate. Fi
 Now that we know where our USB's EFI is, let's mount it. First we'll create a folder, and then we'll mount it. We'll call the folder 'USBEFI'.
 
 ```text
-$ sudo mkdir /Volumes/USBEFI
-$ sudo diskutil mount -mountPoint /Volumes/USBEFI /dev/disk4s1
+sudo mkdir /Volumes/USBEFI
+sudo diskutil mount -mountPoint /Volumes/USBEFI /dev/disk4s1
 ```
 
 Alright, now we'll repeat the process for the internal EFI. This time we'll look for an internal physical disk that contains the internal drive's EFI.
 
 ```text
-$ diskutil list
+diskutil list
 /dev/disk0 (internal, physical):
    #:                       TYPE NAME                    SIZE       IDENTIFIER
    0:      GUID_partition_scheme                        *500.1 GB   disk0
@@ -45,23 +45,23 @@ $ diskutil list
 Our example is disk0 partition 1, so let's mount it on 'SYSEFI'.
 
 ```text
-$ sudo mkdir /Volumes/SYSEFI
-$ sudo diskutil mount -mountPoint /Volumes/SYSEFI /dev/disk0s1
+sudo mkdir /Volumes/SYSEFI
+sudo diskutil mount -mountPoint /Volumes/SYSEFI /dev/disk0s1
 ```
 
 Now that we have both EFIs mounted we just need to copy the files.
 
 ```text
-$ cd /Volumes/USBEFI
-$ cp -rf * ../SYSEFI
+cd /Volumes/USBEFI
+cp -rf * ../SYSEFI
 ```
 
 Lastly, let's unmount those devices so we can reboot.
 
 ```text
-$ diskutil unmount /Volumes/USBEFI
+diskutil unmount /Volumes/USBEFI
 Volume USBEFI on disk4s1 unmounted
-$ diskutil unmount /Volumes/SYSEFI
+diskutil unmount /Volumes/SYSEFI
 Volume SYSEFI on disk0s1 unmounted
 ```
 

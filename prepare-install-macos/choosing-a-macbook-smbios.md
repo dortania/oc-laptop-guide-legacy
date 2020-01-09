@@ -21,7 +21,7 @@ Like most devices, MacBooks have unique identifiers that need to match the model
 [Download MacInfoPkg @ Github](https://github.com/acidanthera/MacInfoPkg)
 
 ```text
-$ ./macserial --model MacBookPro11,1
+./macserial --model MacBookPro11,1
 XXXXXXXXXXXX | XXXXXXXXXXXXXXXXX
 XXXXXXXXXXXX | XXXXXXXXXXXXXXXXX
 XXXXXXXXXXXX | XXXXXXXXXXXXXXXXX
@@ -51,7 +51,7 @@ If everything checks out, add the serial number \(left\) and the coresponding bo
 The SmUUID is a unique identifier that macOS uses for a variety of different things ranging from storage of some of your preferences to association within applications like messages. Generating this one is simple, on any Mac just run the uuidgen command. Copy the output to the SmUUID key in your config.plist.
 
 ```text
-$ uuidgen
+uuidgen
 XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 ```
 

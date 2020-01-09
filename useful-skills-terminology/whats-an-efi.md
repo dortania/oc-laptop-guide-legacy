@@ -5,7 +5,7 @@ An EFI partition is where a computer stores the bits needed for the system to bo
 First, inspect your partitions and find your EFI. If you have two hard disks installed, be careful to determine which one contains the correct EFI as the IDs themselves can change on every startup.
 
 ```text
-$ diskutil list
+diskutil list
 /dev/disk0 (internal, physical):
    #:                       TYPE NAME                    SIZE       IDENTIFIER
    0:      GUID_partition_scheme                        *500.1 GB   disk0
@@ -25,14 +25,14 @@ $ diskutil list
 In the example above, you'll note that you have one internal disk and one synthesized disk. The synthesized disk is a container that holds all of your operating system bits. The source for this container can be found at /dev/disk0s2. You should also note that the EFI partition is located on the internal physical disk at /dev/disk0s1. This is the partition that you should mount for CLOVER. Here's how you would do it.
 
 ```text
-$ sudo mkdir /Volumes/EFI
-$ sudo diskutil mount -mountPoint /Volumes/EFI /dev/disk0s1
+sudo mkdir /Volumes/EFI
+sudo diskutil mount -mountPoint /Volumes/EFI /dev/disk0s1
 ```
 
 That's it, you're ready to work on your CLOVER installation! Simple! When you've finished editing your CLOVER folder, you can eject it in Finder or from Terminal like this.
 
 ```text
-$ diskutil unmount /Volumes/EFI
+diskutil unmount /Volumes/EFI
 ```
 
 ## What are EFI drivers?

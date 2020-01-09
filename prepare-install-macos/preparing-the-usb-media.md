@@ -41,19 +41,19 @@ To prepare our USB media, we'll use a tool called gibMacOS written by CorpNewt. 
 Once it's downloaded, extract it and run the **gibMacOS.command** to download the installation media. Use the `-v` command to _specify the version of macOS_ we're downloading. For our example, we'll download Mojave 10.14.6.
 
 ```text
-$ ./gibMacOS.command -v 10.14.6
+./gibMacOS.command -v 10.14.6
 ```
 
 The process will take a while to complete, when it finishes the macOS installation files can be found in the `gibMacOS/macOS Downloads/publicrelease` directory. Now that it's downloaded, we can build the application using a script that's included with gibMacOS. To do this, we'll run the script and then drag the folder containing the installation media into the terminal window.
 
 ```text
-$ ./BuildmacOSInstallApp.command
+./BuildmacOSInstallApp.command
 ```
 
 Press enter in the terminal window after dragging and dropping the installation folder, and the script will build the application that we'll use to write our media files to the USB stick. Once that process completes, find the "Install macOS {MacOS Version}.app" in the same folder and drag it to Applications. Next verify the name of your USB volume and use the createinstallmedia command to write the installation files to the USB stick. Be sure of the volume path before continuing. If you're using a macOS different than the example update the Install macOS Mojave.app reference to the version of macOS that you're creating the media for.
 
 ```text
-$ sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/{USB VOLUME}
+sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/{USB VOLUME}
 ```
 
 Press yes to overwrite the volume, and the utility should format and write the installation files to the stick.
@@ -77,7 +77,7 @@ EFI
 ├── BOOT
 │   └── BOOTX64.efi
 └── CLOVER
-    ├── ACPI
+    ├── ACPI // create these folders
     │   ├── origin
     │   └── patched
     ├── CLOVERX64.efi

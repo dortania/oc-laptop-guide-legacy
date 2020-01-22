@@ -1,12 +1,12 @@
 # BIOS Configuration
 
-In order to boot macOS you have to make a few adjustments to your laptop's BIOS configuration for compatibility. Some of these settings may not appear in your BIOS, that's OK as many of them can also be corrected in CLOVER. If the parameter isn't found in your laptop's BIOS, just ignore it.
+In order to boot macOS you have to make a few adjustments to your laptop's BIOS configuration for compatibility. Some of these settings may not appear in your BIOS, that's OK as many of them can also be corrected in OpenCore. If the parameter isn't found in your laptop's BIOS, just ignore it.
 
 For information on how to access your BIOS configuration, refer to your laptop's users manual.
 
 ## Turn off Secure Boot
 
-Disable it, or you won't be able to access CLOVER to boot macOS or the macOS installation media.
+Disable it, or you won't be able to access OpenCore to boot macOS or the macOS installation media.
 
 ## Turn the TPM off
 

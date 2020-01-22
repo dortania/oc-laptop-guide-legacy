@@ -56,7 +56,7 @@ Does your laptop have an AMD or Nvidia GPU? You'll need to disable it and use th
 
 ### Built in SDCard Readers
 
-If you have an SDCard reader that's connected through an internal USB hub, it's probably not going to work. Do yourself a favor if you need SDCard support and buy an inexpensive reader. If your SDCard reader is PCI based there is a small chance that it will work in macOS, but you're probably going to want to fake the ID so it appears as a native reader to the operating system. See! We're not even to the next page yet, and it's already important to know your hardware!
+If you have an SDCard reader that's connected through an internal USB hub, it's probably not going to work. Do yourself a favor if you need SDCard support and buy an inexpensive reader. If your SDCard reader is PCI based there is a small chance that it will work in macOS, but you're probably going to want to fake the ID so it appears as a native reader to the operating system.
 
 ### Fingerprint Readers
 

@@ -6,6 +6,10 @@ Welcome to the Internet! Here we have guides of all shapes and sizes, simple gui
 
 In my opinion a complete guide contains the following information:
 
+### Is the Guide up to date?
+
+At the time of writing \(Jan 2020\), Opencore is under heavy development and many of the quirks and behaviors change between releases. Guides tend to go out of date quickly, meaning that the supplied Config.plist may not even _boot_.
+
 ### Hardware details
 
 The more information the better, there are so many variations of laptops out there that there are sub model identifiers within models. A good guide will identify things like:
@@ -56,9 +60,7 @@ A lot of guides out there sacrifice security for convenience, and they often neg
     </tr>
   </thead>
   <tbody></tbody>
-</table>You'll come across this often in guides, there are a few things to ask yourself before aborting.
-
-* Does the configuration include the user's DSDT and serial numbers?  This is an indicator that the writer either didn't take the time to clean up before publishing, or they didn't know enough about their Hackintosh to know they should.  Abort.
+</table>* Does the configuration include the user's DSDT and serial numbers?  This is an indicator that the writer either didn't take the time to clean up before publishing, or they didn't know enough about their Hackintosh to know they should.  Abort.
 * Does the configuration include everything you need for a working hackintosh?  If it does, ask yourself when was the last time it was updated?  If there's a large gap between the publish date and the current date, abort.  If it's maintained, it might be OK.  Check the sources before continuing.
 * Does the configuration include only the deviations from standard?  Maybe it has a clean config.plist, a usb map, and a few SSDTs or even a kext for something that's hard to find.  In this case, it's probably OK.  Still want to check that source though!
 

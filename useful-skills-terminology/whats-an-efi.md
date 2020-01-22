@@ -1,6 +1,6 @@
 # What's an EFI?
 
-An EFI partition is where a computer stores the bits needed for the system to boot. In the case of a Hackintosh, it's where CLOVER and all of the drivers and configurations that CLOVER needs to start your system are stored. As you are building your Hackintosh, you are going to become intimately familiar with this partition and its content. Older computers that don't support EFI boot CLOVER using a legacy stub. Here's how you mount it.
+An EFI partition is where a computer stores the bits needed for the system to boot. In the case of a Hackintosh, it's where OpenCore and all of the drivers and configurations that OpenCore needs to start your system are stored. As you are building your Hackintosh, you are going to become intimately familiar with this partition and its content. Older computers that don't support EFI boot CLOVER using a legacy stub. Here's how you mount it.
 
 First, inspect your partitions and find your EFI. If you have two hard disks installed, be careful to determine which one contains the correct EFI as the IDs themselves can change on every startup.
 

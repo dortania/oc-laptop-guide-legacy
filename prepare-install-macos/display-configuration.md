@@ -6,7 +6,7 @@ Configuring a laptop's integrated GPU is a lot like configuring a desktop's inte
 
 Depending on your laptop, you may have very little to do to configure your iGPU, or you could have to add an elaborate set of patches to configure stuff like DVMT. The most important thing you'll want here is the WhateverGreen kext and it's dependency, LILU. Lilu is a patching mechanism that's used by multiple kernel extensions, and WhateverGreen is responsible for patching your display adapter\(s\).
 
-If you haven't already added WhateverGreen to your CLOVER EFI, better do that now before continuing. You can get it here.
+If you haven't already added WhateverGreen to your OpenCore EFI, better do that now before continuing. You can get it here.
 
 [Download WhateverGreen](https://github.com/acidanthera/WhateverGreen/releases)
 
@@ -157,9 +157,9 @@ Now you are ready to configure your patches. Use the table below to select the p
 | Intel Iris Plus Graphics 655\* | 3EA50009 | 0900A53E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
 | Unlisted iGPU | 3EA60005 | 0500A63E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
 
-## CLOVER Resolution
+## OpenCore Resolution
 
-After completing Whatevergreen patching, it's a good time to set the default resolution on CLOVER. Open your config.plist and browse to GUI. Set the ScreenResolution string to the native resolution of your laptop. If you aren't sure, look up your laptop's specs on the manufacturer website.
+After completing Whatevergreen patching, it's a good time to set the default resolution on OpenCore. Open your config.plist and browse to GUI. Set the ScreenResolution string to the native resolution of your laptop. If you aren't sure, look up your laptop's specs on the manufacturer website.
 
 Now that you have your GPU sorted, let's move on to the backlight.
 
@@ -179,7 +179,7 @@ This method is the simplest, and only requires a plist editor. Use the table bel
 
 ### Method 2 - SSDT-PNLF
 
-We'll do that by compiling PNLF SSDT from the Whatevergreen source repository and placing it in CLOVER/ACPI/patched. First, save the dsl to your home directory.
+We'll do that by compiling PNLF SSDT from the Whatevergreen source repository and placing it in OpenCore/ACPI/patched. First, save the dsl to your home directory.
 
 [SSDT-PNLF.dsl @ Github](https://raw.githubusercontent.com/acidanthera/WhateverGreen/master/Manual/SSDT-PNLF.dsl)
 
@@ -187,7 +187,7 @@ Now that you've saved the file, you'll need to compile it. For that, we need to 
 
 [maciASL Project @ Github](https://github.com/acidanthera/MaciASL)
 
-Run maciASL, and open the SSDT-PNLF.dsl that you created previously. Save the file to CLOVER/ACPI/patched/SSDT-PNLF.aml
+Run maciASL, and open the SSDT-PNLF.dsl that you created previously. Save the file to OpenCore/ACPI/patched/SSDT-PNLF.aml
 
 Before rebooting, review your config.plist and make sure patch GFX0 to IGPU and AddPNLF are disabled if they exist.
 

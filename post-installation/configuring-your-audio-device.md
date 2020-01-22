@@ -38,7 +38,7 @@ Your new AppleALC kext path should look like it does in the tree below.
 
 ```text
 EFI
-└── CLOVER
+└── OpenCore
     └── kexts
         └── Other
             └── AppleALC.kext
@@ -82,7 +82,7 @@ As with AppleALC, it should follow the same pattern in the tree.
 
 ```text
 EFI
-└── CLOVER
+└── OpenCore
     └── kexts
         └── Other
             └── VoodooHDA.kext

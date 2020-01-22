@@ -8,7 +8,7 @@ VirtualSMC is an advanced SMC emulator. It includes plugins to recognize your CP
 
 [Download VirtualSMC @ Github](https://github.com/acidanthera/VirtualSMC)
 
-VirtualSMC includes two main components and a few plugins for extra functionality. VirtualSMC.efi is a direct replacement for SMCHelper which is included with CLOVER by default. The EFI drivers help CLOVER load FileVault and resume from hibernation. The VirtualSMC kext is the main SMC emulator that helps with system management, and the plugins add support for battery status, light sensors to dim or brighten the display, as well as CPU and IO statistics.
+VirtualSMC includes two main components and a few plugins for extra functionality. VirtualSMC.efi is a direct replacement for SMCHelper which is included with OpenCore by default. The EFI drivers help OpenCore load FileVault and resume from hibernation. The VirtualSMC kext is the main SMC emulator that helps with system management, and the plugins add support for battery status, light sensors to dim or brighten the display, as well as CPU and IO statistics.
 
 Before installing VirtualSMC you will also need to download and install VirtualSMC's dependency kext, Lilu. Lilu is a patching system for macOS. Many of the kexts that you'll need to boot and operate your hackintosh require it.
 
@@ -16,13 +16,13 @@ Before installing VirtualSMC you will also need to download and install VirtualS
 
 ### Installing VirtualSMC
 
-Once you have the packages downloaded, mount your EFI partition and delete SMCHelper from CLOVER/drivers/UEFI or wherever the EFI drivers are stored for your installation. Copy the VirtualSMC EFI into the directory to replace it.
+Once you have the packages downloaded, mount your EFI partition and delete SMCHelper from OpenCore/drivers/UEFI or wherever the EFI drivers are stored for your installation. Copy the VirtualSMC EFI into the directory to replace it.
 
 Once that's done, move over to C/k/O and make sure there are no instance of FakeSMC. That's a VirtualSMC competitor, we don't need that. Copy all of the VirtualSMC kexts and the Lilu kext into the directory. When you're done it should look something like this.
 
 ```text
 EFI
-└── CLOVER
+└── OpenCore
     ├── drivers
     │       └──UEFI
     │           └── VirtualSmc.efi

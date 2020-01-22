@@ -79,5 +79,5 @@ Users of SMBIOS of Macbook Pros earlier than 2016 should use tool called ssdtPRG
 
 [Visit ssdtPRGen @ Github](https://github.com/Piker-Alpha/ssdtPRGen.sh)
 
-Using ssdtPRGen is relatively simple, run the utility and follow the prompts. This will create a frequency configuration for your system and place the files in ~/Library/ssdtPRGen. Copy ~/Library/ssdtPRGen/ssdt.aml to CLOVER/ACPI/patched, update CLOVER if you are using a strict SSDT configuration \(sorted order with an explicit list of SSDTs in config.plist\), make sure SSDT/Generate/PluginType is set to True, and reboot. If you are not using a strict SSDT configuration in CLOVER you can ignore that step and just reboot.
+Using ssdtPRGen is relatively simple, run the utility and follow the prompts. This will create a frequency configuration for your system and place the files in ~/Library/ssdtPRGen. Copy ~/Library/ssdtPRGen/ssdt.aml to OpenCore/ACPI/patched, update OpenCore if you are using a strict SSDT configuration \(sorted order with an explicit list of SSDTs in config.plist\), make sure SSDT/Generate/PluginType is set to True, and reboot. If you are not using a strict SSDT configuration in OpenCore you can ignore that step and just reboot.
 

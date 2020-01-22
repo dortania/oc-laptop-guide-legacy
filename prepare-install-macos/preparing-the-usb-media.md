@@ -10,7 +10,7 @@ This method assumes you are using a **Mac** or a **macOS environment system**, a
 
 ### Create the Target Partition
 
-To start, we need to prepare the target partitions where CLOVER \(the boot manager, down bellow\) and macOS Installer will be copied to.
+To start, we need to prepare the target partitions where OpenCore \(the boot manager, down bellow\) and macOS Installer will be copied to.
 
 * Plug the USB stick into your computer, and open **Disk Utility**.
 * In Disk Utility, select **View** and then **Show All Devices**.
@@ -24,7 +24,7 @@ To start, we need to prepare the target partitions where CLOVER \(the boot manag
 
 * Once the drive is formatted, select it again followed by Partition.
 * Click the `+` symbol to add a partition, and create the following additional partition.
-  * Name: CLOVER
+  * Name: OpenCore
   * Format: MS-DOS \(FAT\)
   * Size: 200 MB 
 
@@ -58,7 +58,7 @@ sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallme
 
 Press yes to overwrite the volume, and the utility should format and write the installation files to the stick.
 
-## Installing CLOVER
+## Installing OpenCore
 
 Installing Clover is a relatively simple process, and most guides recommend using the Clover installer. We're going to instead walk down the manual path of installing Clover to your EFI. This process works for thumb drives and for installation onto your SSD/HDD and it will prepare your EFI for changes made in subsequent sections.
 
@@ -68,19 +68,19 @@ First thing first, you should download the latest Clover from the Clover Build R
 
 Now that you have the .tar.lzma package, extract it with The Unarchiver or your archive tool of choice. Mount the extracted ISO image by double clicking it.
 
-## Create the CLOVER Structure
+## Create the OpenCore Structure
 
-The tree view below describes the typical layout of a CLOVER UEFI installation. Use the CLOVER iso image to create this structure within your EFI partition by making directories and copying files from the ISO. Do not add anything more than what's listed in the tree view below for now.
+The tree view below describes the typical layout of a OpenCore UEFI installation. Use the OpenCore iso image to create this structure within your EFI partition by making directories and copying files from the ISO. Do not add anything more than what's listed in the tree view below for now.
 
 ```text
 EFI
 ├── BOOT
 │   └── BOOTX64.efi
-└── CLOVER
+└── OpenCore
     ├── ACPI // create these folders
     │   ├── origin
     │   └── patched
-    ├── CLOVERX64.efi
+    ├── OpenCoreX64.efi
     ├── drivers
     │   └── UEFI
     │       ├── HFSPlus.efi
@@ -95,7 +95,7 @@ EFI
         └── bdmesg.efi
 ```
 
-Now you're ready for the rest of the guide. **Don't try and boot CLOVER yet**. The structure is in place, but it is missing many components required for booting.
+Now you're ready for the rest of the guide. **Don't try and boot OpenCore yet**. The structure is in place, but it is missing many components required for booting.
 
 That's it!
 

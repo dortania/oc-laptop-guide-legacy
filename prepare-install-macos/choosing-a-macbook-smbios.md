@@ -4,7 +4,7 @@ One of the final steps on your Hackintosh installation journey is choosing the r
 
 ## The SMBIOS
 
-SMBIOS or System Management BIOS tells macOS what hardware you're using so it knows how to set things up in a way that's optimal for the hardware it represents. All of this work happens in CLOVER via the config.plist. Choosing the right SMBIOS is actually easier than you might think. All we have to do here is match the CPU in your laptop to the MacBook, MacBook Air, or MacBook Pro that it most closely resembles.
+SMBIOS or System Management BIOS tells macOS what hardware you're using so it knows how to set things up in a way that's optimal for the hardware it represents. All of this work happens in OpenCore via the config.plist. Choosing the right SMBIOS is actually easier than you might think. All we have to do here is match the CPU in your laptop to the MacBook, MacBook Air, or MacBook Pro that it most closely resembles.
 
 It's not quite as simple as choosing an SMBIOS from a table, as there are lots of different models available. Instead, head over to EveryMac and look through the three models. Once you have made your selection you will need the Model ID. We'll use the table below to help visualize the data you need.
 

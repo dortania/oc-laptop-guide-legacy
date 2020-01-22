@@ -30,7 +30,7 @@ If you can, if not you can disable it with a patch later. You may need to boot t
 
 ## Enable Legacy USB support
 
-This is sometimes needed for your keyboard to work in CLOVER. It's always safe to set if it's available.
+This is sometimes needed for your keyboard to work in OpenCore. It's always safe to set if it's available.
 
 ## Enable XHCI Handoff
 

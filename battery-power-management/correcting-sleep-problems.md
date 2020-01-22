@@ -72,7 +72,7 @@ If these wakes are undesirable, close any applications that may create them befo
 
 ## Patching To Correct Sleep Issues
 
-The good news is that you can probably correct all of these issues with a single CLOVER configuration change and SSDT hotpatch from Rehabman! Determine which patch you need by inspecting your DSDT and matching the methods to the patches below.
+The good news is that you can probably correct all of these issues with a single OpenCore configuration change and SSDT hotpatch from Rehabman! Determine which patch you need by inspecting your DSDT and matching the methods to the patches below.
 
 ### Patch Method \#1 \(GPRW,2,N\)
 
@@ -87,7 +87,7 @@ Use your favorite plist editor to add this patch to the ACPI/DSDT/Patches array 
 | Find | Data | 4750525702 |
 | Replace | Data | 5850525702 |
 
-Compile this patch with maciASL and save as CLOVER/ACPI/patches/SSDT-GPRW.aml.
+Compile this patch with maciASL and save as OpenCore/ACPI/patches/SSDT-GPRW.aml.
 
 ```text
 // For solving instant wake by hooking GPRW or UPRW
@@ -136,7 +136,7 @@ Use your favorite plist editor to add this patch to the ACPI/DSDT/Patches array 
 | Find | Data | 555052570a7012 |
 | Replace | Data | 585052570a7012 |
 
-Compile this patch with maciASL and save as CLOVER/ACPI/patches/SSDT-UPRW.aml.
+Compile this patch with maciASL and save as OpenCore/ACPI/patches/SSDT-UPRW.aml.
 
 ```text
 // For solving instant wake by hooking GPRW or UPRW
@@ -184,7 +184,7 @@ Use your favorite plist editor to add this patch to the ACPI/DSDT/Patches array 
 | Find | Data | 00001900141f5f50525708 |
 | Replace | Data | 00001900141f5850525708 |
 
-Compile this patch with maciASL and save as CLOVER/ACPI/patches/SSDT-LANCPRW.aml.
+Compile this patch with maciASL and save as OpenCore/ACPI/patches/SSDT-LANCPRW.aml.
 
 ```text
 // For solving instant wake by hooking GPRW

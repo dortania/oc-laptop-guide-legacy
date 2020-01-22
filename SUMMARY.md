@@ -21,7 +21,7 @@
 * [macOS Memory Allocation](prepare-install-macos/macos-memory-allocation.md)
 * [SMC Emulation](prepare-install-macos/smc-emulation.md)
 * [Disabling TouchID lookup](prepare-install-macos/disabling-touchid.md)
-* [CLOVER Template](prepare-install-macos/clover-template.md)
+* [OpenCore Template](prepare-install-macos/clover-template.md)
 * [Display Configuration](prepare-install-macos/display-configuration.md)
 * [Choosing a MacBook SMBIOS](prepare-install-macos/choosing-a-macbook-smbios.md)
 * [Setting up Input Devices](prepare-install-macos/setting-up-input-devices.md)
@@ -31,7 +31,7 @@
 
 ## Post Installation
 
-* [Adding CLOVER to Your Boot Drive](post-installation/adding-clover-to-the-bios.md)
+* [Adding OpenCore to Your Boot Drive](post-installation/adding-clover-to-the-bios.md)
 * [Configuring USB Ports](post-installation/configuring-usb-ports.md)
 * [Enabling WIFI & Bluetooth](post-installation/enabling-wifi-and-bluetooth.md)
 * [Setting up Ethernet Adapters](post-installation/setting-up-ethernet-adapters.md)

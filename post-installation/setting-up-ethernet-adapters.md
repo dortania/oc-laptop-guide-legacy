@@ -47,7 +47,7 @@ The table below contains a list of kexts that may support your ethernet adapter.
 
 ### External \(USB\) Ethernet for Installation
 
-If you need to add the driver to CLOVER to boot, you will need to extract the kext from the installation package after downloading. Here's how you can do that.
+If you need to add the driver to OpenCore to boot, you will need to extract the kext from the installation package after downloading. Here's how you can do that.
 
 * Install The Unarchiver \(App Store\)
 * Open the package's DMG to mount it.

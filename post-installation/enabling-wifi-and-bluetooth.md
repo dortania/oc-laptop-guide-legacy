@@ -78,7 +78,7 @@ The location of the kext should match the tree below.
 
 ```text
 EFI
-└── CLOVER
+└── OpenCore
     └── kexts
         └── Other
             └── AirportBrcmFixup.kext
@@ -104,7 +104,7 @@ When finished, the kexts should be located in your EFI as indicated in the tree 
 
 ```text
 EFI
-└── CLOVER
+└── OpenCore
     └── kexts
         └── Other
             ├── BrcmBluetoothInjector.kext

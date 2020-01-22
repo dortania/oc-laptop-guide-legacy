@@ -1,8 +1,8 @@
-# Adding CLOVER to Your Boot Drive
+# Adding OpenCore to Your Boot Drive
 
-## Add CLOVER to Your Boot Drive
+## Add OpenCore to Your Boot Drive
 
-At this point, you should be booting into macOS using your USB stick. So, how do we put CLOVER on your hard drive/ssd? Simple, we just need to copy it. This process is relatively painless, but we're going to need to use the terminal so open that now.
+At this point, you should be booting into macOS using your USB stick. So, how do we put OpenCore on your hard drive/ssd? Simple, we just need to copy it. This process is relatively painless, but we're going to need to use the terminal so open that now.
 
 First, we need to mount your USB EFI partition, and the EFI partition on your hard drive or SSD. Remember how we learned about using Disk Utility from the command line in the "[What's an EFI?](../useful-skills-terminology/whats-an-efi.md)" section? Good, because we're doing it twice.
 
@@ -65,9 +65,9 @@ diskutil unmount /Volumes/SYSEFI
 Volume SYSEFI on disk0s1 unmounted
 ```
 
-That's it! Unmount your USB stick in Finder, and reboot without it. You may need to go into your BIOS and set Clover first in your boot order. If you're able to boot into CLOVER, you can skip the next section and move onto [Display Configuration](../prepare-install-macos/display-configuration.md).
+That's it! Unmount your USB stick in Finder, and reboot without it. You may need to go into your BIOS and set Clover first in your boot order. If you're able to boot into OpenCore, you can skip the next section and move onto [Display Configuration](../prepare-install-macos/display-configuration.md).
 
-## Adding CLOVER to your BIOS
+## Adding OpenCore to your BIOS
 
 Most newer computers will pick up Clover automatically, but if it doesn't appear as a bootable selection in your BIOS here's how to correct it.
 
@@ -79,7 +79,7 @@ Most newer computers will pick up Clover automatically, but if it doesn't appear
 * _cd_ - Change directories.
 * _bcfg_ - Boot configuration, used to read and write BIOS boot data.
 
-### Add CLOVER to your BIOS
+### Add OpenCore to your BIOS
 
 * First, use _map_ to find your devices.
 * Once you have an idea of your device, select it by typing _DEVICE:_ replacing device with the actual device. Ex. FS0:

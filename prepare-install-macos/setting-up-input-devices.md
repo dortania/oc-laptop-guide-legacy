@@ -8,11 +8,11 @@ Most laptop keyboards are PS/2 devices. Yep, it's 2019 and PS/2 is still a thing
 
 [VoodooPS2 Project Page](https://github.com/acidanthera/VoodooPS2)
 
-Download the latest release and add it to CLOVER placing the VoodooPS2Controller kext in your C/k/O folder. The path should match the tree below.
+Download the latest release and add it to OpenCore placing the VoodooPS2Controller kext in your C/k/O folder. The path should match the tree below.
 
 ```text
 EFI
-└── CLOVER
+└── OpenCore
     └── kexts
         └── Other
             └── VoodooPS2Controller.kext
@@ -40,7 +40,7 @@ Now that you've saved the file, you'll need to compile it. For that, we need to 
 
 [maciASL Project @ Github](https://github.com/acidanthera/MaciASL)
 
-Run maciASL, and open the SSDT-XOSI.dsl that you created previously. Save the file as a binary to CLOVER/ACPI/patched/SSDT-XOSI.aml. Note: When saving as a binary, maciASL will automatically compile the SSDT.
+Run maciASL, and open the SSDT-XOSI.dsl that you created previously. Save the file as a binary to OpenCore/ACPI/patched/SSDT-XOSI.aml. Note: When saving as a binary, maciASL will automatically compile the SSDT.
 
 ### \_OSI to XOSI Rename
 
@@ -77,7 +77,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "I2C", 0)
 }
 ```
 
-Using maciASL, save this SSDT patch as a binary to CLOVER/ACPI/patched/SSDT-GPI0.aml
+Using maciASL, save this SSDT patch as a binary to OpenCore/ACPI/patched/SSDT-GPI0.aml
 
 ## Installing VoodooI2C
 
@@ -100,7 +100,7 @@ The VoodooI2C configuration should match the tree view below.
 
 ```text
 EFI
-└── CLOVER
+└── OpenCore
     └── kexts
         └── Other
             ├── VoodooI2C.kext
@@ -119,5 +119,5 @@ For touchscreens, you can also try VoodooI2C with VoodooI2CHID, if it's I2C it s
 
 ## Bluetooth Keyboard and Mice
 
-One of the common questions asked is if users can use their bluetooth keyboard and mouse in the BIOS and CLOVER, and the answer to that is yes..but. In order for these devices to work in pre-boot environments like the BIOS, in CLOVER, or even in the FileVault Prebooter; the bluetooth adapter needs to support a profile called HID Proxy. This profile allows your devices to connect to the adapter before booting the OS and it passes them to the system as a USB keyboard and mouse. Without this profile, it is not possible to use these devices until you're in the operating system.
+One of the common questions asked is if users can use their bluetooth keyboard and mouse in the BIOS and OpenCore, and the answer to that is yes..but. In order for these devices to work in pre-boot environments like the BIOS, in OpenCore, or even in the FileVault Prebooter; the bluetooth adapter needs to support a profile called HID Proxy. This profile allows your devices to connect to the adapter before booting the OS and it passes them to the system as a USB keyboard and mouse. Without this profile, it is not possible to use these devices until you're in the operating system.
 

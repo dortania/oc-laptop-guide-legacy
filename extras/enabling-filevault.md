@@ -6,7 +6,7 @@ FileVault is Apple's solution to whole disk encryption. Once enabled, it will us
 
 ## Setting up FileVault
 
-You should never just enable FileVault on a Hackintosh without first installing the prerequisites. Doing so will encrypt your disk, and CLOVER won't have the extensions that it needs to help you decrypt it, leaving you stuck. You can add the extensions to a USB drive later, but let's avoid that scenario altogether by setting it up now.
+You should never just enable FileVault on a Hackintosh without first installing the prerequisites. Doing so will encrypt your disk, and OpenCore won't have the extensions that it needs to help you decrypt it, leaving you stuck. You can add the extensions to a USB drive later, but let's avoid that scenario altogether by setting it up now.
 
 The first thing you're going to want to do is install VirtualSMC if you have not done so yet. You can learn more about that by clicking [here](../prepare-install-macos/smc-emulation.md).
 
@@ -16,14 +16,14 @@ Next you're going to need to download AppleSupportPkg. It contains all of the re
 
 [Download AppleSupportPkg @ Github](https://github.com/acidanthera/AppleSupportPkg)
 
-Browse to CLOVER/drivers/UEFI and delete the following files if they exist.
+Browse to OpenCore/drivers/UEFI and delete the following files if they exist.
 
 * SMCHelper.efi
 * UsbKbDxe.efi
 * UsbMouseDxe.efi
 * ApfsDriverLoader.efi
 
-Now, copy the following files from AppleSupportPkg to CLOVER/drivers/UEFI.
+Now, copy the following files from AppleSupportPkg to OpenCore/drivers/UEFI.
 
 * AppleGenericInput.efi
 * ApfsDriverLoader.efi
@@ -34,7 +34,7 @@ Excluding the EFI drivers necessary for booting, your EFI folder should look lik
 
 ```text
 EFI
-└── CLOVER
+└── OpenCore
     └── drivers
         └── UEFI
             ├── ApfsDriverLoader.efi

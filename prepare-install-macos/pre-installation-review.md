@@ -6,14 +6,14 @@ Congratulations! If you've made it this far you should be ready to install macOS
 EFI
 ├── BOOT
 │   └── BOOTX64.efi
-└── CLOVER
+└── OpenCore
     ├── ACPI
     │   ├── origin
     │   └── patched
     │       ├── SSDT-GPI0.aml
     │       ├── SSDT-PNLF.aml
     │       └── SSDT-XOSI.aml
-    ├── CLOVERX64.efi
+    ├── OpenCoreX64.efi
     ├── config.plist
     ├── drivers
     │   └── UEFI

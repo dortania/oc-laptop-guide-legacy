@@ -8,7 +8,7 @@ The location of the kext should match the tree view below.
 
 ```text
 EFI
-└── CLOVER
+└── OpenCore
     └── kexts
         └── Other
             └── NoTouchID.kext

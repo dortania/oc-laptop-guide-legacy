@@ -12,7 +12,7 @@ ERROR!!! Load prelinked kernel with status 0x8000000000000009
 
 ## OcQuirks
 
-Helpers are EFI drivers, that are used by CLOVER to bootstrap macOS. The best supported and most stable helper is OcQuirks. Currently this helper won't be found in the upstream version of CLOVER, but it can be found on Github and can be downloaded from the repository linked below.
+Helpers are EFI drivers, that are used by OpenCore to bootstrap macOS. The best supported and most stable helper is OcQuirks. Currently this helper won't be found in the upstream version of OpenCore, but it can be found on Github and can be downloaded from the repository linked below.
 
 [ReddestDream's OcQuirks @ Github](https://github.com/ReddestDream/OcQuirks)
 
@@ -32,11 +32,11 @@ The table below lists helpers that you may have found on the web while you were 
 
 ## Inserting the Memory Fix into the EFI
 
-Now that you have your memory fix, add it to your CLOVER EFI folder. The layout should match the tree view below.
+Now that you have your memory fix, add it to your OpenCore EFI folder. The layout should match the tree view below.
 
 ```text
 EFI
-└── CLOVER
+└── OpenCore
     └── drivers
         └──UEFI
            ├──FwRuntimeServices.efi

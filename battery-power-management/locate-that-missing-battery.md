@@ -10,7 +10,7 @@ First of all, you're going to need to dust off maciASL. Remember that? You used 
 
 ### Dumping your DSDT
 
-The first step in getting ready to patch your DSDT is to get a copy of it from your firmware. You can do this by rebooting your computer and pressing F4 at the CLOVER menu, before launching macOS. That instructs CLOVER to drop a copy of it in your EFI partition under CLOVER/ACPI/origin.
+The first step in getting ready to patch your DSDT is to get a copy of it from your firmware. You can do this by rebooting your computer and pressing F4 at the OpenCore menu, before launching macOS. That instructs OpenCore to drop a copy of it in your EFI partition under OpenCore/ACPI/origin.
 
 ### Patching the DSDT
 

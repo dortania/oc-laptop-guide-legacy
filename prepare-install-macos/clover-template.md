@@ -1,4 +1,4 @@
-# CLOVER Template
+# OpenCore Template
 
 ## Using the Vanilla Laptop Guide Template
 
@@ -12,11 +12,11 @@ You can find this template in the Vanilla Laptop Guide artifacts repository.
 
 [Vanilla Laptop Guide Artifacts Repository @ Github](https://github.com/hackintosh-guides/laptop-guide-artifacts)
 
-Once you have your config copy it to the CLOVER folder in your EFI, saving it as config.plist. Remember, you will need to make some changes to customize it for your system. The location of config.plist should match the tree view below.
+Once you have your config copy it to the OpenCore folder in your EFI, saving it as config.plist. Remember, you will need to make some changes to customize it for your system. The location of config.plist should match the tree view below.
 
 ```text
 EFI
-└── CLOVER
+└── OpenCore
     └── config.plist
 ```
 
@@ -71,7 +71,7 @@ Below you'll find bundled fixes that you may need to enable to correct the probl
 
 ## The Config.plist in a Nutshell
 
-Before continuing, you need a bit of knowledge about the config.plist which is a structured text document \(XML\) that provides CLOVER with the instructions that it needs to customize your laptop to boot and use macOS. It is a complex, and sometimes daunting dictionary of key value pairs. There are a variety of tools available to help configure it, here are a few to help get you started.
+Before continuing, you need a bit of knowledge about the config.plist which is a structured text document \(XML\) that provides OpenCore with the instructions that it needs to customize your laptop to boot and use macOS. It is a complex, and sometimes daunting dictionary of key value pairs. There are a variety of tools available to help configure it, here are a few to help get you started.
 
 **ProperTree** - This is a cross platform plist editor written by CorpNewt that works on Windows, Linux, and macOS. It's a very simple, but very powerful tool that simplifies changing parameters while also helping ensure you don't break formatting rules.
 
@@ -83,7 +83,7 @@ Before continuing, you need a bit of knowledge about the config.plist which is a
 
 [Download Clover Configurator from the project website.](https://mackie100projects.altervista.org/download-clover-configurator/)
 
-**Cloud Clover Editor** - This is exactly what it says, a cloud application for all of your CLOVER configuration needs.
+**Cloud Clover Editor** - This is exactly what it says, a cloud application for all of your OpenCore configuration needs.
 
 [Visit the Clover Cloud Editor website](https://cloudclovereditor.altervista.org/cce/index.php).
 
@@ -95,9 +95,9 @@ $ /usr/libexec/PlistBuddy --help
 
 ## OK OK, but What Do All of Those Keys and Values Mean?!
 
-Well, there are so many CLOVER parameters that it's just too much to cover here, so instead you should have a look at their WIKI.
+Well, there are so many OpenCore parameters that it's just too much to cover here, so instead you should have a look at their WIKI.
 
-[Visit the CLOVER WIKI.](https://sourceforge.net/p/cloverefiboot/wiki/Home/)
+[Visit the OpenCore WIKI.](https://sourceforge.net/p/cloverefiboot/wiki/Home/)
 
 Got it? Good!
 

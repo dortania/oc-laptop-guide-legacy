@@ -4,17 +4,20 @@ Input devices on laptops come in a few varietys, each with its own set of quirks
 
 ## Keyboards
 
-Most laptop keyboards are PS/2 devices. Yep, it's 2019 and PS/2 is still a thing. Crazy, huh? There's some good news here, you only need to install a single kext to get it working and then you can put the USB keyboard that you're probably using right now back in the closet where it belongs. That kext is VoodooPS2Controller, and you can find it over on Github.
+Most laptop keyboards are PS/2 devices. Yep, it's 2019 and PS/2 is still a thing. Crazy, huh? There's some good news here, you only need to install two kexts to get it working and then you can put the USB keyboard that you're probably using right now back in the closet where it belongs. Those kexts are VoodooPS2Controller and VoodooInput, which both can be found at Github.
 
-[VoodooPS2 Project Page](https://github.com/acidanthera/VoodooPS2)
+[VoodooPS2Controller Project Page](https://github.com/acidanthera/VoodooPS2)
 
-Download the latest release and add it to OpenCore placing the VoodooPS2Controller kext in your C/k/O folder. The path should match the tree below.
+[VoodooInput Project Page](https://github.com/acidanthera/VoodooInput) \(Only needed for working Trackpad\)
+
+Download the latest release and add it to OpenCore placing the VoodooPS2Controller kext in your OC/K folder. The path should match the tree below.
 
 ```text
 EFI
 └── OpenCore
     └── kexts
         └── Other
+            ├── VoodooInput.kext
             └── VoodooPS2Controller.kext
 ```
 
@@ -22,7 +25,7 @@ EFI
 
 There are generally two types of touchpads on laptop computers, I2C devices and PS2 devices. If you have a PS2 touchpad, you're probably covered by VoodooPS2Controller, so reboot and see if it works. If you're still reading this, it's probably not working because it's I2C.
 
-In case your touchpad is acting weird or lacks gestures, use the VoodooPS2Controller from Rehabman.
+In case your touchpad is acting weird or lacks gestures and it is for sure PS2, use the VoodooPS2Controller from Rehabman. If you are using Rehabman's VoodooPS2 kext, you do not need Voodooinput as well, so delete that as well.
 
 [VoodooPS2Controller Project - Rehabman @ BitBucket](https://bitbucket.org/RehabMan/os-x-voodoo-ps2-controller/downloads/)
 
@@ -49,7 +52,7 @@ Now that you've added the XOSI SSDT patch, you need to add a patch to Clover. Op
 | Key | Type | Value |
 | :--- | :--- | :--- |
 | Comment | String | \_OSI to XOSI |
-| Disabled | Bool | False |
+| Enabled | Bool | True |
 | Find | Data | 5f4f5349 |
 | Replace | Data | 584f5349 |
 

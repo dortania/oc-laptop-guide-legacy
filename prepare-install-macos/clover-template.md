@@ -1,74 +1,5 @@
 # OpenCore Template
 
-## Using the Vanilla Laptop Guide Template
-
-Linked below is a generic config.plist for laptops which is intended to help take some of the pain out of installing macOS on a laptop. Here are a few important things you'll need to know when using this template.
-
-* The template is generic and must be edited to suit your configuration. Do not expect it to just work.
-* Not all of the patches are enabled by default, so review the entire template. Only enable what you need and disable what you don't.
-* You may need to expand upon this template after installation to enable some of the hardware in your system.
-
-You can find this template in the Vanilla Laptop Guide artifacts repository.
-
-[Vanilla Laptop Guide Artifacts Repository @ Github](https://github.com/hackintosh-guides/laptop-guide-artifacts)
-
-Once you have your config copy it to the OpenCore folder in your EFI, saving it as config.plist. Remember, you will need to make some changes to customize it for your system. The location of config.plist should match the tree view below.
-
-```text
-EFI
-└── OpenCore
-    └── config.plist
-```
-
-## Patch Overview
-
-### ACPI Patches
-
-| Patch | Default | Function |
-| :--- | :--- | :--- |
-| change APSS to APXX | Disabled | Can cause AppleIntelCPUPowerManagement to panic, no need to enable if APSS does not exist in ACPI |
-| change \_DSM to XDSM | Disabled | Renames device specific methods.  May be necessary for VoodooI2C. |
-| change EHC1 to EH01 | Disabled | Patch USB 2.0 methods for macOS. |
-| change EHC2 to EH02 | Disabled | Patch USB 2.0 methods for macOS. |
-| change \_OSI to XOSI | Enabled | Rename \_OSI.  Pair with SSDT-XOSI.aml found later in the guide. |
-| change XHC1 to XHC | Enabled | Patch USB 3.0 methods for macOS. |
-| change SAT0 to SATA | Disabled | Patch SATA for macOS. |
-| change LPC to LPCB | Disabled | Patch low pin count bus for macOS. |
-| change \_REG to XREG in EC0 | Disabled | May be necessary for battery status. |
-| ALS: change Method\(RALS,0,S\) XALS | Disabled | May be necessary for ambient light sensor |
-
-## Fix IRQ Conflicts
-
-The table below contains some common fixes that help to eliminate any potential IRQ conflicts that may be preventing your touchpad and audio device from working properly. Enable them in config.plist under ACPI/DSDT/Fixes.
-
-| Fix | Type | Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| FixIPIC | Bool | YES | Deletes IRQ from IPIC device. |
-| FixTMR | Bool | YES | Excludes IRQ from TMR device. |
-| FixRTC | Bool | YES | Excludes IRQ from RTC device. |
-| FixHPET | Bool | YES | Adds IRQ to HPET device. |
-
-## Misc Fixes
-
-Below you'll find bundled fixes that you may need to enable to correct the problems defined in the table below.  These fixes are defaulted to off.
-
-| Fix | Type | Parameter | Description |
-| :--- | :--- | :--- | :--- |
-| FixShutdown | Bool | Yes | Enable if your system restarts when told to shut down and/or when the system resumes from sleep and all other fixes do not correct it. |
-
-## Kernel Patches
-
-| Patch | Default | Function |
-| :--- | :--- | :--- |
-| MSR 0xE2 \_xcpm\_idle instant reboot\(c\) Pike R. Alpha | Enabled | Prevents instant reboot on systems without the ability to disable the MSR parameter in your BIOS. |
-
-## Kext Patches
-
-| Patch | Default | Function |
-| :--- | :--- | :--- |
-| Enable TRIM for SSD | Enabled | Enables native trim support for SATA SSDs |
-| Prevent Apple I2C kexts from attaching to I2C controllers, credit CoolStar | Enabled | Helper to allow VoodooI2C to start before Apple native I2C drivers. \(Two patches\) |
-
 ## The Config.plist in a Nutshell
 
 Before continuing, you need a bit of knowledge about the config.plist which is a structured text document \(XML\) that provides OpenCore with the instructions that it needs to customize your laptop to boot and use macOS. It is a complex, and sometimes daunting dictionary of key value pairs. There are a variety of tools available to help configure it, here are a few to help get you started.
@@ -93,11 +24,34 @@ Before continuing, you need a bit of knowledge about the config.plist which is a
 $ /usr/libexec/PlistBuddy --help
 ```
 
-## OK OK, but What Do All of Those Keys and Values Mean?!
+## Making your own Config.plist
 
-Well, there are so many OpenCore parameters that it's just too much to cover here, so instead you should have a look at their WIKI.
+OpenCore config files \(and EFIs in general\) tend to be very similar to Desktop ones. Because of this, I will link you to Hackintosh Slav's guide _again_ to set up the Config.plist.
 
-[Visit the OpenCore WIKI.](https://sourceforge.net/p/cloverefiboot/wiki/Home/)
+{% hint style="info" %}
+When following the guides below  
+ DO NOT insert SSDT-EC. For laptops, we rename the EC within the ACPI tables.
 
-Got it? Good!
+* DO NOT insert SSDT-EC. Further down this page, we'll go over how to rename the EC already exisitng within your ACPI tables.
+* Instead of using the models provided in the guide, use one of the models provided by the table below each link \(Generally what matches your config closest\)
+{% endhint %}
+
+#### [Ivy Bridge](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/intel-config.plist/ivy-bridge)
+
+| Model | Graphics | Size |
+| :--- | :--- | :--- |
+| MacBookPro9,1 | HD 4000/GeForce GT 650M | 15" |
+| MacBookPro9,2 | HD 4000 | 13" |
+| MacBookPro10,1 | HD 4000/GeForce T 650M | 15" |
+| MacBookPro10,2 | HD 4000 | 13" |
+
+#### Haswell
+
+| Model | Graphics |
+| :--- | :--- |
+| MacBookPro11,1 |  |
+| MacBookPro11,2 |  |
+| MacBookPro11,3 |  |
+| MacBookPro11,4 |  |
+| MacBookPro11,5 |  |
 

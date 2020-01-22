@@ -26,7 +26,7 @@ You always want your Hard Disks and SSDs to operate in AHCI mode. In any of the 
 
 ## Disable that dGPU!
 
-If you can, if not you can disable it with a patch later. You may need to boot the installation media with an extra argument \(-x\) to use safe mode though.
+If you can, if not you can disable it with a patch later. You may need to boot the installation media with an extra argument \(-x\) to use safe mode though. This setting can also be left on if you want to use the dGPU within Windows or other operating systems.
 
 ## Enable Legacy USB support
 

@@ -6,7 +6,7 @@ Configuring a laptop's integrated GPU is a lot like configuring a desktop's inte
 
 Depending on your laptop, you may have very little to do to configure your iGPU, or you could have to add an elaborate set of patches to configure stuff like DVMT. The most important thing you'll want here is the WhateverGreen kext and it's dependency, LILU. Lilu is a patching mechanism that's used by multiple kernel extensions, and WhateverGreen is responsible for patching your display adapter\(s\).
 
-If you haven't already added WhateverGreen to your OpenCore EFI, better do that now before continuing. You can get it here. Remember to add it to your config.plist
+If you haven't already added WhateverGreen to your OpenCore EFI, better do that now before continuing. You can get it here.
 
 [Download WhateverGreen](https://github.com/acidanthera/WhateverGreen/releases)
 
@@ -14,13 +14,13 @@ If you haven't already added WhateverGreen to your OpenCore EFI, better do that 
 
 There are two ways to disable a dGPU in a laptop, the short way and the not so short way. We'll start with the short way because it is really simple. If you don't have a dGPU \(NVidia/ATI dedicated graphics\) you can skip this part and jump straight to configuring your display adapter instead.
 
-To disable your dGPU the short way, add the following to the `NVRAM/Add/7C436110-AB2A-4BBB-A880-FE41995C9F82/boot-args` section of your config.plist.
+To disable your dGPU the short way, add the following to the Boot/Arguments section of your config.plist.
 
 ```text
 -wegnoegpu
 ```
 
-This command instructs Whatevergreen to disable all internal and external dedicated GPUs.
+This command instructs Whatevergreen to disable all internal and external dedicated GPUs. Don't reboot yet, because we still need to get Whatevergreen!
 
 Mission complete? Great! If it doesn't work out the way you would expect, come back and move on the the not so short method using Hackintosh Slav's wonderful guide.
 
@@ -36,12 +36,12 @@ A prerequisite to configuring your iGPU is knowing which GPU you actually have. 
 
 ### iGPU Patching
 
-We can instruct Whatevergreen to patch your GPU by passing specific parameters to macOS in your config.plist. The table below describes the patches that we will be utilizing. These parameters can be found or added in your config.plist under DeviceProperties/Add/PciRoot\(0x0\)/Pci\(0x02,0x00\).
+We can instruct Whatevergreen to patch your GPU by passing specific parameters to macOS in your config.plist. The table below describes the patches that we will be utilizing. These parameters can be found in config.plist under Devices/Properties.
 
 | Key | Function |
 | :--- | :--- |
 | AAPL,ig-platform-id | This is the platform identifier of the GPU you are spoofing.  \(required\) |
-| device-id | This is the device identifier of the GPU you are spoofing. |
+| device-id | This is the device identifier of the GPU you are spoofing. \(required\) |
 | framebuffer-patch-enable | This switch enables framebuffer patching.  It is required when setting framebuffer patches such as fbmem and stolenmem. |
 | framebuffer-fbmem | This patches framebuffer memory, and is used when you cannot configure DVMT to 64MB in the BIOS.  _Do not use if the DVMT BIOS option is available._ |
 | framebuffer-stolenmem | This patches framebuffer stolen memory, and is used when you cannot configure DVMT to 64MB in the BIOS.  _Do not use if the DVMT BIOS option is available._ |
@@ -157,19 +157,39 @@ Now you are ready to configure your patches. Use the table below to select the p
 | Intel Iris Plus Graphics 655\* | 3EA50009 | 0900A53E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
 | Unlisted iGPU | 3EA60005 | 0500A63E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
 
+## OpenCore Resolution
+
+After completing Whatevergreen patching, it's a good time to set the default resolution on OpenCore. Open your config.plist and browse to GUI. Set the ScreenResolution string to the native resolution of your laptop. If you aren't sure, look up your laptop's specs on the manufacturer website.
+
+Now that you have your GPU sorted, let's move on to the backlight.
+
 ## Panel Backlight
 
-Whatevergreen will enable your panel backlight, but to do so you usually have to provide configuration. Because this is OpenCore, the only method we can use is adding the SSDT-PNLF.
+Whatevergreen will enable your panel backlight, but to do so you usually have to provide configuration. There are two methods supported by Whatevergreen. Try one and if it doesn't work or your brightness keys are not working, disable it and try the other.
+
+### Method 1 - AddPNLF
+
+This method is the simplest, and only requires a plist editor. Use the table below to add/enable AddPNLF, SetIntelBacklight, and SetIntelMaxBacklight to your config.plist.
+
+| Path | Property | Type | Value |
+| :--- | :--- | :--- | :--- |
+| ACPI/DSDT/Fixes/ | AddPNLF | Bool | True |
+| Devices/ | SetIntelBacklight | Bool | True |
+| Devices/ | SetIntelMaxBacklight | Bool | True |
+
+### Method 2 - SSDT-PNLF
 
 We'll do that by compiling PNLF SSDT from the Whatevergreen source repository and placing it in OpenCore/ACPI/patched. First, save the dsl to your home directory.
 
 [SSDT-PNLF.dsl @ Github](https://raw.githubusercontent.com/acidanthera/WhateverGreen/master/Manual/SSDT-PNLF.dsl)
 
-Now that you've saved the file, you'll need to compile it. For that, we need to download maciASL if you are on macOS, or iASL if you are on linux or windows.
+Now that you've saved the file, you'll need to compile it. For that, we need to download maciASL.
 
 [maciASL Project @ Github](https://github.com/acidanthera/MaciASL)
 
-Run maciASL, and open the SSDT-PNLF.dsl that you created previously. Save the file to OpenCore/ACPI/patched/SSDT-PNLF.aml. If you are using windows or linux, run `path/to/iasl SSDT-PNLF.dsl`.
+Run maciASL, and open the SSDT-PNLF.dsl that you created previously. Save the file to OpenCore/ACPI/patched/SSDT-PNLF.aml
+
+Before rebooting, review your config.plist and make sure patch GFX0 to IGPU and AddPNLF are disabled if they exist.
 
 ## Verifying Metal Support
 

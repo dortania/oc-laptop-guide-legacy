@@ -18,16 +18,12 @@ VirtualSMC, along with WhateverGreen and other kexts, depend on Lilu - another k
 
 Like VirtualSMC, FakeSMC is another System Management Controller emulator. It operates similar to VirtualSMC but it uses plugins to provide additional functionality to macOS. It is also older, and should only be used when VirtualSMC is found to be incompatible with your hardware.
 
-Installing FakeSMC is easy, you can find it on the Clover ISO that we'll download on the next page. To use it, copy the FakeSMC kext and efi as described in the tree view below.
+Installing FakeSMC is easy, you can find it on the Clover ISO that we'll download on the next page. To use it, copy the FakeSMC kext as described in the tree view below. The EFI driver is now absorbed into OpenCore itself, meaning you just need the kext.
 
 ```text
 .
-├── drivers
-│       └──UEFI
-│           └── SMCHelper.efi
-└── kexts
-    └── Other
-        └── FakeSMC.kext
+└── Kexts
+    └── FakeSMC.kext
 ```
 
 ## SMC Emulator Conflicts

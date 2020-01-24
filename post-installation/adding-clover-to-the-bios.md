@@ -85,7 +85,7 @@ Most newer computers will pick up Clover automatically, but if it doesn't appear
 * Once you have an idea of your device, select it by typing _DEVICE:_ replacing device with the actual device. Ex. FS0:
 * Use _ls_ to determine the content of the device. It should contain an EFI folder. Use caution to make sure this device is not your USB stick.
 * Use `bcfg boot dump` to view your currently configured boot devices \(you may see your USB in this list for validation\).
-* Use `bcfg boot add 00 FS0:\EFI\BOOT\BOOTX64.EFI OpenCore`to add an entry to your boot map.
+* Use `bcfg boot add 00 FS0:\EFI\BOOT\BOOTX64.EFI Clover`to add an entry to your boot map.
   * 00 is the boot order ranking, 00 being the very first one, and it increments by one, 01 being the second, 02 being the third and so on.
 * Rerun the boot dump command to verify.
 * Reboot.

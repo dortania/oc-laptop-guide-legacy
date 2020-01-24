@@ -14,7 +14,7 @@ This is only a **TEMPORARY** fix, do **NOT** keep it as permanent solution.
 
 ## Getting USBInjectAll
 
-This driver would enumerate all the USB ports available in your system \(following the ACPI tables\) and inject **all** of them to macOS, this would let macOS see \*most\* of the ports. The reason why it wouldn't see all of them is because of the Port Limit. However we're going to use USBInjectAll to limit some ports when we need it. If you did not get it already when making the USB, add it now. Remember to add it to your config.plist as well.
+This driver would enumerate all the USB ports available in your system \(following the ACPI tables\) and inject **all** of them to macOS, this would let macOS see \*most\* of the ports. The reason why it wouldn't see all of them is because of the Port Limit. However we're going to use USBInjectAll to limit some ports when we need it.
 
 [USBInjectAll Project - Rehabman @ BitBucket](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/)
 
@@ -60,7 +60,7 @@ Go to Details &gt; and choose under Property list: "BIOS device name"
 
 ![](../.gitbook/assets/image.png)
 
-Here, we can see where the BIOS/UEFI's ACPI has defined the port location and **Name**. In this case it's named `HS03`, for USB3.0 devices it should be named **SSxx** \(in some cases it's named SSPx, usually it's SSxx\). In case it's named `HSxx` you can just go and start your macOS installer, if it's named `SSxx` make sure to check if you have a USB keyboard and do the same process as above and make sure you remember its name, usually it's connected to a USB2.0 personality in the XHCI controller, so it's going to be named as HSxx instead of SSxx.
+Here, we can see where the BIOS/UEFI's ACPI has defined the port location and **Name**. In this case it's named `HS03`, for USB3.0 devices it should be named **SSxx** \(in some cases it's named SSPx, usually it's SSxx\). In case it's named `HSxx` you can just go and start your macOS installer, if it's named `SSxx` make sure to check if you have a USB keybaord and do the same process as above and make sure you remember its name, usually it's connected to a USB2.0 personality in the XHCI controller, so it's going to be named as HSxx instead of SSxx.
 
 {% hint style="info" %}
 At this point, if you have a **USB attached Mouse/Trackpad** \(some laptops have it connected through PS2 like seen in the section before\), do the same process as above and make sure you remember its name, usually it's connected to a USB2.0 personality in the XHCI controller, so it's going to be named as `HSxx` instead of `SSxx`.
@@ -70,7 +70,7 @@ At this point, if you have a **USB attached Mouse/Trackpad** \(some laptops have
 If you happen to use a Bluetooth mouse, it's better if you change it for a USB one, Bluetooth on macOS is quite a hassle also it's not going to work properly in the installer environment.
 {% endhint %}
 
-Now go back to your config.plist &gt; NVRAM &gt; Add &gt; ... &gt; boot-args. Here you're going to add these arguments:
+Now go back to your config.plist &gt; Boot &gt; Arguments. Here you're going to add these arguments:
 
 ```text
 -uia_exclude_hs uia_include=HSxx,SSxx

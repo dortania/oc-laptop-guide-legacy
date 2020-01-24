@@ -6,33 +6,42 @@ Congratulations! If you've made it this far you should be ready to install macOS
 EFI
 ├── BOOT
 │   └── BOOTX64.efi
-└── OC
+└── OpenCore
     ├── ACPI
-    │   ├── SSDT-GPI0.aml
-    │   ├── SSDT-PNLF.aml
-    │   └── SSDT-XOSI.aml
-    ├── OpenCore.efi
+    │   ├── origin
+    │   └── patched
+    │       ├── SSDT-GPI0.aml
+    │       ├── SSDT-PNLF.aml
+    │       └── SSDT-XOSI.aml
+    ├── OpenCoreX64.efi
     ├── config.plist
-    ├── Drivers
-    │   ├── ApfsDriverLoader.efi
-    │   ├── FwRuntimeServices.efi
-    │   └── HFSPlus.efi
-    ├── Kexts
-    │   ├── Lilu.kext
-    │   ├── NoTouchID.kext
-    │   ├── SMCBatteryManager.kext
-    │   ├── SMCLightSensor.kext // Only use if you have a light sensor.
-    │   ├── SMCProcessor.kext
-    │   ├── SMCSuperIO.kext // IO status reporting, causes panics on some systems.
-    │   ├── USBInjectAll.kext
-    │   ├── VirtualSMC.kext
-    │   ├── VoodooI2C.kext
-    │   ├── VoodooI2CHID.kext
-    │   ├── VoodooInput.kext
-    │   └── VoodooPS2Controller.kext
-    └── Tools // These aren't needed to boot but can be useful
-        ├── VerifyMSR2.efi
-        └── acpidump.efi
+    ├── drivers
+    │   └── UEFI
+    │       ├── ApfsDriverLoader.efi
+    │       ├── FwRuntimeServices.efi
+    │       ├── FSInject.efi
+    │       ├── OcQuirks.efi
+    │       ├── HFSPlus.efi
+    │       └── VirtualSmc.efi
+    ├── kexts
+    │   └── Other
+    │       ├── Lilu.kext
+    │       ├── NoTouchID.kext
+    │       ├── SMCBatteryManager.kext
+    │       ├── SMCLightSensor.kext // Only use if you have a light sensor.
+    │       ├── SMCProcessor.kext
+    │       ├── SMCSuperIO.kext // IO status reporting, causes panics on some systems.
+    │       ├── USBInjectAll.kext
+    │       ├── VirtualSMC.kext
+    │       ├── VoodooI2C.kext
+    │       ├── VoodooI2CHID.kext
+    │       └── VoodooPS2Controller.kext
+    ├── themes
+    └── tools (optional)
+        ├── Shell32.efi
+        ├── Shell64.efi
+        ├── Shell64U.efi
+        └── bdmesg.efi
 ```
 
 Looks good? Great! Let's start the installation!

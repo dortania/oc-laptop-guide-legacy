@@ -28,7 +28,11 @@ I get it, you want your Hackintosh to be able to access the internet and connect
     </tr>
   </thead>
   <tbody></tbody>
-</table>### PCIe m.2 Adapters
+</table>| BCM94360HMB | MHF4 | [AzureWave AW-CB160H](https://web.archive.org/web/20191020204026/https://wikidevi.com/wiki/AzureWave_AW-CB160H) |
+| :--- | :--- | :--- |
+
+
+### PCIe m.2 Adapters
 
 | Chipset | Antenna | Models |
 | :--- | :--- | :--- |
@@ -48,7 +52,11 @@ I get it, you want your Hackintosh to be able to access the internet and connect
     </tr>
   </thead>
   <tbody></tbody>
-</table>### Apple Native WIFI Cards
+</table>| BCM943602BAED | MHF4 | [Dell DW1830](https://web.archive.org/web/20191020204443/https://wikidevi.com/wiki/Dell_Wireless_1830_%28DW1830%29) \(A/E key\) |
+| :--- | :--- | :--- |
+
+
+### Apple Native WIFI Cards
 
 Wireless cards manufactured by Apple are natively supported, however they use a proprietary 12+6 connector which requires an adapter to function in an mPCIe or m.2 socket. Before purchasing ensure your laptop has sufficient space for the card + adapter, and make sure to purchase the appropriate 12+6 to mPCIE or m.2 adapter.
 
@@ -62,7 +70,7 @@ _Note: Be sure to use an adapter that is suited for your WLAN socket and only in
 
 ## Configuring WIFI
 
-WIFI configuration is pretty straightforward, you only need an injector kext to help macOS see and configure the card. For that we'll need to download the AirportBrcmFixup kext from its project page at Github. Add the kext to OC/K and reboot when convenient. Don't forget to add the kext to your Config.plist as well.
+WIFI configuration is pretty straightforward, you only need an injector kext to help macOS see and configure the card. For that we'll need to download the AirportBrcmFixup kext from its project page at Github. Add the kext to C/k/O and reboot when convenient.
 
 [Download AirportBrcmFixup @ Github](https://github.com/acidanthera/AirportBrcmFixup)
 
@@ -71,8 +79,9 @@ The location of the kext should match the tree below.
 ```text
 EFI
 └── OpenCore
-    └── Kexts
-        └── AirportBrcmFixup.kext
+    └── kexts
+        └── Other
+            └── AirportBrcmFixup.kext
 ```
 
 ## Setting up Bluetooth
@@ -91,15 +100,16 @@ Once you've determined the kexts that you'll need, add them to C/k/O and reboot.
 
 [Download BrcmPatchRam @ Github](https://github.com/acidanthera/BrcmPatchRAM)
 
-When finished, the kexts should be located in your EFI as indicated in the tree below. Don't forget to add the kexts to your Config.plist.
+When finished, the kexts should be located in your EFI as indicated in the tree below.
 
 ```text
 EFI
-└── OC
-    └── Kexts
-        ├── BrcmBluetoothInjector.kext
-        ├── BrcmPatchRAM{2,3}.kext
-        └── BrcmFirmwareData.kext
+└── OpenCore
+    └── kexts
+        └── Other
+            ├── BrcmBluetoothInjector.kext
+            ├── BrcmPatchRAM{2,3}.kext
+            └── BrcmFirmwareData.kext
 ```
 
 If you need additional help with installing and configuring WIFI and Bluetooth, you should read Toleda's Broadcom WiFi/Bluetooth guide which is linked below.

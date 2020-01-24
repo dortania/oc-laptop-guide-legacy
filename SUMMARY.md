@@ -30,7 +30,7 @@
 
 ## Installing
 
-* [Installing the Operating System](installing/installing-the-operating-system.md)
+* [Installing the Operating System](prepare-install-macos/installing-the-operating-system.md)
 * [Troubleshooting](installing/troubleshooting.md)
 
 ## Post Installation

@@ -30,7 +30,7 @@ If you're dual booting with Windows or Linux, you should enable the Devices/Audi
 
 ## Installing AppleALC
 
-Installing AppleALC is simple. You just need to download the AppleALC kext from the project's release page and add the kext to OC/K. You can find it here. You may have it already if you installed it when making the USB. If you do add it, make sure to edit your config.plist
+Installing AppleALC is simple. You just need to download the AppleALC kext from the project's release page and add the kext to C/k/O. You can find it here.
 
 [Download AppleALC @ Github](https://github.com/acidanthera/AppleALC)
 
@@ -38,9 +38,10 @@ Your new AppleALC kext path should look like it does in the tree below.
 
 ```text
 EFI
-└── OC
-    └── Kexts
-        └── AppleALC.kext
+└── OpenCore
+    └── kexts
+        └── Other
+            └── AppleALC.kext
 ```
 
 Before rebooting, let's configure it!
@@ -55,7 +56,7 @@ If you don't find your codec listed, you might find that it's just a rebranded v
 
 Once you have a list of layouts, but you don't know which is the right one you can test them one by one. Just configure the layout id in config.plist with your favorite plist editor and reboot. If audio works, congratulations! Otherwise, repeat until you've found it.
 
-Open up your plist editor and the config.plist, then browse to DeviceProperties/Add and set the alc-layout-id parameter to your layout id. It should look something like this.
+Open up your plist editor and the config.plist, then browse to Devices/Properties and set the alc-layout-id parameter to your layout id. It should look something like this.
 
 ![](../.gitbook/assets/screen-shot-2019-12-02-at-6.39.24-pm.png)
 
@@ -81,8 +82,9 @@ As with AppleALC, it should follow the same pattern in the tree.
 
 ```text
 EFI
-└── OC
-    └── Kexts
-        └── VoodooHDA.kext
+└── OpenCore
+    └── kexts
+        └── Other
+            └── VoodooHDA.kext
 ```
 

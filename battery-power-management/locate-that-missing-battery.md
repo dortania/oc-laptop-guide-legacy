@@ -10,7 +10,7 @@ First of all, you're going to need to dust off maciASL. Remember that? You used 
 
 ### Dumping your DSDT
 
-The first step in getting ready to patch your DSDT is to get a copy of it from your firmware. You can do this by rebooting your computer and pressing F4 at the OpenCore menu, before launching macOS. That instructs OpenCore to drop a copy of it in your EFI partition under OpenCore/ACPI/origin.
+The first step in getting ready to patch your DSDT is to get a copy of it from your firmware. You can do this by rebooting your computer and pressing F4 at the OpenCore menu, before launching macOS. That instructs OpenCore to drop a copy of it in your EFI partition under OpenCore/ACPI/origin. You should also still have the DSDT from when you configured your EC.
 
 ### Patching the DSDT
 
@@ -21,6 +21,8 @@ Alright, now that you're in maciASL and you have your DSDT open comes the hard p
 Click Patch and in the left pane of the window that opens you should find a whole bunch of patch repositories already configured for you. Find Rehabman in the tree. Under this section you will find a large selection of patches for various laptops. After making a backup of your DSDT, try applying the patches for systems that are most similar to yours. You might get lucky and have no more work to do.
 
 If those don't work, you're going to have to get personal with Rehabman's battery patching guide and your DSDT.
+
+When adding your DSDT to the ACPI folder and your config.plist, make sure that it is the first thing injected. The order should be DSDT then all of your others SSDT in your config.plist.
 
 [\[Guide\] How to patch DSDT for working battery status](https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/)
 

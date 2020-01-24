@@ -1,6 +1,6 @@
 # Setting up Ethernet Adapters
 
-If your laptop has an Ethernet adapter, or you have a USB dongle that you'd like to use it's possible that it is compatible with macOS, but probably not by default. If it's a supportable device, it should be as simple as adding the kext to C/k/O for macOS to see it.
+If your laptop has an Ethernet adapter, or you have a USB dongle that you'd like to use it's possible that it is compatible with macOS, but probably not by default. If it's a supportable device, it should be as simple as adding the kext to OC/K and your config.plist for macOS to see it.
 
 ## Internal Ethernet
 
@@ -38,14 +38,13 @@ The table below contains a list of kexts that may support your ethernet adapter.
           Cards)</p>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left">Asix</td>
+      <td style="text-align:left"><a href="https://www.asix.com.tw/download.php?sub=driverdetail&amp;PItemID=131">AX88179</a>
+      </td>
+    </tr>
   </tbody>
-</table>### USB Ethernet
-
-| Vendor | Driver |
-| :--- | :--- |
-| ASIX | [AX88179](https://www.asix.com.tw/download.php?sub=driverdetail&PItemID=131) |
-
-### External \(USB\) Ethernet for Installation
+</table>### External \(USB\) Ethernet for Installation
 
 If you need to add the driver to OpenCore to boot, you will need to extract the kext from the installation package after downloading. Here's how you can do that.
 
@@ -61,7 +60,8 @@ cd {package}.pkg
 tar -xvf Payload
 ```
 
-* Copy the extracted kext to C/k/O
+* Copy the extracted kext to OC/K
+* Add the kext to your Config.plist
 
 The USB adapter should be detected by macOS upon reboot into the installer.
 

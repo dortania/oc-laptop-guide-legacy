@@ -34,5 +34,5 @@ If while booting macOS you come across a boot failure with a prohibited symbol a
 
 This is a very common problem, and it's usually related to the USB device or the USB port that the device is plugged into. The first thing to try is moving the USB from one port to another, repeating until you're back where you started. You don't need to reboot, just move the stick and wait a few seconds to see if macOS finds it and progresses. If not, there are a few things you can do to try and fix it.
 
-You can check again [USB pre-setup](usb-pre-setup.md) to see if you properly made your USBInjectAll setup.
+You can check again [USB pre-setup](../prepare-install-macos/usb-pre-setup.md) to see if you properly made your USBInjectAll setup.
 

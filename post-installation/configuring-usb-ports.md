@@ -12,17 +12,7 @@ As mentioned previously, macOS has a very strict USB configuration by default, a
 **DO NOT** use these as a permanent solution, they're only temporary fixes until you map all your USB ports.
 {% endhint %}
 
-Mount up your EFI partition if it isn't already and then we'll merge these patches using your favorite text editor \(remember, I prefer [Atom](https://atom.io)\).
-
-Add the patches to an array called KextsToPatch under KernelAndKextPatches. If the array does not exist, go ahead and create it. Save and close the file. If you're using the guide template these patches already exist so just make sure they're enabled.
-
-| Comment | Disabled | Find | Replace | InfoPlistPatch | Name |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| USB port limit patch \#1 10.14.x modify by DalianSky\(credit ydeng\) | False | 83FB0F0F | 83FB3F0F | False | com.apple.iokit.IOUSBHostFamily |
-| USB port limit patch \#2 10.14.x modify by DalianSky\(credit PMHeart\) | False | 83E30FD3 | 83E33FD3 | False | com.apple.iokit.IOUSBHostFamily |
-| USB Port limit patch \#3 10.14.x modify by DalianSky\(credits PMheart\) | False | 83FB0F0F | 83FB3F0F | False | com.apple.iokit.IOUSBHostFamily |
-| USB Port limit patch \#4 10.14.x modify by DalianSky\(credits PMheart\) | False | 83FF0F0F | 83FF3F0F | False | com.apple.iokit.IOUSBHostFamily |
-| USB Port limit patch \#5 10.15.x modify by DalianSky\(credits PMheart\) | False | 83F90F0F | 83F93F0F | False | com.apple.iokit.IOUSBHostFamily |
+Mount up your EFI partition if it isn't already and open your config.plist. Enable `XhciPortLimit` under Kernel -&gt; Quirks
 
 ## Information About Port Types
 

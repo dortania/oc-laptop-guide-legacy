@@ -78,16 +78,16 @@ The good news is that you can probably correct all of these issues with a single
 
 Search your DSDT for PRW. If you find method GPRW, use these patches.
 
-Use your favorite plist editor to add this patch to the ACPI/DSDT/Patches array in config.plist.
+Use your favorite plist editor to add this patch to the ACPI/Patch array in config.plist.
 
 | Key | Type | Value |
 | :--- | :--- | :--- |
 | Comment | String | change Method\(GPRW,2,N\) to XPRW, pair with SSDT-GPRW.aml |
-| Disabled | Bool | False |
+| Enabled | Bool | True |
 | Find | Data | 4750525702 |
 | Replace | Data | 5850525702 |
 
-Compile this patch with maciASL and save as OpenCore/ACPI/patches/SSDT-GPRW.aml.
+Compile this patch with maciASL and save as OC/ACPI/SSDT-GPRW.aml. Don't forget to add it to your Config.plist as well.
 
 ```text
 // For solving instant wake by hooking GPRW or UPRW
@@ -127,16 +127,16 @@ DefinitionBlock("", "SSDT", 2, "hack", "_GPRW", 0)
 
 Search your DSDT for PRW. If you find method UPRW, use these patches.
 
-Use your favorite plist editor to add this patch to the ACPI/DSDT/Patches array in config.plist.
+Use your favorite plist editor to add this patch to the ACPI/Patch array in config.plist.
 
 | Key | Type | Value |
 | :--- | :--- | :--- |
 | Comment | String | change Method\(UPRW,2,N\) to XPRW, pair with SSDT-UPRW.aml |
-| Disabled | Bool | False |
+| Enabled | Bool | True |
 | Find | Data | 555052570a7012 |
 | Replace | Data | 585052570a7012 |
 
-Compile this patch with maciASL and save as OpenCore/ACPI/patches/SSDT-UPRW.aml.
+Compile this patch with maciASL and save as OC/ACPI/SSDT-UPRW.aml. Don't forget to add it to your config.plist as well.
 
 ```text
 // For solving instant wake by hooking GPRW or UPRW
@@ -175,7 +175,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_UPRW", 0)
 
 Search your DSDT for PRW. If you find method LANC \_PRW, use these patches.
 
-Use your favorite plist editor to add this patch to the ACPI/DSDT/Patches array in config.plist.
+Use your favorite plist editor to add this patch to the ACPI/Patch array in config.plist.
 
 | Key | Type | Value |
 | :--- | :--- | :--- |
@@ -184,7 +184,7 @@ Use your favorite plist editor to add this patch to the ACPI/DSDT/Patches array 
 | Find | Data | 00001900141f5f50525708 |
 | Replace | Data | 00001900141f5850525708 |
 
-Compile this patch with maciASL and save as OpenCore/ACPI/patches/SSDT-LANCPRW.aml.
+Compile this patch with maciASL and save as OC/ACPI/SSDT-LANCPRW.aml. Don't forget to add it to your config.plist as well.
 
 ```text
 // For solving instant wake by hooking GPRW

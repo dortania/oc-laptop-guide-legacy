@@ -2,7 +2,7 @@
 
 ## Why OpenCore?
 
-Many guides out there use Clover - and for good reason. It's been around for many years and there is a large knowledge base around it. Recently though, Clover has been showing glaring pitfalls - many of which OpenCore solves. Starting with release 5092, Clover does not inject ethernet/wifi kexts when going into the installer, making the internet installation method impossible, and laptops sometimes will refuse to boot with OpenCore.
+Many guides out there use Clover - and for good reason. It's been around for many years and there is a large knowledge base around it. Recently though, Clover has been showing glaring pitfalls - many of which OpenCore solves. Starting with release 5092, Clover does not inject ethernet/wifi kexts when going into the installer, making the internet installation method impossible. Additionally, laptops sometimes will refuse to boot with Clover.
 
 * OpenCore has a cleaner codebase and clear debug logging
 * OpenCore has a large amount of documentation
@@ -11,7 +11,7 @@ Many guides out there use Clover - and for good reason. It's been around for man
 * Has further developments to AptioMemoryFix directly within OpenCore and FwRuntimeServices
 * Uses a kext injection method which is more future proof, which does not break System Integrity Protection \(SIP\)
 
-That said, Hackintosh on a laptop is _still_ hard. You'll likely still spend tens of hours reading documentation and troubleshooting. If you are here to just make things work and not spend the time learning, then you are better off buyin a macbook instead.
+That said, Hackintosh on a laptop is _still_ hard. You'll likely still spend tens of hours reading documentation and troubleshooting. If you are here to just make things work and not spend the time learning, then you are better off buying a macbook instead.
 
 This guide is forked from Fewtarius' laptop-guide, and a lot of the content from this guide not only comes him, but many other people. Here is a section from his guide:
 

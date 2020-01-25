@@ -37,19 +37,7 @@ diskutil unmount /Volumes/EFI
 
 ## What are EFI drivers?
 
-EFI drivers are used by OpenCore to bootstrap macOS and start the process of loading the kernel and services that get you to your desktop. They've moved around a bit recently, here's where they go.
-
-### Before OpenCore r4985
-
-Legacy EFI drivers should be installed to OpenCore/Drivers64
-
-UEFI drivers should be installed to OpenCore/Drivers64UEFI
-
-### OpenCore r4985 and Later
-
-Legacy EFI drivers should be installed to OpenCore/drivers/BIOS
-
-UEFI drivers should be installed to OpenCore/drivers/UEFI
+EFI drivers are used by OpenCore to bootstrap macOS and start the process of loading the kernel and services that get you to your desktop. These are found under OC/Drivers.
 
 ## So what's LEGACY?
 

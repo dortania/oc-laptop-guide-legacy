@@ -10,7 +10,7 @@ Most laptop keyboards are PS/2 devices. Yep, it's 2019 and PS/2 is still a thing
 
 [VoodooInput Project Page](https://github.com/acidanthera/VoodooInput) \(Only needed for working Trackpad\)
 
-Download the latest release and add it to OpenCore placing the VoodooPS2Controller kext in your OC/K folder. The path should match the tree below.
+Download the latest release and add it to OpenCore placing the VoodooPS2Controller kext in your OC/K folder. The path should match the tree below. Remember to add these kexts to your config.plist.
 
 ```text
 EFI

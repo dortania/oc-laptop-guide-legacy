@@ -69,7 +69,7 @@ Next you will be asked to enter an EPP value. This is explained in the instructi
 | 0x80 | Balance power - Scale at a rate that prefers battery life while slightly sacrificing performance. |
 | 0xC0 | Max Power saving - Sacrifice performance for battery life while still performing well enough for normal tasks. |
 
-Once CPUFriendFriend has been run, copy the CPUFriend and CPUFriendDataProvider kexts to C/k/O. Once that's finished, open your config.plist and make sure that SSDT/Generate/PluginType is set to true. Finally, reboot.
+Once CPUFriendFriend has been run, copy the CPUFriend and CPUFriendDataProvider kexts to OC/K. Don't forget to add the kexts to your config.plist Once that's finished, open your config.plist and make sure that you have SSDT-PLUG. Finally, reboot.
 
 You should immediately notice a difference in battery life.
 
@@ -79,5 +79,5 @@ Users of SMBIOS of Macbook Pros earlier than 2016 should use tool called ssdtPRG
 
 [Visit ssdtPRGen @ Github](https://github.com/Piker-Alpha/ssdtPRGen.sh)
 
-Using ssdtPRGen is relatively simple, run the utility and follow the prompts. This will create a frequency configuration for your system and place the files in ~/Library/ssdtPRGen. Copy ~/Library/ssdtPRGen/ssdt.aml to OpenCore/ACPI/patched, update OpenCore if you are using a strict SSDT configuration \(sorted order with an explicit list of SSDTs in config.plist\), make sure SSDT/Generate/PluginType is set to True, and reboot. If you are not using a strict SSDT configuration in OpenCore you can ignore that step and just reboot.
+Using ssdtPRGen is relatively simple, run the utility and follow the prompts. This will create a frequency configuration for your system and place the files in ~/Library/ssdtPRGen. Copy ~/Library/ssdtPRGen/ssdt.aml to OpenCore/ACPI/, and update your config.plist.
 

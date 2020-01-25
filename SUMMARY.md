@@ -18,8 +18,6 @@
 ## Installing macOS <a id="prepare-install-macos"></a>
 
 * [Preparing the USB Media](prepare-install-macos/preparing-the-usb-media.md)
-* [macOS Memory Allocation](prepare-install-macos/macos-memory-allocation.md)
-* [SMC Emulation](prepare-install-macos/smc-emulation.md)
 * [OpenCore Template](prepare-install-macos/clover-template.md)
 * [Setting up Input Devices](prepare-install-macos/setting-up-input-devices.md)
 * [Disabling TouchID lookup](prepare-install-macos/disabling-touchid.md)
@@ -30,7 +28,7 @@
 
 ## Installing
 
-* [Installing the Operating System](prepare-install-macos/installing-the-operating-system.md)
+* [Installing the Operating System](installing/installing-the-operating-system.md)
 * [Troubleshooting](installing/troubleshooting.md)
 
 ## Post Installation

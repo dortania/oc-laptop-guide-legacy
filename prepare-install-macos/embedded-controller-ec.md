@@ -7,9 +7,9 @@ Starting in macOS 10.15 \(Catalina\), macOS now stalls when booting and attachin
 3. Figure out which EC is the main one in your DSDT
 4. Put in the right rename into the patches section of your Config.plist
 
-For more info, you can [read this guide,](https://khronokernel.github.io/EC-fix-guide/) also by Hackintosh Slav
+For more info, you can [read this guide,](https://khronokernel.github.io/EC-fix-guide/) also by Hackintosh Slav. This page is more or less a copy and paste from the laptop page specifically.
 
-## Dumping the DSDT
+# Dumping the DSDT
 
 ### [MaciASL](https://github.com/acidanthera/MaciASL/releases)
 

@@ -10,13 +10,9 @@ Before continuing, you need a bit of knowledge about the config.plist which is a
 
 **XCode** - You probably don't need or want to install an entire development suite for editing your plist, but it is an option so it's worth mentioning. If you're looking to take a tank to a knife fight, XCode can be installed through the App Store. It is also woth noting that Xcode has issues editing plists starting with Xcode 11.
 
-**Clover Configurator** - While not generally recommended, sometimes it's nice to have a GUI with tips. This tool will give you that GUI, but it's been known to break things now and then so make sure you back your config.plist up before saving.
+~~**Clover Configurator**~~
 
-[Download Clover Configurator from the project website.](https://mackie100projects.altervista.org/download-clover-configurator/)
-
-**Cloud Clover Editor** - This is exactly what it says, a cloud application for all of your OpenCore configuration needs.
-
-[Visit the Clover Cloud Editor website](https://cloudclovereditor.altervista.org/cce/index.php).
+![](../.gitbook/assets/image.png)
 
 **PlistBuddy** - This is a command line utility that's built into macOS. It's a great utility for making changes to plist files from scripts or the command line.
 

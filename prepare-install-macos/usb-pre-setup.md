@@ -58,7 +58,7 @@ Select your drive and double click on it, or right click &gt; Properties, in thi
 
 Go to Details &gt; and choose under Property list: "BIOS device name"
 
-![](../.gitbook/assets/image.png)
+![](../.gitbook/assets/image%20%281%29.png)
 
 Here, we can see where the BIOS/UEFI's ACPI has defined the port location and **Name**. In this case it's named `HS03`, for USB3.0 devices it should be named **SSxx** \(in some cases it's named SSPx, usually it's SSxx\). In case it's named `HSxx` you can just go and start your macOS installer, if it's named `SSxx` make sure to check if you have a USB keyboard and do the same process as above and make sure you remember its name, usually it's connected to a USB2.0 personality in the XHCI controller, so it's going to be named as HSxx instead of SSxx.
 

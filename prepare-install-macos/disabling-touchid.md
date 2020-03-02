@@ -13,5 +13,3 @@ EFI
         └── NoTouchID.kext
 ```
 
-Finished? Great!
-

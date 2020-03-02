@@ -1,39 +1,45 @@
 # Setting up Input Devices
 
-Input devices on laptops come in a few varietys, each with its own set of quirks. Fortunately, we've reached a clearing and you can rest a bit as this should be one of the simpler things to set up on your laptop. Let's start with keyboards, because they're easy.
+Input devices on laptops come in a few variants, each with its own set of quirks. Most laptops will want VoodooPS2 for the keyboard. For your trackpad, it's a good idea to check device manager in windows if possible to see what trackpad you have.
 
-## Keyboards
+## VoodooPS2 \(Keyboard and Trackpad\)
 
-Most laptop keyboards are PS/2 devices. Yep, it's 2019 and PS/2 is still a thing. Crazy, huh? There's some good news here, you only need to install two kexts to get it working and then you can put the USB keyboard that you're probably using right now back in the closet where it belongs. Those kexts are VoodooPS2Controller and VoodooInput, which both can be found at Github.
+Most laptop keyboard and trackpads are PS/2 devices. You should only need the two listed below. These should cover most Synaptics touchpads used in recent laptops.
 
-[VoodooPS2Controller Project Page](https://github.com/acidanthera/VoodooPS2)
+* [VoodooInput Project Page](https://github.com/acidanthera/VoodooInput)
+  * Used by VoodooPS2 to emulate a Magic Trackpad
+  * Should be listed first in your Config.plist as it is required for VoodooPS2Trackpad to load
+* [VoodooPS2Controller Project Page](https://github.com/acidanthera/VoodooPS2)
+  * Actually is 4 kexts bundled into one kext package.
+    * VoodooPS2Controller
+    * VoodooPS2Keyboard
+    * VoodooPS2Trackpad
+    * VoodooPS2Mouse
+  * Make sure when adding this to your config.plist that all 4 of these appear
 
-[VoodooInput Project Page](https://github.com/acidanthera/VoodooInput) \(Only needed for working Trackpad\)
-
-Download the latest release and add it to OpenCore placing the VoodooPS2Controller kext in your OC/K folder. The path should match the tree below. Remember to add these kexts to your config.plist.
+Download the two kexts and place them in your EFI as shown below.
 
 ```text
 EFI
 └── OpenCore
-    └── kexts
-        └── Other
-            ├── VoodooInput.kext
-            └── VoodooPS2Controller.kext
+    └── Kexts
+        ├── VoodooInput.kext
+        └── VoodooPS2Controller.kext
 ```
 
-## Touchpads
+{% hint style="warning" %}
+#### The Kexts below do not need VoodooInput
+{% endhint %}
 
-There are generally two types of touchpads on laptop computers, I2C devices and PS2 devices. If you have a PS2 touchpad, you're probably covered by VoodooPS2Controller, so reboot and see if it works. If you're still reading this, it's probably not working because it's I2C.
+If you have issues running the above version of VoodooPS2, you may want to try Rehabman's version of VoodooPS2:
 
-In case your touchpad is acting weird or lacks gestures and it is for sure PS2, use the VoodooPS2Controller from Rehabman. If you are using Rehabman's VoodooPS2 kext, you do not need Voodooinput as well, so delete that as well.
+* [VoodooPS2Controller Project - Rehabman @ BitBucket](https://bitbucket.org/RehabMan/os-x-voodoo-ps2-controller/downloads/)
 
-[VoodooPS2Controller Project - Rehabman @ BitBucket](https://bitbucket.org/RehabMan/os-x-voodoo-ps2-controller/downloads/)
+If you have an Alps trackpad, you will want this version here:
 
-## Touch Screens
+* [VoodooPS2-Alps - 1Revenger1](https://github.com/1Revenger1/VoodooPS2-Alps)
 
-Good news! If you have one of those fancy 2-in-1 laptops with a touch screen, it is probably supported by VoodooI2C as well! Touch screens are I2C devices, so configuring your touchpad should also enable your touch display. You may find that it's not working right away though, and that's OK! It's probably just due to your USB ports not being fully configured yet.
-
-## Prerequisites for VoodooI2C
+## VoodooI2C \(Touchscreens and I2C Trackpads\)
 
 I2C touchpads are interesting in that they fully integrate into macOS and support gestures and everything that a real Apple Trackpad supports, except force touch \(obviously\). Not all I2C touchpads are supported by I2C or without extra hotpatches to configure pinning. An unusual requirement for the trackpad to work is functional battery status reporting, so if you don't have that working yet skip to that section and then come back. Most though work fine with just two hotpatches that are pretty simple to install. Let's add them now. First, download SSDT-XOSI.dsl.
 
@@ -104,10 +110,9 @@ The VoodooI2C configuration should match the tree view below.
 ```text
 EFI
 └── OpenCore
-    └── kexts
-        └── Other
-            ├── VoodooI2C.kext
-            └── VoodooI2CHID.kext
+    └── Kexts
+        ├── VoodooI2C.kext
+        └── VoodooI2CHID.kext
 ```
 
 I know that you've kind of breezed through this one, but we don't want to make it too easy, so here's some required reading.
@@ -117,7 +122,13 @@ I know that you've kind of breezed through this one, but we don't want to make i
 The documentation covers troubleshooting, GPIO pinning, and other topics that may be important tools in troubleshooting any problems you may face while setting up your touchpad device.
 
 {% hint style="info" %}
-For touchscreens, you can also try VoodooI2C with VoodooI2CHID, if it's I2C it should work as long as your GPI0 and XOSI are properly fixed, if it's USB, there is a chance that it may attach. The VoodooI2C documentation doesn't guarantee that all USB touchscreens will work.
+### A note on Touchscreens:
+
+If you have one of those fancy 2-in-1 laptops with a touch screen, it may be supported by VoodooI2C as well! Touch screens are I2C devices, so configuring your touchpad should also enable your touch display. Some things to keep in mind:
+
+* You'll want to use VoodooI2C with VoodooI2CHID. 
+* If it's I2C, it should work as long as your GPI0 and XOSI are properly fixed, and it's USB, there is a chance that it may attach.
+* The VoodooI2C documentation doesn't guarantee that all USB touchscreens will work.
 {% endhint %}
 
 ## Bluetooth Keyboard and Mice

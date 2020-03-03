@@ -50,7 +50,7 @@ These parameters contain the basics to get you started. If you need more advance
 
 ### iGPU Patches
 
-Now you are ready to configure your patches. Use the table below to select the patch that most closely resembles the configuration from Ark.
+Now you are ready to configure your patches. Use the table below to select the patch that most closely resembles the configuration from Ark. The values below are already reversed, so you can just copy and paste them in.
 
 {% hint style="info" %}
 `*` Denotes the default configured by Whatevergreen.
@@ -69,11 +69,11 @@ Now you are ready to configure your patches. Use the table below to select the p
 | Intel HD Graphics 4000 | 01660008 | 08006601 | 3 | 64MB | 16MB | 1536MB | LVDS1 DP2 |
 | Intel HD Graphics 4000 | 01660009 | 09006601 | 3 | 64MB | 16MB | 1536MB | LVDS1 DP2 |
 
-#### Usual values
+#### Usual ig-platform-id values
 
-* 01660003 for 1366x768 display laptops
-* 01660004 for 1600x900 display laptops or higher
-* 01660009 for laptops with eDP internal display
+* 03006601 for 1366x768 display laptops
+* 04006601 for 1600x900 display laptops or higher
+* 09006601 for laptops with eDP internal display
 
 ### Intel Haswell
 

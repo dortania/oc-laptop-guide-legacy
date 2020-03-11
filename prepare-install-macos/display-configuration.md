@@ -118,7 +118,7 @@ Now you are ready to configure your patches. Use the table below to select the p
 
 #### Special Notes:
 
-* <sup>1</sup>: to be sed usually with HD5000, HD5100 and HD5200
+* <sup>1</sup>: to be used usually with HD5000, HD5100 and HD5200
   * The device-id of these devices *should* be supported already by the native macOS drivers.
 * <sup>2</sup>: to be used usually with HD4200, HD4400 and HD4600.
   * You **must** use `device-id` = `12040000`

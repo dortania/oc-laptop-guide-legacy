@@ -66,10 +66,10 @@ Now you are ready to configure your patches. Use the table below to select the p
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Intel HD Graphics 4000 | 01660001 | 01006601 | 4 | 96MB | 24MB | 1536MB | LVDS1 HDMI1 DP2 |
 | Intel HD Graphics 4000 | 01660002 | 02006601 | 1 | 64MB | 24MB | 1536MB | LVDS1 |
-| **Intel HD Graphics 4000<sup>1</sup>** * | 01660003 | 03006601 | 4 | 64MB | 16MB | 1536MB | LVDS1 DP3 |
-| **Intel HD Graphics 4000<sup>2</sup>** | 01660004 | 04006601 | 1 | 32MB | 16MB | 1536MB | LVDS1 |
+| **Intel HD Graphics 4000 <sup>1</sup>** * | 01660003 | 03006601 | 4 | 64MB | 16MB | 1536MB | LVDS1 DP3 |
+| **Intel HD Graphics 4000 <sup>2</sup>** | 01660004 | 04006601 | 1 | 32MB | 16MB | 1536MB | LVDS1 |
 | Intel HD Graphics 4000 | 01660008 | 08006601 | 3 | 64MB | 16MB | 1536MB | LVDS1 DP2 |
-| **Intel HD Graphics 4000<sup>3</sup>** | 01660009 | 09006601 | 3 | 64MB | 16MB | 1536MB | LVDS1 DP2 |
+| **Intel HD Graphics 4000 <sup>3</sup>** | 01660009 | 09006601 | 3 | 64MB | 16MB | 1536MB | LVDS1 DP2 |
 
 #### Special Notes:
 
@@ -108,8 +108,8 @@ Now you are ready to configure your patches. Use the table below to select the p
 | iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Intel HD Graphics 4400 | 0a16000c | 0c00160a | 3 | 64MB | 34MB | 1536MB | LVDS1 DP2 |
-| **Intel HD Graphics 5000<sup>1</sup>** | 0a260005 | 0500260a | 3 | 32MB | 19MB | 1536MB | LVDS1 DP2 |
-| **Intel HD Graphics 5000<sup>2</sup>** | 0a260006 | 0600260a | 3 | 32MB | 19MB | 1536MB | LVDS1 DP2 |
+| **Intel HD Graphics 5000 <sup>1</sup>** | 0a260005 | 0500260a | 3 | 32MB | 19MB | 1536MB | LVDS1 DP2 |
+| **Intel HD Graphics 5000 <sup>2</sup>** | 0a260006 | 0600260a | 3 | 32MB | 19MB | 1536MB | LVDS1 DP2 |
 | Intel Iris Graphics 5100 | 0a2e0008 | 08002e0a | 3 | 64MB | 34MB | 1536MB | LVDS1 DP2 |
 | Intel Iris Pro Graphics 5200 | 0d260007 | 0700260d | 4 | 64MB | 34MB | 1536MB | LVDS1 DP2 HDMI1 |
 | Intel Iris Pro Graphics 5200 | 0d260009 | 0900260d | 1 | 64MB | 34MB | 1536MB | LVDS1 |

@@ -8,7 +8,7 @@ That's right..if you're using USBInjectAll in its default configuration, or you 
 
 ## Disabling Hibernation
 
-Hibernation isn't well supported on hackintoshes, and in some cases it doesn't work at all. We can mitigate this problem by configuring macOS to use standby mode which will preserve what's in memory on sleep but will not write it out to disk and power off the machine.
+Hibernation isn't well supported on hackintoshes, and in some cases it doesn't work at all. We can mitigate this problem by configuring macOS to use standby mode which will preserve what's in memory on sleep but will not write it out to disk and power off the machine. This may help to lenghten your SSD's lifespan but at the cost of losing all your work if the laptop was in sleep mode and power ran out or when the power is so low macOS will just shutdown and not enter hibernation mode.
 
 ```text
 sudo pmset hibernatemode 0
@@ -26,7 +26,7 @@ pmset -g log | grep -e "Wake.*due to "
 
 Yep, that's a ton of data. You're looking for a couple of specific things though and they should be pretty close to the bottom of the log.
 
-## Wake on GLAN
+## Wake on GLAN/LANC
 
 If you see an entry in the log that looks similar to this one, you'll need to disable Wake on Lan in your BIOS. If that doesn't work, a patch is necessary.
 
@@ -91,15 +91,14 @@ Compile this patch with maciASL and save as OC/ACPI/SSDT-GPRW.aml. Don't forget 
 
 ```text
 // For solving instant wake by hooking GPRW or UPRW
+// Credit: Rehabman
+// Modified to work without some extra setup
 
-#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_GPRW", 0)
 {
-#endif
     External(XPRW, MethodObj)
-    External(RMCF.DWOU, IntObj)
 
-    // In DSDT, native GPRW is renamed to XPRW with Clover binpatch.
+    // In DSDT, native GPRW is renamed to XPRW with OpenCore binpatch.
     // As a result, calls to GPRW land here.
     // The purpose of this implementation is to avoid "instant wake"
     // by returning 0 in the second position (sleep state supported)
@@ -108,19 +107,13 @@ DefinitionBlock("", "SSDT", 2, "hack", "_GPRW", 0)
     {
         For (,,)
         {
-            // when RMCF.DWOU is provided and is zero, patch disabled
-            If (CondRefOf(\RMCF.DWOU)) { If (!\RMCF.DWOU) { Break }}
-            // either RMCF.DWOU not provided, or is non-zero, patch is enabled
             If (0x6d == Arg0) { Return (Package() { 0x6d, 0, }) }
             If (0x0d == Arg0) { Return (Package() { 0x0d, 0, }) }
             Break
         }
         Return (XPRW(Arg0, Arg1))
     }
-#ifndef NO_DEFINITIONBLOCK
 }
-#endif
-//EOF
 ```
 
 ### Patch Method \#2 \(UPRW,2,N\)
@@ -140,15 +133,14 @@ Compile this patch with maciASL and save as OC/ACPI/SSDT-UPRW.aml. Don't forget 
 
 ```text
 // For solving instant wake by hooking GPRW or UPRW
+// Credit: Rehabman
+// Modified to work without some extra setup
 
-#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_UPRW", 0)
 {
-#endif
     External(XPRW, MethodObj)
-    External(RMCF.DWOU, IntObj)
 
-    // In DSDT, native UPRW is renamed to XPRW with Clover binpatch.
+    // In DSDT, native UPRW is renamed to XPRW with OpenCore binpatch.
     // As a result, calls to UPRW land here.
     // The purpose of this implementation is to avoid "instant wake"
     // by returning 0 in the second position (sleep state supported)
@@ -157,18 +149,12 @@ DefinitionBlock("", "SSDT", 2, "hack", "_UPRW", 0)
     {
         For (,,)
         {
-            // when RMCF.DWOU is provided and is zero, patch disabled
-            If (CondRefOf(\RMCF.DWOU)) { If (!\RMCF.DWOU) { Break }}
-            // either RMCF.DWOU not provided, or is non-zero, patch is enabled
             If (0x6d == Arg0) { Return (Package() { 0x6d, 0, }) }
             If (0x0d == Arg0) { Return (Package() { 0x0d, 0, }) }
         }
         Return (XPRW(Arg0, Arg1))
     }
-#ifndef NO_DEFINITIONBLOCK
 }
-#endif
-//EOF
 ```
 
 ### Patch Method \#3 LANC \(\_PRW,2,N\)
@@ -189,36 +175,29 @@ Compile this patch with maciASL and save as OC/ACPI/SSDT-LANCPRW.aml. Don't forg
 ```text
 // For solving instant wake by hooking GPRW
 
-#ifndef NO_DEFINITIONBLOCK
 DefinitionBlock("", "SSDT", 2, "hack", "_LANCPRW", 0)
 {
-#endif
     External(XPRW, MethodObj)
-    External(RMCF.DWOU, IntObj)
 
-    // In DSDT, native LANC._PRW is renamed XPRW with Clover binpatch.
+    // In DSDT, native LANC._PRW is renamed XPRW with OpenCore binpatch.
     // As a result, calls to LANC._PRW land here.
     // The purpose of this implementation is to avoid "instant wake"
     // by returning 0 in the second position (sleep state supported)
     // of the return package.
     // LANC._PRW is renamed to XPRW so we can replace it here
+    // LANC can be named as GLAN or other names, make sure you match it
+    // with the one in your ACPI.
     External(_SB.PCI0.LANC.XPRW, MethodObj)
     Method(_SB.PCI0.LANC._PRW)
     {
         Local0 = \_SB.PCI0.LANC.XPRW()
         For (,,)
         {
-            // when RMCF.DWOU is provided and is zero, patch disabled
-            If (CondRefOf(\RMCF.DWOU)) { If (!\RMCF.DWOU) { Break }}
-            // either RMCF.DWOU not provided, or is non-zero, patch is enabled
             Local0[1] = 0
         }
         Return(Local0)
     }
-#ifndef NO_DEFINITIONBLOCK
 }
-#endif
-//EO
 ```
 
 ## Laptop Still Have Insomnia?

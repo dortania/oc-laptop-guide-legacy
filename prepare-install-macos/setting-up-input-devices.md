@@ -31,7 +31,7 @@ EFI
 #### The Kexts below do not need VoodooInput
 {% endhint %}
 
-If you have issues running the above version of VoodooPS2, you may want to try Rehabman's version of VoodooPS2:
+If you have issues running the above version of VoodooPS2 (the case of a hard surface trackpad), you may want to try Rehabman's version of VoodooPS2Controller:
 
 * [VoodooPS2Controller Project - Rehabman @ BitBucket](https://bitbucket.org/RehabMan/os-x-voodoo-ps2-controller/downloads/)
 
@@ -49,11 +49,11 @@ Now that you've saved the file, you'll need to compile it. For that, we need to 
 
 [maciASL Project @ Github](https://github.com/acidanthera/MaciASL)
 
-Run maciASL, and open the SSDT-XOSI.dsl that you created previously. Save the file as a binary to OpenCore/ACPI/patched/SSDT-XOSI.aml. Note: When saving as a binary, maciASL will automatically compile the SSDT.
+Run maciASL, and open the SSDT-XOSI.dsl that you created previously. Save the file as a binary to OC/ACPI/SSDT-XOSI.aml. Note: When saving as a binary, maciASL will automatically compile the SSDT.
 
 ### \_OSI to XOSI Rename
 
-Now that you've added the XOSI SSDT patch, you need to add a patch to Clover. Open your config.plist with your plist editor of choice and add the following patch under ACPI/DSDT/Patches. If you're using the guide template this rename already exists so just make sure it's enabled.
+Now that you've added the XOSI SSDT patch, you need to add a patch to OpenCore. Open your config.plist with your plist editor of choice and add the following patch under ACPI/Patch. If you're using the guide template this rename already exists so just make sure it's enabled.
 
 | Key | Type | Value |
 | :--- | :--- | :--- |
@@ -86,7 +86,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "I2C", 0)
 }
 ```
 
-Using maciASL, save this SSDT patch as a binary to OpenCore/ACPI/patched/SSDT-GPI0.aml
+Using MaciASL, save this SSDT patch as a binary to OC/ACPI/SSDT-GPI0.aml
 
 ## Installing VoodooI2C
 
@@ -113,6 +113,10 @@ EFI
     └── Kexts
         ├── VoodooI2C.kext
         └── VoodooI2CHID.kext
+            └── Contents (already inside, you do not need to add them)
+                └── Plugins
+                    ├── VoodooGPIO.kext
+                    └── VoodooI2CServices.kext
 ```
 
 I know that you've kind of breezed through this one, but we don't want to make it too easy, so here's some required reading.
@@ -121,17 +125,94 @@ I know that you've kind of breezed through this one, but we don't want to make i
 
 The documentation covers troubleshooting, GPIO pinning, and other topics that may be important tools in troubleshooting any problems you may face while setting up your touchpad device.
 
+For this kext to properly load on your OpenCore setup, you must make sure that the loading order is as follows:
+
+    1. VoodooI2CServices
+    2. VoodooGPIO
+    3. VoodooI2C
+    4. <your satellite(s)>
+
+Example: Using VoodooI2C + VoodooI2CHID
+
+```xml
+    <dict>
+        <key>BundlePath</key>
+        <string>VoodooI2C.kext/Contents/PlugIns/VoodooI2CServices.kext</string>
+        <key>Comment</key>
+        <string></string>
+        <key>Enabled</key>
+        <true/>
+        <key>ExecutablePath</key>
+        <string>Contents/MacOS/VoodooI2CServices</string>
+        <key>MaxKernel</key>
+        <string></string>
+        <key>MinKernel</key>
+        <string></string>
+        <key>PlistPath</key>
+        <string>Contents/Info.plist</string>
+    </dict>
+    <dict>
+        <key>BundlePath</key>
+        <string>VoodooI2C.kext/Contents/PlugIns/VoodooGPIO.kext</string>
+        <key>Comment</key>
+        <string></string>
+        <key>Enabled</key>
+        <true/>
+        <key>ExecutablePath</key>
+        <string>Contents/MacOS/VoodooGPIO</string>
+        <key>MaxKernel</key>
+        <string></string>
+        <key>MinKernel</key>
+        <string></string>
+        <key>PlistPath</key>
+        <string>Contents/Info.plist</string>
+    </dict>
+    <dict>
+        <key>BundlePath</key>
+        <string>VoodooI2C.kext</string>
+        <key>Comment</key>
+        <string></string>
+        <key>Enabled</key>
+        <true/>
+        <key>ExecutablePath</key>
+        <string>Contents/MacOS/VoodooI2C</string>
+        <key>MaxKernel</key>
+        <string></string>
+        <key>MinKernel</key>
+        <string></string>
+        <key>PlistPath</key>
+        <string>Contents/Info.plist</string>
+    </dict>
+    <dict>
+        <key>BundlePath</key>
+        <string>VoodooI2CHID.kext</string>
+        <key>Comment</key>
+        <string></string>
+        <key>Enabled</key>
+        <true/>
+        <key>ExecutablePath</key>
+        <string>Contents/MacOS/VoodooI2CHID</string>
+        <key>MaxKernel</key>
+        <string></string>
+        <key>MinKernel</key>
+        <string></string>
+        <key>PlistPath</key>
+        <string>Contents/Info.plist</string>
+    </dict> 
+```
+
 {% hint style="info" %}
 ### A note on Touchscreens:
 
-If you have one of those fancy 2-in-1 laptops with a touch screen, it may be supported by VoodooI2C as well! Touch screens are I2C devices, so configuring your touchpad should also enable your touch display. Some things to keep in mind:
+If you have one of those fancy 2-in-1 laptops with a touch screen, it may be supported by VoodooI2C as well! Touchscreens are either I2C or USB devices, so configuring your touchpad should also enable your touch display when supported. Some things to keep in mind:
 
 * You'll want to use VoodooI2C with VoodooI2CHID. 
 * If it's I2C, it should work as long as your GPI0 and XOSI are properly fixed, and it's USB, there is a chance that it may attach.
 * The VoodooI2C documentation doesn't guarantee that all USB touchscreens will work.
+* USB Touchscreens may work as a single pointer device while in the installer phase, I2C touchscreens may not work until the full macOS installation boots up.
 {% endhint %}
 
 ## Bluetooth Keyboard and Mice
 
-One of the common questions asked is if users can use their bluetooth keyboard and mouse in the BIOS and OpenCore, and the answer to that is yes..but. In order for these devices to work in pre-boot environments like the BIOS, in OpenCore, or even in the FileVault Prebooter; the bluetooth adapter needs to support a profile called HID Proxy. This profile allows your devices to connect to the adapter before booting the OS and it passes them to the system as a USB keyboard and mouse. Without this profile, it is not possible to use these devices until you're in the operating system.
+One of the common questions asked is if users can use their bluetooth keyboard and mouse in the BIOS and OpenCore, and the answer to that is yes... but! In order for these devices to work in pre-boot environments like the BIOS, in OpenCore, or even in the FileVault Prebooter; the bluetooth adapter needs to support a profile called **HID Proxy**. This profile allows your devices to connect to the adapter before booting the OS and it passes them to the system as a USB keyboard and mouse. Without this profile, it is not possible to use these devices until you're in the operating system.
 

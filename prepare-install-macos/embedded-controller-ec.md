@@ -46,7 +46,7 @@ Directory of fs0:\
 
 fs0:\> cd EFI\OC\Tools // note that it's with forward slashes
 
-fs0:\EFI\OC\Tools> acpidump.efi -b -n DSDT -z
+fs0:\EFI\OC\Tools> acpidump.efi -b -n DSDT
 ```
 
 ## Decompiling the DSDT

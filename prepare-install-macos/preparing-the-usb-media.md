@@ -8,9 +8,6 @@ For this section, I'm going to hand you off to Hackintosh Slav's OpenCore guide 
 
 {% embed url="https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/opencore-efi" %}
 
-You will want to follow both the "Creating the USB" page AND the "Gathering Files" page within the guide linked above.
+You will want to follow both the "**Creating the USB**" page AND the "**Gathering Files**" page within the guide linked above.
 
-{% hint style="danger" %}
-Linux users will need to follow the[ Internet Install guide ](https://internet-install.gitbook.io/macos-internet-install/)and skip setting up Clover to get macOS on to the USB. Users then will need to follow the above guide, skipping the "Making the Installer" on the "Creating the USB" page.
-{% endhint %}
 

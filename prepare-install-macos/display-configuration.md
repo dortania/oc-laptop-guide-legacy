@@ -58,18 +58,20 @@ Now you are ready to configure your patches. Use the table below to select the p
 
 **thicc text** Denotes recommended values (taken from WhateverGreen and Rehabman laptop configs)
 
+`Intel <Gen> (10.x.x)` Denotes the Generation of the Processor and the supported macOS versions.
+
 {% endhint %}
 
-### Intel Ivy Bridge
+### Intel Ivy Bridge (10.8+)
 
-| iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
+| iGPU | device-id | AAPL,ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Intel HD Graphics 4000 | 01660001 | 01006601 | 4 | 96MB | 24MB | 1536MB | LVDS1 HDMI1 DP2 |
-| Intel HD Graphics 4000 | 01660002 | 02006601 | 1 | 64MB | 24MB | 1536MB | LVDS1 |
-| **Intel HD Graphics 4000 <sup>1</sup>** * | 01660003 | 03006601 | 4 | 64MB | 16MB | 1536MB | LVDS1 DP3 |
-| **Intel HD Graphics 4000 <sup>2</sup>** | 01660004 | 04006601 | 1 | 32MB | 16MB | 1536MB | LVDS1 |
-| Intel HD Graphics 4000 | 01660008 | 08006601 | 3 | 64MB | 16MB | 1536MB | LVDS1 DP2 |
-| **Intel HD Graphics 4000 <sup>3</sup>** | 01660009 | 09006601 | 3 | 64MB | 16MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 4000 | 66010001 | 01006601 | 4 | 96MB | 24MB | 1536MB | LVDS1 HDMI1 DP2 |
+| Intel HD Graphics 4000 | 66010002 | 02006601 | 1 | 64MB | 24MB | 1536MB | LVDS1 |
+| **Intel HD Graphics 4000 <sup>1</sup>** * | 66010003 | 03006601 | 4 | 64MB | 16MB | 1536MB | LVDS1 DP3 |
+| **Intel HD Graphics 4000 <sup>2</sup>** | 66010004 | 04006601 | 1 | 32MB | 16MB | 1536MB | LVDS1 |
+| Intel HD Graphics 4000 | 66010008 | 08006601 | 3 | 64MB | 16MB | 1536MB | LVDS1 DP2 |
+| **Intel HD Graphics 4000 <sup>3</sup>** | 66010009 | 09006601 | 3 | 64MB | 16MB | 1536MB | LVDS1 DP2 |
 
 #### Special Notes:
 
@@ -103,18 +105,18 @@ Now you are ready to configure your patches. Use the table below to select the p
     * Type: Data
     * Value: `3A1E0000`
 
-### Intel Haswell
+### Intel Haswell (10.9+)
 
-| iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
+| iGPU | device-id | AAPL,ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Intel HD Graphics 4400 | 0a16000c | 0c00160a | 3 | 64MB | 34MB | 1536MB | LVDS1 DP2 |
-| **Intel HD Graphics 5000 <sup>1</sup>** | 0a260005 | 0500260a | 3 | 32MB | 19MB | 1536MB | LVDS1 DP2 |
-| **Intel HD Graphics 5000 <sup>2</sup>** | 0a260006 | 0600260a | 3 | 32MB | 19MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Graphics 5100 | 0a2e0008 | 08002e0a | 3 | 64MB | 34MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Pro Graphics 5200 | 0d260007 | 0700260d | 4 | 64MB | 34MB | 1536MB | LVDS1 DP2 HDMI1 |
-| Intel Iris Pro Graphics 5200 | 0d260009 | 0900260d | 1 | 64MB | 34MB | 1536MB | LVDS1 |
-| Intel Iris Pro Graphics 5200 | 0d26000e | 0e00260d | 4 | 96MB | 34MB | 1536MB | LVDS1 DP2 HDMI1 |
-| Intel Iris Pro Graphics 5200 | 0d26000f | 0f00260d | 1 | 96MB | 34MB | 1536MB | LVDS1 |
+| Intel HD Graphics 4400 | 160a000c | 0c00160a | 3 | 64MB | 34MB | 1536MB | LVDS1 DP2 |
+| **Intel HD Graphics 5000 <sup>1</sup>** | 260a0005 | 0500260a | 3 | 32MB | 19MB | 1536MB | LVDS1 DP2 |
+| **Intel HD Graphics 5000 <sup>2</sup>** | 260a0006 | 0600260a | 3 | 32MB | 19MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Graphics 5100 | 2e0a0008 | 08002e0a | 3 | 64MB | 34MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Pro Graphics 5200 | 260d0007 | 0700260d | 4 | 64MB | 34MB | 1536MB | LVDS1 DP2 HDMI1 |
+| Intel Iris Pro Graphics 5200 | 260d0009 | 0900260d | 1 | 64MB | 34MB | 1536MB | LVDS1 |
+| Intel Iris Pro Graphics 5200 | 260d000e | 0e00260d | 4 | 96MB | 34MB | 1536MB | LVDS1 DP2 HDMI1 |
+| Intel Iris Pro Graphics 5200 | 260d000f | 0f00260d | 1 | 96MB | 34MB | 1536MB | LVDS1 |
 
 #### Special Notes:
 
@@ -128,74 +130,154 @@ Now you are ready to configure your patches. Use the table below to select the p
     * We change the cursor byte from 6MB (00006000) to 9MB because of some glitches.
 
 
-### Intel Broadwell
+### Intel Broadwell (10.10.2+)
 
-| iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
+| iGPU | device-id | AAPL,ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Unlisted iGPU | 16060002 | 02000616 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Unlisted iGPU | 160e0001 | 01000e16 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 5600 | 16120003 | 03001216 | 4 | 34MB | 21MB | 1536MB | LVDS1 DP2 HDMI1 |
+| Unlisted iGPU | 06160002 | 02000616 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Unlisted iGPU | 0e160001 | 01000e16 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 5600 | 12160003 | 03001216 | 4 | 34MB | 21MB | 1536MB | LVDS1 DP2 HDMI1 |
 | Intel HD Graphics 5500 | 16160002 | 02001616 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 5300 | 161e0001 | 01001e16 | 3 | 38MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Pro Graphics 6200 | 16220002 | 02002216 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 6000 | 16260002 | 02002616 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 6000 | 16260005 | 05002616 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 6000\* | 16260006 | 06002616 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Graphics 6100 | 162b0002 | 02002b16 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 5300 | 1e160001 | 01001e16 | 3 | 38MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Pro Graphics 6200 | 22160002 | 02002216 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 6000 | 26160002 | 02002616 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 6000 | 26160005 | 05002616 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| **Intel HD Graphics 6000** * | 26160006 | 06002616 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Graphics 6100 | 2b160002 | 02002b16 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
 
-### Intel Skylake
+#### Sepcial Notes:
 
-| iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
+* For HD5300, HD5500 and HD6000, you do not have to specify any `device-id`
+
+* For HD5600 you need `device-id` faked to `26160000`
+
+* In some cases where you cannot set the DVMT-prealloc of these cards to 96MB higher in your UEFI Setup, you may get a kernel panic. Usually they're configured for 32MB of DVMT-prealloc, in that case these values are added to your iGPU Properties
+ 
+  | Key | Type | Value |
+  | :--- | :--- | :--- |
+  | `framebuffer-patch-enable` | Number | `1` |
+  | `framebuffer-stolenmem` | Data | `00003001` |
+  | `framebuffer-fbmem` | Data | `00009000` |
+
+### Intel Skylake 
+
+| iGPU | device-id | AAPL,ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Intel HD Graphics 530 | 19120000 | 00001219 | 3 | 34MB | 21MB | 1536MB | DUMMY1 DP2 |
-| Intel HD Graphics 520\* | 19160000 | 00001619 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 520 | 19160002 | 02001619 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 530 | 191b0000 | 00001b19 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 530 | 191b0006 | 06001b19 | 1 | 38MB | 0MB | 1536MB | LVDS1 |
-| Intel HD Graphics 515 | 191e0000 | 00001e19 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 515 | 191e0003 | 03001e19 | 3 | 40MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Graphics 540 | 19260000 | 00002619 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Graphics 540 | 19260002 | 02002619 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Graphics 540 | 19260004 | 04002619 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Graphics 540 | 19260007 | 07002619 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Graphics 550 | 19270000 | 00002719 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Graphics 550 | 19270004 | 04002719 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Pro Graphics 580 | 193b0000 | 00003b19 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Pro Graphics 580 | 193b0005 | 05003b19 | 4 | 34MB | 21MB | 1536MB | LVDS1 DP3 |
+| Intel HD Graphics 530 | 12190000 | 00001219 | 3 | 34MB | 21MB | 1536MB | DUMMY1 DP2 |
+| **Intel HD Graphics 520** | 16190000 | 00001619 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 520 | 16190002 | 02001619 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| **Intel HD Graphics 530** * | 1b190000 | 00001b19 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 530 | 1b190006 | 06001b19 | 1 | 38MB | 0MB | 1536MB | LVDS1 |
+| Intel HD Graphics 515 | 1e190000 | 00001e19 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 515 | 1e190003 | 03001e19 | 3 | 40MB | 0MB | 1536MB | LVDS1 DP2 |
+| **Intel Iris Graphics 540** | 26190000 | 00002619 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Graphics 540 | 26190002 | 02002619 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Graphics 540 | 26190004 | 04002619 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Graphics 540 | 26190007 | 07002619 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Graphics 550 | 27190000 | 00002719 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Graphics 550 | 27190004 | 04002719 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Pro Graphics 580 | 3b190000 | 00003b19 | 3 | 34MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Pro Graphics 580 | 3b190005 | 05003b19 | 4 | 34MB | 21MB | 1536MB | LVDS1 DP3 |
+
+#### Special Notes:
+
+* For HD515, HD520, HD530 and HD540, you do not need to use `device-id` faking, they're natively recognised.
+  * I would recommend you keep the `AAPL,ig-platform-id` automatically recognised for each device-id by commenting/removing its entry in the config, otherwise it is recommended to choose `00001619`.
+* For HD510 you may need to use `device-id`=`02190000` to fake its device-id.
+  * You would need also to use `AAPL,ig-platform-id`=`00001B19` or `00001619`
+* For HD550 and P530 (and potentially all HD P-series iGPUs), you may need to use `device-id`=`16190000`(recommended) or `12190000` or `26190000` or `1b190000`
+  * The choice of device-id may help with usable screen on boot up and on wake.
+    * For example Lenovo ThinkPad P50 with Xeon CPU will only properly work with `1619`.
+    * For example Dell Precision 7710 with i7 CPU has issues when set to `1619`, using `1b19` or something else may help.
+    * It is also recommended using `2619` with Xeon iGPUs.
+  * You may also pair it with a proper `AAPL,ig-platform-id`=`00001619`(recommended) or `00001219` or `00002619` or `00001b19`
+
+* In some cases where you cannot set the DVMT-prealloc of these cards to 64MB higher in your UEFI Setup, you may get a kernel panic. Usually they're configured for 32MB of DVMT-prealloc, in that case these values are added to your iGPU Properties
+ 
+  | Key | Type | Value |
+  | :--- | :--- | :--- |
+  | `framebuffer-patch-enable` | Number | `1` |
+  | `framebuffer-stolenmem` | Data | `00003001` |
+  | `framebuffer-fbmem` | Data | `00009000` |
+
 
 ### Intel Kaby Lake, KBL-R, & Amber Lake
 
-| iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
+| iGPU | device-id | AAPL,ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Intel HD Graphics 620 | 59160000 | 00001659 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 620 | 59160009 | 09001659 | 3 | 38MB | 0MB | 1536MB | LVDS1 DP2 |
-| Unlisted iGPU | 59180002 | 02001859 | 0 | 0MB | 0MB | 1536MB | Connector: |
-| Intel HD Graphics 630\* | 591b0000 | 00001b59 | 3 | 38MB | 21MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 630 | 591b0006 | 06001b59 | 1 | 38MB | 0MB | 1536MB | LVDS1 |
-| Unlisted iGPU | 591c0005 | 05001c59 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 615 | 591e0000 | 00001e59 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel HD Graphics 615 | 591e0001 | 01001e59 | 3 | 38MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Plus Graphics 640 | 59260002 | 02002659 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Plus Graphics 650 | 59270004 | 04002759 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Plus Graphics 650 | 59270009 | 09002759 | 3 | 38MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel UHD Graphics 617\*\* | 87C00000 | 0000C087 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel UHD Graphics 617 | 87C00005 | 0500C087 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| **Intel HD Graphics 620** | 16590000 | 00001659 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 620 | 16590009 | 09001659 | 3 | 38MB | 0MB | 1536MB | LVDS1 DP2 |
+| Unlisted iGPU | 18590002 | 02001859 | 0 | 0MB | 0MB | 1536MB | Connector: |
+| **Intel HD Graphics 630** | 1b590000 | 00001b59 | 3 | 38MB | 21MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 630 | 1b590006 | 06001b59 | 1 | 38MB | 0MB | 1536MB | LVDS1 |
+| Unlisted iGPU | 1c590005 | 05001c59 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 615 | 1e590000 | 00001e59 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel HD Graphics 615 | 1e590001 | 01001e59 | 3 | 38MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Plus Graphics 640 | 26590002 | 02002659 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Plus Graphics 650 | 27590004 | 04002759 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Plus Graphics 650 | 27590009 | 09002759 | 3 | 38MB | 0MB | 1536MB | LVDS1 DP2 |
+| **Intel UHD Graphics 617** | C0870000 | 0000C087 | 3 | 34MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel UHD Graphics 617 | C0870005 | 0500C087 | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
 
-### Intel Coffee Lake
+#### Special Notes:
 
-| iGPU | device-id | ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
+* For `HD615`, `HD620`, `HD630`, `HD640` and `HD650` it is not needed to use a `device-id`, however due to many issues with different setups it is recommended to use:
+  * `device-id`=`1b590000` or `16590000`
+  * `AAPL,ig-platform-id`=`00001659` or `00001b59` (you can try whichever works the best, some even try to cross the device-id and the ig-platform-id)
+    * For HD620 users, they can skip the part above (unless you get issues)
+* For `UHD620` users, you **must** use:
+  * `device-id`=`87C00000`
+  * `AAPL,ig-platform-id`=`0000C087`
+    * **Note:** `UHD630` ***IS NOT*** KabyLake, it's CoffeeLake (check next section).
+* For all HD6\*\* (`UHD` users are not concerned), there are some small issues with output where plugging anything would cause a lock up (kernel panic), here are some patches to mitigate that (credit Rehabman):
+  * 0306 to 0105 (will probably explain what it does one day)
+
+  | Key | Type | Value |
+  | :--- | :--- | :--- |
+  | `framebuffer-con1-enable` | Number | `1` |
+  | `framebuffer-con1-alldata` | Data | `01050A00 00080000 87010000 02040A00 00080000 87010000 FF000000 01000000 20000000` |
+
+  * 0204 to 0105 (will probably explain what it does one day)
+
+  | Key | Type | Value |
+  | :--- | :--- | :--- |
+  | `framebuffer-con1-enable` | Number | `1` |
+  | `framebuffer-con1-alldata` | Data | `01050A00 00080000 87010000 03060A00 00040000 87010000 FF000000 01000000 20000000` |
+
+* In some cases where you cannot set the DVMT-prealloc of these cards to 64MB higher in your UEFI Setup, you may get a kernel panic. Usually they're configured for 32MB of DVMT-prealloc, in that case these values are added to your iGPU Properties
+ 
+  | Key | Type | Value |
+  | :--- | :--- | :--- |
+  | `framebuffer-patch-enable` | Number | `1` |
+  | `framebuffer-stolenmem` | Data | `00003001` |
+  | `framebuffer-fbmem` | Data | `00009000` |
+
+### Intel Coffee Lake, Comet Lake (14nm++++++)
+
+| iGPU | device-id | AAPL,ig-platform-id | Port Count | Stolen Memory | Framebuffer Memory | Video RAM | Connectors |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Intel UHD Graphics 630 | 3E000000 | 0000003E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel UHD Graphics 630 | 3E920000 | 0000923E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel UHD Graphics 630 | 3E920009 | 0900923E | 3 | 57MB | 0MB | 1536MB | LVDS1 DUMMY2 |
-| Intel UHD Graphics 630 | 3E9B0000 | 00009B3E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel UHD Graphics 630 | 3E9B0006 | 06009B3E | 1 | 38MB | 0MB | 1536MB | LVDS1 DUMMY2 |
-| Intel UHD Graphics 630 | 3E9B0009 | 09009B3E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Plus Graphics 655 | 3EA50000 | 0000A53E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Plus Graphics 655 | 3EA50004 | 0400A53E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel UHD Graphics 630 | 3EA50005 | 0500A53E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Intel Iris Plus Graphics 655\* | 3EA50009 | 0900A53E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
-| Unlisted iGPU | 3EA60005 | 0500A63E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel UHD Graphics 630 | 003E0000 | 0000003E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel UHD Graphics 630 | 923E0000 | 0000923E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel UHD Graphics 630 | 923E0009 | 0900923E | 3 | 57MB | 0MB | 1536MB | LVDS1 DUMMY2 |
+| **Intel UHD Graphics 630** | 9B3E0000 | 00009B3E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel UHD Graphics 630 | 9B3E0006 | 06009B3E | 1 | 38MB | 0MB | 1536MB | LVDS1 DUMMY2 |
+| Intel UHD Graphics 630 | 9B3E0009 | 09009B3E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Plus Graphics 655 | A53E0000 | 0000A53E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Plus Graphics 655 | A53E0004 | 0400A53E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel UHD Graphics 630 | A53E0005 | 0500A53E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Intel Iris Plus Graphics 655 | A53E0009 | 0900A53E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+| Unlisted iGPU | A63E0005 | 0500A63E | 3 | 57MB | 0MB | 1536MB | LVDS1 DP2 |
+
+#### Special Notes:
+
+* For `UHD630` you may not need to fake the `device-id`  as long as it's `8086:9B3E`, if it's anything else, you may use `device-id`=`9B3E0000`
+* For `UHD620` in a Comet Lake CPU **requires**:
+  * `device-id`=`9B3E0000`
+  * `AAPL,ig-platform-id`=`00009B3E`
+
+### Intel IceLake (*soon™*)
+
+*to be filled*
 
 ## Panel Backlight
 
@@ -205,11 +287,24 @@ We'll do that by compiling PNLF SSDT from the Whatevergreen source repository an
 
 [SSDT-PNLF.dsl @ Github](https://raw.githubusercontent.com/acidanthera/WhateverGreen/master/Manual/SSDT-PNLF.dsl)
 
+[SSDT-PNLFCFL.dsl @ AppleLife.ru](https://cdn.discordapp.com/attachments/573338411503714324/690377007040561162/SSDT-PNLFCFL.dsl)
+
+{% hint style="info" %}
+Use the SSDT-PNLF.dsl with any iGPU Generation. Use SSDT-PNLFCFL.dsl with CoffeeLake (and potentially later releases). DO NOT USE BOTH AT THE SAME TIME.
+{% endhint %}
+
 Now that you've saved the file, you'll need to compile it. For that, we need to download maciASL if you are on macOS, or iASL if you are on linux or windows.
 
 [maciASL Project @ Github](https://github.com/acidanthera/MaciASL)
 
 Run maciASL, and open the SSDT-PNLF.dsl that you created previously. Save the file to OpenCore/ACPI/patched/SSDT-PNLF.aml. If you are using windows or linux, run `path/to/iasl SSDT-PNLF.dsl`.
+
+#### Special note for CoffeeLake and later:
+
+You might also want to try adding these boot arguments / device properties (recommended) to your configuration:
+
+* `igfxcflbklt=1` or `enable-cfl-backlight-fix`=`1`(Number) to enable CFL backlight patch
+* `-igfxmlr` or `enable-dpcd-max-link-rate-fix`=`1`(Number) to apply the maximum link rate fix (for some high resolution laptop screens like on XPS15 and others)
 
 ## Verifying Metal Support
 

@@ -283,7 +283,7 @@ Now you are ready to configure your patches. Use the table below to select the p
 
 Whatevergreen will enable your panel backlight, but to do so you usually have to provide configuration. Because this is OpenCore, the only method we can use is adding the SSDT-PNLF.
 
-We'll do that by compiling PNLF SSDT from the Whatevergreen source repository and placing it in OpenCore/ACPI/patched. First, save the dsl to your home directory.
+We'll do that by compiling PNLF SSDT from the Whatevergreen source repository and placing it in OpenCore/ACPI/. First, save the dsl to your home directory.
 
 [SSDT-PNLF.dsl @ Github](https://raw.githubusercontent.com/acidanthera/WhateverGreen/master/Manual/SSDT-PNLF.dsl)
 
@@ -297,7 +297,7 @@ Now that you've saved the file, you'll need to compile it. For that, we need to 
 
 [maciASL Project @ Github](https://github.com/acidanthera/MaciASL)
 
-Run maciASL, and open the SSDT-PNLF.dsl that you created previously. Save the file to OpenCore/ACPI/patched/SSDT-PNLF.aml. If you are using windows or linux, run `path/to/iasl SSDT-PNLF.dsl`.
+Run maciASL, and open the SSDT-PNLF.dsl that you created previously. Save the file to OpenCore/ACPI/SSDT-PNLF.aml. If you are using windows or linux, run `path/to/iasl SSDT-PNLF.dsl`.
 
 #### Special note for CoffeeLake and later:
 

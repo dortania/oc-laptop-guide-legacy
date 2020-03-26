@@ -174,6 +174,8 @@ Compile this patch with maciASL and save as OC/ACPI/SSDT-LANCPRW.aml. Don't forg
 
 ```text
 // For solving instant wake by hooking GPRW
+// Credit: Rehabman
+// Modified to work without some extra setup
 
 DefinitionBlock("", "SSDT", 2, "hack", "_LANCPRW", 0)
 {

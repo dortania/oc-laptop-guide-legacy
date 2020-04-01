@@ -31,7 +31,7 @@ EFI
 #### The Kexts below do not need VoodooInput
 {% endhint %}
 
-If you have issues running the above version of VoodooPS2 (the case of a hard surface trackpad), you may want to try Rehabman's version of VoodooPS2Controller:
+If you have issues running the above version of VoodooPS2 \(the case of a hard surface trackpad\), you may want to try Rehabman's version of VoodooPS2Controller:
 
 * [VoodooPS2Controller Project - Rehabman @ BitBucket](https://bitbucket.org/RehabMan/os-x-voodoo-ps2-controller/downloads/)
 
@@ -127,14 +127,13 @@ The documentation covers troubleshooting, GPIO pinning, and other topics that ma
 
 For this kext to properly load on your OpenCore setup, you must make sure that the loading order is as follows:
 
-    1. VoodooI2CServices
-    2. VoodooGPIO
-    3. VoodooI2C
-    4. <your satellite(s)>
-
+1. VoodooI2CServices
+2. VoodooGPIO
+3. VoodooI2C
+4. 
 Example: Using VoodooI2C + VoodooI2CHID
 
-```xml
+```markup
     <dict>
         <key>BundlePath</key>
         <string>VoodooI2C.kext/Contents/PlugIns/VoodooI2CServices.kext</string>
@@ -198,7 +197,7 @@ Example: Using VoodooI2C + VoodooI2CHID
         <string></string>
         <key>PlistPath</key>
         <string>Contents/Info.plist</string>
-    </dict> 
+    </dict>
 ```
 
 {% hint style="info" %}

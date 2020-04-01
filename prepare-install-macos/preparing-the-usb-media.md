@@ -6,8 +6,7 @@ For this step, you'll need a USB thumb drive that's 16GB or larger, and if possi
 
 For this section, I'm going to hand you off to Hackintosh Slav's OpenCore guide to set up the USB initially.
 
-{% embed url="https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/opencore-efi" %}
+{% embed url="https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/opencore-efi" caption="" %}
 
 You will want to follow both the "**Creating the USB**" page AND the "**Gathering Files**" page within the guide linked above.
-
 

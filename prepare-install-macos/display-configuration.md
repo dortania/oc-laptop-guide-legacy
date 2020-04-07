@@ -213,7 +213,7 @@ Now you are ready to configure your patches. Use the table below to select the p
   * `AAPL,ig-platform-id`=`00001659` or `00001b59` \(you can try whichever works the best, some even try to cross the device-id and the ig-platform-id\)
     * For HD620 users, they can skip the part above \(unless you get issues\)
 * For `UHD620` users, you **must** use:
-  * `device-id`=`87C00000`
+  * `device-id`=`C0870000`
   * `AAPL,ig-platform-id`=`0000C087`
     * **Note:** `UHD630` _**IS NOT**_ KabyLake, it's CoffeeLake \(check next section\).
 * For all HD6\*\* \(`UHD` users are not concerned\), there are some small issues with output where plugging anything would cause a lock up \(kernel panic\), here are some patches to mitigate that \(credit Rehabman\):

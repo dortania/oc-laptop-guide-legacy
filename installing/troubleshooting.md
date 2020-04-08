@@ -1,8 +1,6 @@
 # Troubleshooting
 
-Hackintosh Slav has a large page of errors and troubleshooting steps for Hackintoshes in general:
-
-{% embed url="https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/troubleshooting/troubleshooting" %}
+Hackintosh Slav has a [large page of errors and troubleshooting steps](https://desktop.dortania.ml/troubleshooting/troubleshooting) for Hackintoshes in general:
 
 ### Scrambled Login Screen
 

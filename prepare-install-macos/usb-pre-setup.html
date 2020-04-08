@@ -1,0 +1,704 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>USB pre-setup · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="pre-installation-review.html" />
+    
+    
+    <link rel="prev" href="display-configuration.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../a-guide-to-build-guides.html">
+            
+                <a href="../a-guide-to-build-guides.html">
+            
+                    
+                    A Guide to Build Guides
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Before you start</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../before-you-start/know-your-hardware.html">
+            
+                <a href="../before-you-start/know-your-hardware.html">
+            
+                    
+                    Know Your Hardware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../before-you-start/bios-configuration.html">
+            
+                <a href="../before-you-start/bios-configuration.html">
+            
+                    
+                    BIOS Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Necessary Skills & Terminology</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../useful-skills-terminology/a-little-unix-never-hurt-anyone.html">
+            
+                <a href="../useful-skills-terminology/a-little-unix-never-hurt-anyone.html">
+            
+                    
+                    A Little UNIX Never Hurt Anyone!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../useful-skills-terminology/just-enough-git.html">
+            
+                <a href="../useful-skills-terminology/just-enough-git.html">
+            
+                    
+                    Just Enough GIT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../useful-skills-terminology/whats-an-efi.html">
+            
+                <a href="../useful-skills-terminology/whats-an-efi.html">
+            
+                    
+                    What's an EFI?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../useful-skills-terminology/what-about-kexts.html">
+            
+                <a href="../useful-skills-terminology/what-about-kexts.html">
+            
+                    
+                    What about KEXTs?
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Installing macOS</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="preparing-the-usb-media.html">
+            
+                <a href="preparing-the-usb-media.html">
+            
+                    
+                    Preparing the USB Media
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="clover-template.html">
+            
+                <a href="clover-template.html">
+            
+                    
+                    OpenCore Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="setting-up-input-devices.html">
+            
+                <a href="setting-up-input-devices.html">
+            
+                    
+                    Setting up Input Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="disabling-touchid.html">
+            
+                <a href="disabling-touchid.html">
+            
+                    
+                    Disabling TouchID lookup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="embedded-controller-ec.html">
+            
+                <a href="embedded-controller-ec.html">
+            
+                    
+                    Embedded Controller (EC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="display-configuration.html">
+            
+                <a href="display-configuration.html">
+            
+                    
+                    Display Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.7" data-path="usb-pre-setup.html">
+            
+                <a href="usb-pre-setup.html">
+            
+                    
+                    USB pre-setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="pre-installation-review.html">
+            
+                <a href="pre-installation-review.html">
+            
+                    
+                    Pre-Installation Review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Installing</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../installing/installing-the-operating-system.html">
+            
+                <a href="../installing/installing-the-operating-system.html">
+            
+                    
+                    Installing the Operating System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../installing/troubleshooting.html">
+            
+                <a href="../installing/troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Post Installation</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../post-installation/adding-clover-to-the-bios.html">
+            
+                <a href="../post-installation/adding-clover-to-the-bios.html">
+            
+                    
+                    Adding OpenCore to Your Boot Drive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../post-installation/configuring-usb-ports.html">
+            
+                <a href="../post-installation/configuring-usb-ports.html">
+            
+                    
+                    Configuring USB Ports
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../post-installation/enabling-wifi-and-bluetooth.html">
+            
+                <a href="../post-installation/enabling-wifi-and-bluetooth.html">
+            
+                    
+                    Enabling WIFI & Bluetooth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../post-installation/setting-up-ethernet-adapters.html">
+            
+                <a href="../post-installation/setting-up-ethernet-adapters.html">
+            
+                    
+                    Setting up Ethernet Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../post-installation/configuring-your-audio-device.html">
+            
+                <a href="../post-installation/configuring-your-audio-device.html">
+            
+                    
+                    Configuring your Audio Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Battery/Power Management</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../battery-power-management/locate-that-missing-battery.html">
+            
+                <a href="../battery-power-management/locate-that-missing-battery.html">
+            
+                    
+                    Locate that Missing Battery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../battery-power-management/correcting-sleep-problems.html">
+            
+                <a href="../battery-power-management/correcting-sleep-problems.html">
+            
+                    
+                    Correcting Sleep Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../battery-power-management/optimizing-battery-life.html">
+            
+                <a href="../battery-power-management/optimizing-battery-life.html">
+            
+                    
+                    Optimizing Battery Life
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Extras</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../extras/enabling-filevault.html">
+            
+                <a href="../extras/enabling-filevault.html">
+            
+                    
+                    Enabling FileVault
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../extras/display-rotation.html">
+            
+                <a href="../extras/display-rotation.html">
+            
+                    
+                    Display Rotation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../extras/dual-booting-with-bluetooth-devices.html">
+            
+                <a href="../extras/dual-booting-with-bluetooth-devices.html">
+            
+                    
+                    Dual booting​ with Bluetooth Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../extras/asussmc.html">
+            
+                <a href="../extras/asussmc.html">
+            
+                    
+                    ASUS Function Keys
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >USB pre-setup</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="usb-pre-setup">USB pre-setup</h1>
+<p>USB ports and controllers on macOS are one of the most tricky parts of a hackintosh. Ever since 10.11, Apple decided to change the way macOS handles the ports and controllers and how many can it handle, which would limit the number of ports. You can know more about that here:</p>
+<p><a href="https://usb-map.gitbook.io/project/" target="_blank">USB Map by CorpNewt @ Gitbook</a></p>
+<p><a href="https://www.tonymacx86.com/threads/guide-10-11-usb-changes-and-solutions.173616/" target="_blank">10.11+ USB changes and solutions by Rehabman @ tonymacx86 forums</a></p>
+<p>In this part of the guide, we will see how to temporary fix your USB drives for the installer section.</p>
+<p><div class="alert alert-danger hints-alert"><div class="hints-icon"><i class="fa fa-exclamation-circle"></i></div><div class="hints-container"><p>This is only a <strong>TEMPORARY</strong> fix, do <strong>NOT</strong> keep it as permanent solution.</p>
+</div></div></p>
+<h2 id="getting-usbinjectall">Getting USBInjectAll</h2>
+<p>This driver would enumerate all the USB ports available in your system (following the ACPI tables) and inject <strong>all</strong> of them to macOS, this would let macOS see *most* of the ports. The reason why it wouldn&apos;t see all of them is because of the Port Limit. However we&apos;re going to use USBInjectAll to limit some ports when we need it. If you did not get it already when making the USB, add it now. Remember to add it to your config.plist as well.</p>
+<p><a href="https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/" target="_blank">USBInjectAll Project - Rehabman @ BitBucket</a></p>
+<h2 id="for-usb20-flash-drives">For USB2.0 flash drives</h2>
+<p>You do not need anything more to do, you can just plug and use it for the installer, make sure you get USBInjectAll.</p>
+<p>In case you have an Ivy Bridge up to Broadwell laptop, make sure that <code>change EHC1 to EH01</code> and <code>change EHC2 to EH02</code> ACPI patches are <strong>disabled</strong>. If you have a USB3.0 port, plug the drive in it.</p>
+<h2 id="for-usb30-flash-drives">For USB3.0 flash drives</h2>
+<p>USBInjectAll would inject all the USB ports detected beginning with USB2.0 personalities. And since most controllers support at least 11 USB2.0 personalities, it would fill up the maximum allowed ports by macOS (check the CorpNewt guide above to understand more about that). To fix this, we can try and limit some ports from showing up to keep room for USB3.0 personalities to show up (since 1 USB3.0 personality = 2 ports count, and 1 USB2.0 personality = 1 port count).</p>
+<h3 id="solution-1">Solution #1</h3>
+<p>Use a USB2.0 drive and see the above section.</p>
+<h3 id="solution-2">Solution #2</h3>
+<p>Use a USB2.0 hub or extension cord to force the USB3.0 drive to run in USB2.0 mode.</p>
+<h3 id="solution-3">Solution #3</h3>
+<p>On Windows, plug your USB3.0 drive in a USB3.0 port. In case you have a Skylake (6th Gen intel) platform, you have only one controller (XHCI, for USB3.0), if you have Broadwell or earlier, you have two controllers (XHCI, USB3.0, and EHCI, USB2.0), either way use the USB3.0 port of your device. Right click on Start &gt; Device Manager, highlight &quot;<em>USB Root Hub (USB3.0)</em>&quot; or &quot;<em>Intel(R) USB 3.0 eXtensible Host Controller</em>&quot; under &quot;Universal Serial Bus Controller&quot; section:</p>
+<p><img src="../.gitbook/assets/image-2.png" alt=""></p>
+<p>Then select View &gt; Devices by connection</p>
+<p><img src="../.gitbook/assets/image-1.png" alt=""></p>
+<p>Your setup should look something similar to this,</p>
+<p><img src="../.gitbook/assets/image-4.png" alt=""></p>
+<p>Under <code>USB Root Hub</code> you&apos;ll see your connected USB devices (USB3.0 ports, in this case even my internal USB devices since I only have an XHCI controller, for Broadwell and earlier you may find the internal USB devices under EHCI, we do not need to care about those). You should see your USB drive under this section, OR under a USB Hub, either way look for the root device under <code>USB Root Hub</code> that leads to your USB3.0 drive (it can also be the USB3.0 drive itself).</p>
+<p>Select your drive and double click on it, or right click &gt; Properties, in this example, I&apos;ll select &quot;Generic USB Hub&quot;:</p>
+<p><img src="../.gitbook/assets/image-5.png" alt=""></p>
+<p>Go to Details &gt; and choose under Property list: &quot;BIOS device name&quot;</p>
+<p><img src="../.gitbook/assets/image%20%281%29.png" alt=""></p>
+<p>Here, we can see where the BIOS/UEFI&apos;s ACPI has defined the port location and <strong>Name</strong>. In this case it&apos;s named <code>HS03</code>, for USB3.0 devices it should be named <strong>SSxx</strong> (in some cases it&apos;s named SSPx, usually it&apos;s SSxx). In case it&apos;s named <code>HSxx</code> you can just go and start your macOS installer, if it&apos;s named <code>SSxx</code> make sure to check if you have a USB keyboard and do the same process as above and make sure you remember its name, usually it&apos;s connected to a USB2.0 personality in the XHCI controller, so it&apos;s going to be named as HSxx instead of SSxx.</p>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>At this point, if you have a <strong>USB attached Mouse/Trackpad</strong> (some laptops have it connected through PS2 like seen in the section before), do the same process as above and make sure you remember its name, usually it&apos;s connected to a USB2.0 personality in the XHCI controller, so it&apos;s going to be named as <code>HSxx</code> instead of <code>SSxx</code>.</p>
+</div></div></p>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>If you happen to use a Bluetooth mouse, it&apos;s better if you change it for a USB one, Bluetooth on macOS is quite a hassle also it&apos;s not going to work properly in the installer environment.</p>
+</div></div></p>
+<p>Now go back to your config.plist &gt; NVRAM &gt; Add &gt; ... &gt; boot-args. Here you&apos;re going to add these arguments:</p>
+<pre><code class="lang-text">-uia_exclude_hs uia_include=HSxx,SSxx
+</code></pre>
+<h3 id="explanations">Explanations:</h3>
+<ul>
+<li><code>-uia_exclude_hs</code> is a boot argument read by USBInjectAll driver that would tell it to disable the enumeration and injection of all HS (USB2.0) personalities, leaving some sports for the SS (USB3.0) personalities to be injected (lifting the 15 ports limit by removing some ports).</li>
+<li><code>uia_include:HSxx,SSxx</code> is a boot argument read by USBInjectAll driver that would <strong>include</strong> some excluded ports and with that we can include USB mice/keyboards that we got the IDs of before. There is no need to include any <code>SS</code> device, since they&apos;re all included anyways. So your argument will look something like this: <code>uia_include=HS03,HS05</code> (if, for example, your USB devices that you want to keep and are USB2.0 devices named HS03 and HS05).</li>
+</ul>
+<p>Save your config.plist. With this you can continue the setup and review your Installation files.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="display-configuration.html" class="navigation navigation-prev " aria-label="Previous page: Display Configuration">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="pre-installation-review.html" class="navigation navigation-next " aria-label="Next page: Pre-Installation Review">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"USB pre-setup","level":"4.7","depth":1,"next":{"title":"Pre-Installation Review","level":"4.8","depth":1,"path":"prepare-install-macos/pre-installation-review.md","ref":"prepare-install-macos/pre-installation-review.md","articles":[]},"previous":{"title":"Display Configuration","level":"4.6","depth":1,"path":"prepare-install-macos/display-configuration.md","ref":"prepare-install-macos/display-configuration.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"prepare-install-macos/usb-pre-setup.md","mtime":"2020-04-08T19:08:47.232Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-08T19:09:33.909Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    
+
+    </body>
+</html>
+

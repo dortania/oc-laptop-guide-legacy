@@ -1,0 +1,883 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Correcting Sleep Problems · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="optimizing-battery-life.html" />
+    
+    
+    <link rel="prev" href="locate-that-missing-battery.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../a-guide-to-build-guides.html">
+            
+                <a href="../a-guide-to-build-guides.html">
+            
+                    
+                    A Guide to Build Guides
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Before you start</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../before-you-start/know-your-hardware.html">
+            
+                <a href="../before-you-start/know-your-hardware.html">
+            
+                    
+                    Know Your Hardware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../before-you-start/bios-configuration.html">
+            
+                <a href="../before-you-start/bios-configuration.html">
+            
+                    
+                    BIOS Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Necessary Skills & Terminology</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../useful-skills-terminology/a-little-unix-never-hurt-anyone.html">
+            
+                <a href="../useful-skills-terminology/a-little-unix-never-hurt-anyone.html">
+            
+                    
+                    A Little UNIX Never Hurt Anyone!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../useful-skills-terminology/just-enough-git.html">
+            
+                <a href="../useful-skills-terminology/just-enough-git.html">
+            
+                    
+                    Just Enough GIT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../useful-skills-terminology/whats-an-efi.html">
+            
+                <a href="../useful-skills-terminology/whats-an-efi.html">
+            
+                    
+                    What's an EFI?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../useful-skills-terminology/what-about-kexts.html">
+            
+                <a href="../useful-skills-terminology/what-about-kexts.html">
+            
+                    
+                    What about KEXTs?
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Installing macOS</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../prepare-install-macos/preparing-the-usb-media.html">
+            
+                <a href="../prepare-install-macos/preparing-the-usb-media.html">
+            
+                    
+                    Preparing the USB Media
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../prepare-install-macos/clover-template.html">
+            
+                <a href="../prepare-install-macos/clover-template.html">
+            
+                    
+                    OpenCore Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../prepare-install-macos/setting-up-input-devices.html">
+            
+                <a href="../prepare-install-macos/setting-up-input-devices.html">
+            
+                    
+                    Setting up Input Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../prepare-install-macos/disabling-touchid.html">
+            
+                <a href="../prepare-install-macos/disabling-touchid.html">
+            
+                    
+                    Disabling TouchID lookup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../prepare-install-macos/embedded-controller-ec.html">
+            
+                <a href="../prepare-install-macos/embedded-controller-ec.html">
+            
+                    
+                    Embedded Controller (EC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../prepare-install-macos/display-configuration.html">
+            
+                <a href="../prepare-install-macos/display-configuration.html">
+            
+                    
+                    Display Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../prepare-install-macos/usb-pre-setup.html">
+            
+                <a href="../prepare-install-macos/usb-pre-setup.html">
+            
+                    
+                    USB pre-setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../prepare-install-macos/pre-installation-review.html">
+            
+                <a href="../prepare-install-macos/pre-installation-review.html">
+            
+                    
+                    Pre-Installation Review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Installing</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../installing/installing-the-operating-system.html">
+            
+                <a href="../installing/installing-the-operating-system.html">
+            
+                    
+                    Installing the Operating System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../installing/troubleshooting.html">
+            
+                <a href="../installing/troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Post Installation</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../post-installation/adding-clover-to-the-bios.html">
+            
+                <a href="../post-installation/adding-clover-to-the-bios.html">
+            
+                    
+                    Adding OpenCore to Your Boot Drive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../post-installation/configuring-usb-ports.html">
+            
+                <a href="../post-installation/configuring-usb-ports.html">
+            
+                    
+                    Configuring USB Ports
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../post-installation/enabling-wifi-and-bluetooth.html">
+            
+                <a href="../post-installation/enabling-wifi-and-bluetooth.html">
+            
+                    
+                    Enabling WIFI & Bluetooth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../post-installation/setting-up-ethernet-adapters.html">
+            
+                <a href="../post-installation/setting-up-ethernet-adapters.html">
+            
+                    
+                    Setting up Ethernet Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../post-installation/configuring-your-audio-device.html">
+            
+                <a href="../post-installation/configuring-your-audio-device.html">
+            
+                    
+                    Configuring your Audio Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Battery/Power Management</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="locate-that-missing-battery.html">
+            
+                <a href="locate-that-missing-battery.html">
+            
+                    
+                    Locate that Missing Battery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="7.2" data-path="correcting-sleep-problems.html">
+            
+                <a href="correcting-sleep-problems.html">
+            
+                    
+                    Correcting Sleep Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="optimizing-battery-life.html">
+            
+                <a href="optimizing-battery-life.html">
+            
+                    
+                    Optimizing Battery Life
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Extras</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../extras/enabling-filevault.html">
+            
+                <a href="../extras/enabling-filevault.html">
+            
+                    
+                    Enabling FileVault
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../extras/display-rotation.html">
+            
+                <a href="../extras/display-rotation.html">
+            
+                    
+                    Display Rotation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../extras/dual-booting-with-bluetooth-devices.html">
+            
+                <a href="../extras/dual-booting-with-bluetooth-devices.html">
+            
+                    
+                    Dual booting​ with Bluetooth Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../extras/asussmc.html">
+            
+                <a href="../extras/asussmc.html">
+            
+                    
+                    ASUS Function Keys
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Correcting Sleep Problems</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="correcting-sleep-problems">Correcting Sleep Problems</h1>
+<p>Are you experiencing a condition where you tell your computer to sleep, and it starts to do as instructed but then laughs in your face? Well, you are not alone! That&apos;s a condition that most of us face, but we can fix it! There are a few things that can cause this problem, some of which we&apos;ve corrected before ever reaching this section (How about that!). Let&apos;s talk about each one.</p>
+<h2 id="usb-port-mapping">USB Port Mapping</h2>
+<p>That&apos;s right..if you&apos;re using USBInjectAll in its default configuration, or you have no USB port injection at all, it could cause this condition. That isn&apos;t a problem for you though because we&apos;ve already fixed it.</p>
+<h2 id="disabling-hibernation">Disabling Hibernation</h2>
+<p>Hibernation isn&apos;t well supported on hackintoshes, and in some cases it doesn&apos;t work at all. We can mitigate this problem by configuring macOS to use standby mode which will preserve what&apos;s in memory on sleep but will not write it out to disk and power off the machine. This may help to lenghten your SSD&apos;s lifespan but at the cost of losing all your work if the laptop was in sleep mode and power ran out or when the power is so low macOS will just shutdown and not enter hibernation mode.</p>
+<pre><code class="lang-text">sudo pmset hibernatemode 0
+sudo pmset standby 0
+sudo pmset autopoweroff 0
+</code></pre>
+<h2 id="finding-wake-reasons-for-correction">Finding Wake Reasons for Correction</h2>
+<p>Before talking about the remaining items that cause wakeups, we need to talk about how to tell what&apos;s waking your system up. There are a couple of very common reasons and the correction is similar for all of them. To find out what&apos;s waking your system, put it to sleep. Do it right now. Alright, it&apos;s probably already woken up so let&apos;s take a look at the log.</p>
+<pre><code class="lang-text">pmset -g log | grep -e &quot;Wake.*due to &quot;
+</code></pre>
+<p>Yep, that&apos;s a ton of data. You&apos;re looking for a couple of specific things though and they should be pretty close to the bottom of the log.</p>
+<h2 id="wake-on-glanlanc">Wake on GLAN/LANC</h2>
+<p>If you see an entry in the log that looks similar to this one, you&apos;ll need to disable Wake on Lan in your BIOS. If that doesn&apos;t work, a patch is necessary.</p>
+<pre><code class="lang-text">Wake [CDNVA] due to GLAN: Using AC
+</code></pre>
+<h2 id="wake-on-hdef">Wake on HDEF</h2>
+<p>This message looks similar to the GLAN log entry. If you see it, you definitely need a patch.</p>
+<pre><code class="lang-text">Wake [CDNVA] due to HDEF&#xFEFF;: Using AC
+</code></pre>
+<h2 id="wake-on-xhci">Wake on XHCI</h2>
+<p>This message is one of the most common that you may come across. It also looks similar to the other messages in the log. If you see it, you need a patch.</p>
+<pre><code class="lang-text">Wake [CDNVA] due to XHC&#xFEFF;: Using AC
+</code></pre>
+<h2 id="rtcmaintenance-wakes">RTC/Maintenance Wakes</h2>
+<p>Maintenance wakes are normal behavior, and are related to PowerNap. When PowerNap is enabled your computer will wake up to check email, initiate Time Machine backups, and sync with iCloud. Those wakes look similar to the following.</p>
+<pre><code class="lang-text">DarkWake from Normal Sleep [CDNPB] : due to RTC/Maintenance Using AC
+</code></pre>
+<p>If these wakes are not desired, disable PowerNap.</p>
+<h2 id="wake-on-rtc-alarm">Wake on RTC Alarm</h2>
+<p>RTC Alarm wakes are generated by applications that use enhanced notifications that are left running while the system is asleep. Examples of applications that cause this wake type would be Messages, or Facebook. Those wakes may look like this.</p>
+<pre><code class="lang-text">Wake reason: RTC (Alarm)
+</code></pre>
+<p>If these wakes are undesirable, close any applications that may create them before allowing the device to sleep.</p>
+<h2 id="patching-to-correct-sleep-issues">Patching To Correct Sleep Issues</h2>
+<p>The good news is that you can probably correct all of these issues with a single OpenCore configuration change and SSDT hotpatch from Rehabman! Determine which patch you need by inspecting your DSDT and matching the methods to the patches below.</p>
+<h3 id="patch-method-1-gprw2n">Patch Method #1 (GPRW,2,N)</h3>
+<p>Search your DSDT for PRW. If you find method GPRW, use these patches.</p>
+<p>Use your favorite plist editor to add this patch to the ACPI/Patch array in config.plist.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Key</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Comment</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">change Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</td>
+</tr>
+<tr>
+<td style="text-align:left">Enabled</td>
+<td style="text-align:left">Bool</td>
+<td style="text-align:left">True</td>
+</tr>
+<tr>
+<td style="text-align:left">Find</td>
+<td style="text-align:left">Data</td>
+<td style="text-align:left">4750525702</td>
+</tr>
+<tr>
+<td style="text-align:left">Replace</td>
+<td style="text-align:left">Data</td>
+<td style="text-align:left">5850525702</td>
+</tr>
+</tbody>
+</table>
+<p>Compile this patch with maciASL and save as OC/ACPI/SSDT-GPRW.aml. Don&apos;t forget to add it to your Config.plist as well.</p>
+<pre><code class="lang-text">// For solving instant wake by hooking GPRW or UPRW
+// Credit: Rehabman
+// Modified to work without some extra setup
+
+DefinitionBlock(&quot;&quot;, &quot;SSDT&quot;, 2, &quot;hack&quot;, &quot;_GPRW&quot;, 0)
+{
+    External(XPRW, MethodObj)
+
+    // In DSDT, native GPRW is renamed to XPRW with OpenCore binpatch.
+    // As a result, calls to GPRW land here.
+    // The purpose of this implementation is to avoid &quot;instant wake&quot;
+    // by returning 0 in the second position (sleep state supported)
+    // of the return package.
+    Method(GPRW, 2)
+    {
+        For (,,)
+        {
+            If (0x6d == Arg0) { Return (Package() { 0x6d, 0, }) }
+            If (0x0d == Arg0) { Return (Package() { 0x0d, 0, }) }
+            Break
+        }
+        Return (XPRW(Arg0, Arg1))
+    }
+}
+</code></pre>
+<h3 id="patch-method-2-uprw2n">Patch Method #2 (UPRW,2,N)</h3>
+<p>Search your DSDT for PRW. If you find method UPRW, use these patches.</p>
+<p>Use your favorite plist editor to add this patch to the ACPI/Patch array in config.plist.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Key</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Comment</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">change Method(UPRW,2,N) to XPRW, pair with SSDT-UPRW.aml</td>
+</tr>
+<tr>
+<td style="text-align:left">Enabled</td>
+<td style="text-align:left">Bool</td>
+<td style="text-align:left">True</td>
+</tr>
+<tr>
+<td style="text-align:left">Find</td>
+<td style="text-align:left">Data</td>
+<td style="text-align:left">555052570a7012</td>
+</tr>
+<tr>
+<td style="text-align:left">Replace</td>
+<td style="text-align:left">Data</td>
+<td style="text-align:left">585052570a7012</td>
+</tr>
+</tbody>
+</table>
+<p>Compile this patch with maciASL and save as OC/ACPI/SSDT-UPRW.aml. Don&apos;t forget to add it to your config.plist as well.</p>
+<pre><code class="lang-text">// For solving instant wake by hooking GPRW or UPRW
+// Credit: Rehabman
+// Modified to work without some extra setup
+
+DefinitionBlock(&quot;&quot;, &quot;SSDT&quot;, 2, &quot;hack&quot;, &quot;_UPRW&quot;, 0)
+{
+    External(XPRW, MethodObj)
+
+    // In DSDT, native UPRW is renamed to XPRW with OpenCore binpatch.
+    // As a result, calls to UPRW land here.
+    // The purpose of this implementation is to avoid &quot;instant wake&quot;
+    // by returning 0 in the second position (sleep state supported)
+    // of the return package.
+    Method(UPRW, 2)
+    {
+        For (,,)
+        {
+            If (0x6d == Arg0) { Return (Package() { 0x6d, 0, }) }
+            If (0x0d == Arg0) { Return (Package() { 0x0d, 0, }) }
+        }
+        Return (XPRW(Arg0, Arg1))
+    }
+}
+</code></pre>
+<h3 id="patch-method-3-lanc-prw2n">Patch Method #3 LANC (_PRW,2,N)</h3>
+<p>Search your DSDT for PRW. If you find method LANC _PRW, use these patches.</p>
+<p>Use your favorite plist editor to add this patch to the ACPI/Patch array in config.plist.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Key</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Comment</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">change LANC (_PRW,0,S) to (XPRW,0,..), pair with SSDT-LANCPRW.aml</td>
+</tr>
+<tr>
+<td style="text-align:left">Disabled</td>
+<td style="text-align:left">Bool</td>
+<td style="text-align:left">False</td>
+</tr>
+<tr>
+<td style="text-align:left">Find</td>
+<td style="text-align:left">Data</td>
+<td style="text-align:left">00001900141f5f50525708</td>
+</tr>
+<tr>
+<td style="text-align:left">Replace</td>
+<td style="text-align:left">Data</td>
+<td style="text-align:left">00001900141f5850525708</td>
+</tr>
+</tbody>
+</table>
+<p>Compile this patch with maciASL and save as OC/ACPI/SSDT-LANCPRW.aml. Don&apos;t forget to add it to your config.plist as well.</p>
+<pre><code class="lang-text">// For solving instant wake by hooking GPRW
+// Credit: Rehabman
+// Modified to work without some extra setup
+
+DefinitionBlock(&quot;&quot;, &quot;SSDT&quot;, 2, &quot;hack&quot;, &quot;_LANCPRW&quot;, 0)
+{
+    External(XPRW, MethodObj)
+
+    // In DSDT, native LANC._PRW is renamed XPRW with OpenCore binpatch.
+    // As a result, calls to LANC._PRW land here.
+    // The purpose of this implementation is to avoid &quot;instant wake&quot;
+    // by returning 0 in the second position (sleep state supported)
+    // of the return package.
+    // LANC._PRW is renamed to XPRW so we can replace it here
+    // LANC can be named as GLAN or other names, make sure you match it
+    // with the one in your ACPI.
+    External(_SB.PCI0.LANC.XPRW, MethodObj)
+    Method(_SB.PCI0.LANC._PRW)
+    {
+        Local0 = \_SB.PCI0.LANC.XPRW()
+        For (,,)
+        {
+            Local0[1] = 0
+        }
+        Return(Local0)
+    }
+}
+</code></pre>
+<h2 id="laptop-still-have-insomnia">Laptop Still Have Insomnia?</h2>
+<p>In that case, you&apos;re going to have to create a custom patch for your system, here&apos;s a guide that should help you out.</p>
+<p><a href="https://www.tonymacx86.com/threads/guide-using-clover-to-hotpatch-acpi.200137/" target="_blank">[Guide] Using Clover to &quot;hotpatch&quot; ACPI</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="locate-that-missing-battery.html" class="navigation navigation-prev " aria-label="Previous page: Locate that Missing Battery">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="optimizing-battery-life.html" class="navigation navigation-next " aria-label="Next page: Optimizing Battery Life">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Correcting Sleep Problems","level":"7.2","depth":1,"next":{"title":"Optimizing Battery Life","level":"7.3","depth":1,"path":"battery-power-management/optimizing-battery-life.md","ref":"battery-power-management/optimizing-battery-life.md","articles":[]},"previous":{"title":"Locate that Missing Battery","level":"7.1","depth":1,"path":"battery-power-management/locate-that-missing-battery.md","ref":"battery-power-management/locate-that-missing-battery.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"battery-power-management/correcting-sleep-problems.md","mtime":"2020-04-08T19:08:47.232Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-08T19:09:33.909Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    
+
+    </body>
+</html>
+

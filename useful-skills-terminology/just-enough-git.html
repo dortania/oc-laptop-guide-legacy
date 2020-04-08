@@ -1,0 +1,669 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Just Enough GIT · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="whats-an-efi.html" />
+    
+    
+    <link rel="prev" href="a-little-unix-never-hurt-anyone.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../a-guide-to-build-guides.html">
+            
+                <a href="../a-guide-to-build-guides.html">
+            
+                    
+                    A Guide to Build Guides
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Before you start</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../before-you-start/know-your-hardware.html">
+            
+                <a href="../before-you-start/know-your-hardware.html">
+            
+                    
+                    Know Your Hardware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../before-you-start/bios-configuration.html">
+            
+                <a href="../before-you-start/bios-configuration.html">
+            
+                    
+                    BIOS Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Necessary Skills & Terminology</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="a-little-unix-never-hurt-anyone.html">
+            
+                <a href="a-little-unix-never-hurt-anyone.html">
+            
+                    
+                    A Little UNIX Never Hurt Anyone!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2" data-path="just-enough-git.html">
+            
+                <a href="just-enough-git.html">
+            
+                    
+                    Just Enough GIT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="whats-an-efi.html">
+            
+                <a href="whats-an-efi.html">
+            
+                    
+                    What's an EFI?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="what-about-kexts.html">
+            
+                <a href="what-about-kexts.html">
+            
+                    
+                    What about KEXTs?
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Installing macOS</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../prepare-install-macos/preparing-the-usb-media.html">
+            
+                <a href="../prepare-install-macos/preparing-the-usb-media.html">
+            
+                    
+                    Preparing the USB Media
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../prepare-install-macos/clover-template.html">
+            
+                <a href="../prepare-install-macos/clover-template.html">
+            
+                    
+                    OpenCore Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../prepare-install-macos/setting-up-input-devices.html">
+            
+                <a href="../prepare-install-macos/setting-up-input-devices.html">
+            
+                    
+                    Setting up Input Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../prepare-install-macos/disabling-touchid.html">
+            
+                <a href="../prepare-install-macos/disabling-touchid.html">
+            
+                    
+                    Disabling TouchID lookup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../prepare-install-macos/embedded-controller-ec.html">
+            
+                <a href="../prepare-install-macos/embedded-controller-ec.html">
+            
+                    
+                    Embedded Controller (EC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../prepare-install-macos/display-configuration.html">
+            
+                <a href="../prepare-install-macos/display-configuration.html">
+            
+                    
+                    Display Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../prepare-install-macos/usb-pre-setup.html">
+            
+                <a href="../prepare-install-macos/usb-pre-setup.html">
+            
+                    
+                    USB pre-setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../prepare-install-macos/pre-installation-review.html">
+            
+                <a href="../prepare-install-macos/pre-installation-review.html">
+            
+                    
+                    Pre-Installation Review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Installing</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../installing/installing-the-operating-system.html">
+            
+                <a href="../installing/installing-the-operating-system.html">
+            
+                    
+                    Installing the Operating System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../installing/troubleshooting.html">
+            
+                <a href="../installing/troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Post Installation</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../post-installation/adding-clover-to-the-bios.html">
+            
+                <a href="../post-installation/adding-clover-to-the-bios.html">
+            
+                    
+                    Adding OpenCore to Your Boot Drive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../post-installation/configuring-usb-ports.html">
+            
+                <a href="../post-installation/configuring-usb-ports.html">
+            
+                    
+                    Configuring USB Ports
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../post-installation/enabling-wifi-and-bluetooth.html">
+            
+                <a href="../post-installation/enabling-wifi-and-bluetooth.html">
+            
+                    
+                    Enabling WIFI & Bluetooth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../post-installation/setting-up-ethernet-adapters.html">
+            
+                <a href="../post-installation/setting-up-ethernet-adapters.html">
+            
+                    
+                    Setting up Ethernet Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../post-installation/configuring-your-audio-device.html">
+            
+                <a href="../post-installation/configuring-your-audio-device.html">
+            
+                    
+                    Configuring your Audio Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Battery/Power Management</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../battery-power-management/locate-that-missing-battery.html">
+            
+                <a href="../battery-power-management/locate-that-missing-battery.html">
+            
+                    
+                    Locate that Missing Battery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../battery-power-management/correcting-sleep-problems.html">
+            
+                <a href="../battery-power-management/correcting-sleep-problems.html">
+            
+                    
+                    Correcting Sleep Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../battery-power-management/optimizing-battery-life.html">
+            
+                <a href="../battery-power-management/optimizing-battery-life.html">
+            
+                    
+                    Optimizing Battery Life
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Extras</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../extras/enabling-filevault.html">
+            
+                <a href="../extras/enabling-filevault.html">
+            
+                    
+                    Enabling FileVault
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../extras/display-rotation.html">
+            
+                <a href="../extras/display-rotation.html">
+            
+                    
+                    Display Rotation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../extras/dual-booting-with-bluetooth-devices.html">
+            
+                <a href="../extras/dual-booting-with-bluetooth-devices.html">
+            
+                    
+                    Dual booting​ with Bluetooth Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../extras/asussmc.html">
+            
+                <a href="../extras/asussmc.html">
+            
+                    
+                    ASUS Function Keys
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Just Enough GIT</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="just-enough-git">Just Enough GIT</h1>
+<p>Many of the instructions in the guide point you to Github and possibly other sites to download software or scripts from a repository. If the site offers a release package, that&apos;s what you want to download. If it doesn&apos;t however you will need to know enough about git to clone the contents of the repository to your computer. In order to install git, you will need to add some command line tools to your Hack. Here&apos;s how you install those.</p>
+<pre><code class="lang-text">xcode-select --install
+</code></pre>
+<p>Once the installation completes you will have the ability to run the &apos;git&apos; command. This command allows you to interact with software repositories. To clone a repository to your computer, go to the site with the repository you want to clone and click the green clone or download button, then select https. Copy the URI path in the box and add it to the end of a git clone command like this.</p>
+<pre><code class="lang-text">git clone https://github.com/corpnewt/USBMap.git
+</code></pre>
+<p>Once it&apos;s cloned, you will be able to enter the directory and make use of the projects resources.</p>
+<p>If you&apos;d like a little more advanced git knowledge, here are some resources to get you started!</p>
+<p><a href="https://try.github.io" target="_blank">Resources to learn Git @ Github</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="a-little-unix-never-hurt-anyone.html" class="navigation navigation-prev " aria-label="Previous page: A Little UNIX Never Hurt Anyone!">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="whats-an-efi.html" class="navigation navigation-next " aria-label="Next page: What's an EFI?">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Just Enough GIT","level":"3.2","depth":1,"next":{"title":"What's an EFI?","level":"3.3","depth":1,"path":"useful-skills-terminology/whats-an-efi.md","ref":"useful-skills-terminology/whats-an-efi.md","articles":[]},"previous":{"title":"A Little UNIX Never Hurt Anyone!","level":"3.1","depth":1,"path":"useful-skills-terminology/a-little-unix-never-hurt-anyone.md","ref":"useful-skills-terminology/a-little-unix-never-hurt-anyone.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"useful-skills-terminology/just-enough-git.md","mtime":"2020-04-08T19:08:47.236Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-08T19:09:33.909Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    
+
+    </body>
+</html>
+

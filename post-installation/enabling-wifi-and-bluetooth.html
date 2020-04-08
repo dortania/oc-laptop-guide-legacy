@@ -1,0 +1,803 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Enabling WIFI & Bluetooth · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="setting-up-ethernet-adapters.html" />
+    
+    
+    <link rel="prev" href="configuring-usb-ports.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../a-guide-to-build-guides.html">
+            
+                <a href="../a-guide-to-build-guides.html">
+            
+                    
+                    A Guide to Build Guides
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Before you start</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../before-you-start/know-your-hardware.html">
+            
+                <a href="../before-you-start/know-your-hardware.html">
+            
+                    
+                    Know Your Hardware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../before-you-start/bios-configuration.html">
+            
+                <a href="../before-you-start/bios-configuration.html">
+            
+                    
+                    BIOS Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Necessary Skills & Terminology</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../useful-skills-terminology/a-little-unix-never-hurt-anyone.html">
+            
+                <a href="../useful-skills-terminology/a-little-unix-never-hurt-anyone.html">
+            
+                    
+                    A Little UNIX Never Hurt Anyone!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../useful-skills-terminology/just-enough-git.html">
+            
+                <a href="../useful-skills-terminology/just-enough-git.html">
+            
+                    
+                    Just Enough GIT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../useful-skills-terminology/whats-an-efi.html">
+            
+                <a href="../useful-skills-terminology/whats-an-efi.html">
+            
+                    
+                    What's an EFI?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../useful-skills-terminology/what-about-kexts.html">
+            
+                <a href="../useful-skills-terminology/what-about-kexts.html">
+            
+                    
+                    What about KEXTs?
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Installing macOS</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../prepare-install-macos/preparing-the-usb-media.html">
+            
+                <a href="../prepare-install-macos/preparing-the-usb-media.html">
+            
+                    
+                    Preparing the USB Media
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../prepare-install-macos/clover-template.html">
+            
+                <a href="../prepare-install-macos/clover-template.html">
+            
+                    
+                    OpenCore Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../prepare-install-macos/setting-up-input-devices.html">
+            
+                <a href="../prepare-install-macos/setting-up-input-devices.html">
+            
+                    
+                    Setting up Input Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../prepare-install-macos/disabling-touchid.html">
+            
+                <a href="../prepare-install-macos/disabling-touchid.html">
+            
+                    
+                    Disabling TouchID lookup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../prepare-install-macos/embedded-controller-ec.html">
+            
+                <a href="../prepare-install-macos/embedded-controller-ec.html">
+            
+                    
+                    Embedded Controller (EC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../prepare-install-macos/display-configuration.html">
+            
+                <a href="../prepare-install-macos/display-configuration.html">
+            
+                    
+                    Display Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../prepare-install-macos/usb-pre-setup.html">
+            
+                <a href="../prepare-install-macos/usb-pre-setup.html">
+            
+                    
+                    USB pre-setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../prepare-install-macos/pre-installation-review.html">
+            
+                <a href="../prepare-install-macos/pre-installation-review.html">
+            
+                    
+                    Pre-Installation Review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Installing</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../installing/installing-the-operating-system.html">
+            
+                <a href="../installing/installing-the-operating-system.html">
+            
+                    
+                    Installing the Operating System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../installing/troubleshooting.html">
+            
+                <a href="../installing/troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Post Installation</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="adding-clover-to-the-bios.html">
+            
+                <a href="adding-clover-to-the-bios.html">
+            
+                    
+                    Adding OpenCore to Your Boot Drive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="configuring-usb-ports.html">
+            
+                <a href="configuring-usb-ports.html">
+            
+                    
+                    Configuring USB Ports
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.3" data-path="enabling-wifi-and-bluetooth.html">
+            
+                <a href="enabling-wifi-and-bluetooth.html">
+            
+                    
+                    Enabling WIFI & Bluetooth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="setting-up-ethernet-adapters.html">
+            
+                <a href="setting-up-ethernet-adapters.html">
+            
+                    
+                    Setting up Ethernet Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="configuring-your-audio-device.html">
+            
+                <a href="configuring-your-audio-device.html">
+            
+                    
+                    Configuring your Audio Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Battery/Power Management</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../battery-power-management/locate-that-missing-battery.html">
+            
+                <a href="../battery-power-management/locate-that-missing-battery.html">
+            
+                    
+                    Locate that Missing Battery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../battery-power-management/correcting-sleep-problems.html">
+            
+                <a href="../battery-power-management/correcting-sleep-problems.html">
+            
+                    
+                    Correcting Sleep Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../battery-power-management/optimizing-battery-life.html">
+            
+                <a href="../battery-power-management/optimizing-battery-life.html">
+            
+                    
+                    Optimizing Battery Life
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Extras</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../extras/enabling-filevault.html">
+            
+                <a href="../extras/enabling-filevault.html">
+            
+                    
+                    Enabling FileVault
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../extras/display-rotation.html">
+            
+                <a href="../extras/display-rotation.html">
+            
+                    
+                    Display Rotation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../extras/dual-booting-with-bluetooth-devices.html">
+            
+                <a href="../extras/dual-booting-with-bluetooth-devices.html">
+            
+                    
+                    Dual booting​ with Bluetooth Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../extras/asussmc.html">
+            
+                <a href="../extras/asussmc.html">
+            
+                    
+                    ASUS Function Keys
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Enabling WIFI & Bluetooth</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="enabling-wifi--bluetooth">Enabling WIFI &amp; Bluetooth</h1>
+<p>I get it, you want your Hackintosh to be able to access the internet and connect to your Bluetooth headphones. That&apos;s a noble goal, so let&apos;s get to work! Enabling WIFI &amp; Bluetooth is pretty straight forward, but if you haven&apos;t swapped the card out for one of the supported devices that we talked about in the Know Your Hardware section, you&apos;re in for a bad time. Stop now and do that first. Remember, there are only a few compatible devices, and you really don&apos;t want to try to force the use of an unsupported device because it&apos;s cheaper, you&apos;ll just be throwing your money away. Before purchasing make sure the adapter matches the socket you&apos;ll be installing it into.</p>
+<h2 id="supported-wifibluetooth-combo-cards">Supported WIFI/Bluetooth Combo Cards</h2>
+<h3 id="mini-pcie-adapters"><strong>Mini PCIe Adapters</strong></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Chipset</th>
+<th style="text-align:left">Antenna</th>
+<th style="text-align:left">Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<p><table>
+  <thead>
+    <tr>
+      <th style="text-align:left">BCM94352HMB</th>
+      <th style="text-align:left">U.FL</th>
+      <th style="text-align:left">
+        <p><a href="https://web.archive.org/web/20191003003404/https://wikidevi.com/wiki/AzureWave_AW-CE123H" target="_blank">AzureWave AW-CE123H</a>
+        </p>
+        <p><a href="https://web.archive.org/web/20191003014022/https://wikidevi.com/wiki/Dell_Wireless_1550_(DW1550)" target="_blank">Dell DW1550</a>
+        </p>
+        <p><a href="https://web.archive.org/web/20191002211005/https://wikidevi.com/wiki/HP_TPC-Q013" target="_blank">HP TPC-Q013</a>
+        </p>
+        <p><a href="https://web.archive.org/web/20191003063651/https://wikidevi.com/wiki/Lite-On_WCBN606BH_(Lenovo)" target="_blank">Lenovo WCBN606BH</a>
+        </p>
+      </th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>### PCIe m.2 Adapters</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Chipset</th>
+<th style="text-align:left">Antenna</th>
+<th style="text-align:left">Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<p><table>
+  <thead>
+    <tr>
+      <th style="text-align:left">BCM94352Z</th>
+      <th style="text-align:left">MHF4</th>
+      <th style="text-align:left">
+        <p><a href="https://web.archive.org/web/20191003014024/https://wikidevi.com/wiki/Dell_Wireless_1560_(DW1560)" target="_blank">Dell DW1560</a> (A/E
+          key)</p>
+        <p><a href="https://web.archive.org/web/20191003030111/https://wikidevi.com/wiki/Broadcom_BCM94352Z" target="_blank">Lenovo 04X6020</a> (E
+          key)</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>### Apple Native WIFI Cards</p>
+<p>Wireless cards manufactured by Apple are natively supported, however they use a proprietary 12+6 connector which requires an adapter to function in an mPCIe or m.2 socket. Before purchasing ensure your laptop has sufficient space for the card + adapter, and make sure to purchase the appropriate 12+6 to mPCIE or m.2 adapter.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Chipset</th>
+<th style="text-align:left">Antenna</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://web.archive.org/web/20191003030122/https://wikidevi.com/wiki/Broadcom_BCM94360CS2" target="_blank">BCM94360CS2</a></td>
+<td style="text-align:left">MHF4</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://web.archive.org/web/20191002215550/https://wikidevi.com/wiki/Broadcom_BCM943224PCIEBT2" target="_blank">BCM943224PCIEBT2</a></td>
+<td style="text-align:left">MHF4</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://web.archive.org/web/20191020204211/https://wikidevi.com/wiki/Broadcom_BCM94360CD" target="_blank">BCM94360CD</a></td>
+<td style="text-align:left">M.FL</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: Be sure to use an adapter that is suited for your WLAN socket and only install to the WLAN socket. Other m.2 sockets may not have all of the paths needed for WIFI and Bluetooth to function. WWAN sockets may be USB or not available without modded BIOS.</em></p>
+<h2 id="configuring-wifi">Configuring WIFI</h2>
+<p>WIFI configuration is pretty straightforward, you only need an injector kext to help macOS see and configure the card. For that we&apos;ll need to download the AirportBrcmFixup kext from its project page at Github. Add the kext to OC/K and reboot when convenient. Don&apos;t forget to add the kext to your Config.plist as well.</p>
+<p><a href="https://github.com/acidanthera/AirportBrcmFixup" target="_blank">Download AirportBrcmFixup @ Github</a></p>
+<p>The location of the kext should match the tree below.</p>
+<pre><code class="lang-text">EFI
+&#x2514;&#x2500;&#x2500; OpenCore
+    &#x2514;&#x2500;&#x2500; Kexts
+        &#x2514;&#x2500;&#x2500; AirportBrcmFixup.kext
+</code></pre>
+<h2 id="setting-up-bluetooth">Setting up Bluetooth</h2>
+<p>Internal Bluetooth devices are almost as easy, but they do require being configured as internal USB devices. If you haven&apos;t mapped your USB ports yet, do that first. Unless you&apos;re using a native Apple card you will need to download BrcmPatchRam from the Acidanthera repo. Within this package you will find several kexts. These kexts are detailed in the table below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Kext</th>
+<th style="text-align:left">Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">BrcmBluetoothInjector.kext</td>
+<td style="text-align:left">Use when firmware loading is not required.</td>
+</tr>
+<tr>
+<td style="text-align:left">BrcmPatchRAM.kext</td>
+<td style="text-align:left">Loads firmware into the bluetooth device and activates it.  For macOS 10.10 or earlier.</td>
+</tr>
+<tr>
+<td style="text-align:left">BrcmPatchRAM2.kext</td>
+<td style="text-align:left">Loads firmware into the bluetooth device and activates it.  For macOS 10.10-10.14.</td>
+</tr>
+<tr>
+<td style="text-align:left">BrcmPatchRAM3.kext</td>
+<td style="text-align:left">Loads firmware into the bluetooth device and activates it.  For macOS 10.15.</td>
+</tr>
+<tr>
+<td style="text-align:left">BrcmFirmwareData.kext</td>
+<td style="text-align:left">Provides firmware to BrcmPatchRAM2.</td>
+</tr>
+</tbody>
+</table>
+<p>Once you&apos;ve determined the kexts that you&apos;ll need, add them to C/k/O and reboot. If you&apos;re unsure, start with BrcmBluetoothInjector.kext. If your Bluetooth device isn&apos;t working after a reboot, you need a firmwareloader. Add the appropriate BrcmPatchRAM?.kext along with BrcmFirmwareData.kext. Leave BrcmBluetoothInjector.kext as well as it is also required.</p>
+<p><a href="https://github.com/acidanthera/BrcmPatchRAM" target="_blank">Download BrcmPatchRam @ Github</a></p>
+<p>When finished, the kexts should be located in your EFI as indicated in the tree below. Don&apos;t forget to add the kexts to your Config.plist.</p>
+<pre><code class="lang-text">EFI
+&#x2514;&#x2500;&#x2500; OC
+    &#x2514;&#x2500;&#x2500; Kexts
+        &#x251C;&#x2500;&#x2500; BrcmBluetoothInjector.kext
+        &#x251C;&#x2500;&#x2500; BrcmPatchRAM{2,3}.kext
+        &#x2514;&#x2500;&#x2500; BrcmFirmwareData.kext
+</code></pre>
+<p>If you need additional help with installing and configuring WIFI and Bluetooth, you should read Toleda&apos;s Broadcom WiFi/Bluetooth guide which is linked below.</p>
+<p><a href="https://www.tonymacx86.com/threads/broadcom-wifi-bluetooth-guide.242423/" target="_blank">Broadcom WiFi/Bluetooth [Guide]</a></p>
+<p>That wasn&apos;t so bad, right?</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="configuring-usb-ports.html" class="navigation navigation-prev " aria-label="Previous page: Configuring USB Ports">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="setting-up-ethernet-adapters.html" class="navigation navigation-next " aria-label="Next page: Setting up Ethernet Adapters">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Enabling WIFI & Bluetooth","level":"6.3","depth":1,"next":{"title":"Setting up Ethernet Adapters","level":"6.4","depth":1,"path":"post-installation/setting-up-ethernet-adapters.md","ref":"post-installation/setting-up-ethernet-adapters.md","articles":[]},"previous":{"title":"Configuring USB Ports","level":"6.2","depth":1,"path":"post-installation/configuring-usb-ports.md","ref":"post-installation/configuring-usb-ports.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"post-installation/enabling-wifi-and-bluetooth.md","mtime":"2020-04-08T19:08:47.232Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-08T19:09:33.909Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    
+
+    </body>
+</html>
+

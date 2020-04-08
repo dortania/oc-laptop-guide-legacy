@@ -1,0 +1,674 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Locate that Missing Battery · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="correcting-sleep-problems.html" />
+    
+    
+    <link rel="prev" href="../post-installation/configuring-your-audio-device.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../a-guide-to-build-guides.html">
+            
+                <a href="../a-guide-to-build-guides.html">
+            
+                    
+                    A Guide to Build Guides
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Before you start</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../before-you-start/know-your-hardware.html">
+            
+                <a href="../before-you-start/know-your-hardware.html">
+            
+                    
+                    Know Your Hardware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../before-you-start/bios-configuration.html">
+            
+                <a href="../before-you-start/bios-configuration.html">
+            
+                    
+                    BIOS Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Necessary Skills & Terminology</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../useful-skills-terminology/a-little-unix-never-hurt-anyone.html">
+            
+                <a href="../useful-skills-terminology/a-little-unix-never-hurt-anyone.html">
+            
+                    
+                    A Little UNIX Never Hurt Anyone!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../useful-skills-terminology/just-enough-git.html">
+            
+                <a href="../useful-skills-terminology/just-enough-git.html">
+            
+                    
+                    Just Enough GIT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../useful-skills-terminology/whats-an-efi.html">
+            
+                <a href="../useful-skills-terminology/whats-an-efi.html">
+            
+                    
+                    What's an EFI?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../useful-skills-terminology/what-about-kexts.html">
+            
+                <a href="../useful-skills-terminology/what-about-kexts.html">
+            
+                    
+                    What about KEXTs?
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Installing macOS</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../prepare-install-macos/preparing-the-usb-media.html">
+            
+                <a href="../prepare-install-macos/preparing-the-usb-media.html">
+            
+                    
+                    Preparing the USB Media
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../prepare-install-macos/clover-template.html">
+            
+                <a href="../prepare-install-macos/clover-template.html">
+            
+                    
+                    OpenCore Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../prepare-install-macos/setting-up-input-devices.html">
+            
+                <a href="../prepare-install-macos/setting-up-input-devices.html">
+            
+                    
+                    Setting up Input Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../prepare-install-macos/disabling-touchid.html">
+            
+                <a href="../prepare-install-macos/disabling-touchid.html">
+            
+                    
+                    Disabling TouchID lookup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../prepare-install-macos/embedded-controller-ec.html">
+            
+                <a href="../prepare-install-macos/embedded-controller-ec.html">
+            
+                    
+                    Embedded Controller (EC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../prepare-install-macos/display-configuration.html">
+            
+                <a href="../prepare-install-macos/display-configuration.html">
+            
+                    
+                    Display Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../prepare-install-macos/usb-pre-setup.html">
+            
+                <a href="../prepare-install-macos/usb-pre-setup.html">
+            
+                    
+                    USB pre-setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../prepare-install-macos/pre-installation-review.html">
+            
+                <a href="../prepare-install-macos/pre-installation-review.html">
+            
+                    
+                    Pre-Installation Review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Installing</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../installing/installing-the-operating-system.html">
+            
+                <a href="../installing/installing-the-operating-system.html">
+            
+                    
+                    Installing the Operating System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../installing/troubleshooting.html">
+            
+                <a href="../installing/troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Post Installation</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../post-installation/adding-clover-to-the-bios.html">
+            
+                <a href="../post-installation/adding-clover-to-the-bios.html">
+            
+                    
+                    Adding OpenCore to Your Boot Drive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../post-installation/configuring-usb-ports.html">
+            
+                <a href="../post-installation/configuring-usb-ports.html">
+            
+                    
+                    Configuring USB Ports
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../post-installation/enabling-wifi-and-bluetooth.html">
+            
+                <a href="../post-installation/enabling-wifi-and-bluetooth.html">
+            
+                    
+                    Enabling WIFI & Bluetooth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../post-installation/setting-up-ethernet-adapters.html">
+            
+                <a href="../post-installation/setting-up-ethernet-adapters.html">
+            
+                    
+                    Setting up Ethernet Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../post-installation/configuring-your-audio-device.html">
+            
+                <a href="../post-installation/configuring-your-audio-device.html">
+            
+                    
+                    Configuring your Audio Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Battery/Power Management</li>
+        
+        
+    
+        <li class="chapter active" data-level="7.1" data-path="locate-that-missing-battery.html">
+            
+                <a href="locate-that-missing-battery.html">
+            
+                    
+                    Locate that Missing Battery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="correcting-sleep-problems.html">
+            
+                <a href="correcting-sleep-problems.html">
+            
+                    
+                    Correcting Sleep Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="optimizing-battery-life.html">
+            
+                <a href="optimizing-battery-life.html">
+            
+                    
+                    Optimizing Battery Life
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Extras</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../extras/enabling-filevault.html">
+            
+                <a href="../extras/enabling-filevault.html">
+            
+                    
+                    Enabling FileVault
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../extras/display-rotation.html">
+            
+                <a href="../extras/display-rotation.html">
+            
+                    
+                    Display Rotation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../extras/dual-booting-with-bluetooth-devices.html">
+            
+                <a href="../extras/dual-booting-with-bluetooth-devices.html">
+            
+                    
+                    Dual booting​ with Bluetooth Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../extras/asussmc.html">
+            
+                <a href="../extras/asussmc.html">
+            
+                    
+                    ASUS Function Keys
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Locate that Missing Battery</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="locate-that-missing-battery">Locate that Missing Battery</h1>
+<p>First thing I have to ask is this. Is it actually missing? Often just installing VirtualSMC is all that it takes for your battery status to appear. If it&apos;s there, there&apos;s nothing to see here, and it&apos;s safe to move onto the next section!</p>
+<p>Oh, you&apos;re still here? Well...unfortunately that means this is going to be one of our more painful endeavors as it requires DSDT patches. Fortunately, you&apos;ve already studied applying hotpatches, so there&apos;s no need to cover it again. Let&apos;s jump right into the basics to get you started.</p>
+<h2 id="dsdt-battery-status-patching">DSDT Battery Status Patching</h2>
+<p>First of all, you&apos;re going to need to dust off maciASL. Remember that? You used it to compile the SSDT patches for your touchpad. This is going to be a little different. Here&apos;s the 101.</p>
+<h3 id="dumping-your-dsdt">Dumping your DSDT</h3>
+<p>The first step in getting ready to patch your DSDT is to get a copy of it from your firmware. You can do this by rebooting your computer and pressing F4 at the OpenCore menu, before launching macOS. That instructs OpenCore to drop a copy of it in your EFI partition under OpenCore/ACPI/origin. You should also still have the DSDT from when you configured your EC.</p>
+<h3 id="patching-the-dsdt">Patching the DSDT</h3>
+<p>This is a little more advanced, so after getting you started you&apos;re going to have to study some documentation and really understand what it is that you&apos;re doing as the DSDT is quite fragile. Open maciASL, then open your DSDT file. You should be presented with quite an array of data about your system. If you get an error right away, that means you&apos;ll want to go into preferences and change your iASL and then close and re-open the DSDT. To do that, open Preferences of maciASL, click iASL and select Legacy. If Legacy is already selected change it to Stable. You&apos;ll also want to click the Update iASL button before closing.</p>
+<p>Alright, now that you&apos;re in maciASL and you have your DSDT open comes the hard part. Finding patches that work for your system. In maciASL you&apos;ll notice that at the top center of the main window are two options; Compile, and Patch.</p>
+<p>Click Patch and in the left pane of the window that opens you should find a whole bunch of patch repositories already configured for you. Find Rehabman in the tree. Under this section you will find a large selection of patches for various laptops. After making a backup of your DSDT, try applying the patches for systems that are most similar to yours. You might get lucky and have no more work to do.</p>
+<p>If those don&apos;t work, you&apos;re going to have to get personal with Rehabman&apos;s battery patching guide and your DSDT.</p>
+<p>When adding your DSDT to the ACPI folder and your config.plist, make sure that it is the first thing injected. The order should be DSDT then all of your others SSDT in your config.plist.</p>
+<p><a href="https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/" target="_blank">[Guide] How to patch DSDT for working battery status</a></p>
+<p>This one could take a while, but don&apos;t worry..the next section will be here waiting for your click!</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../post-installation/configuring-your-audio-device.html" class="navigation navigation-prev " aria-label="Previous page: Configuring your Audio Device">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="correcting-sleep-problems.html" class="navigation navigation-next " aria-label="Next page: Correcting Sleep Problems">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Locate that Missing Battery","level":"7.1","depth":1,"next":{"title":"Correcting Sleep Problems","level":"7.2","depth":1,"path":"battery-power-management/correcting-sleep-problems.md","ref":"battery-power-management/correcting-sleep-problems.md","articles":[]},"previous":{"title":"Configuring your Audio Device","level":"6.5","depth":1,"path":"post-installation/configuring-your-audio-device.md","ref":"post-installation/configuring-your-audio-device.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"battery-power-management/locate-that-missing-battery.md","mtime":"2020-04-08T19:08:47.232Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-08T19:09:33.909Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    
+
+    </body>
+</html>
+

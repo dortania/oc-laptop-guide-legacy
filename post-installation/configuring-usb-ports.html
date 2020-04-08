@@ -1,0 +1,740 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Configuring USB Ports · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="enabling-wifi-and-bluetooth.html" />
+    
+    
+    <link rel="prev" href="adding-clover-to-the-bios.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../a-guide-to-build-guides.html">
+            
+                <a href="../a-guide-to-build-guides.html">
+            
+                    
+                    A Guide to Build Guides
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Before you start</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../before-you-start/know-your-hardware.html">
+            
+                <a href="../before-you-start/know-your-hardware.html">
+            
+                    
+                    Know Your Hardware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../before-you-start/bios-configuration.html">
+            
+                <a href="../before-you-start/bios-configuration.html">
+            
+                    
+                    BIOS Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Necessary Skills & Terminology</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../useful-skills-terminology/a-little-unix-never-hurt-anyone.html">
+            
+                <a href="../useful-skills-terminology/a-little-unix-never-hurt-anyone.html">
+            
+                    
+                    A Little UNIX Never Hurt Anyone!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../useful-skills-terminology/just-enough-git.html">
+            
+                <a href="../useful-skills-terminology/just-enough-git.html">
+            
+                    
+                    Just Enough GIT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../useful-skills-terminology/whats-an-efi.html">
+            
+                <a href="../useful-skills-terminology/whats-an-efi.html">
+            
+                    
+                    What's an EFI?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../useful-skills-terminology/what-about-kexts.html">
+            
+                <a href="../useful-skills-terminology/what-about-kexts.html">
+            
+                    
+                    What about KEXTs?
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Installing macOS</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../prepare-install-macos/preparing-the-usb-media.html">
+            
+                <a href="../prepare-install-macos/preparing-the-usb-media.html">
+            
+                    
+                    Preparing the USB Media
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../prepare-install-macos/clover-template.html">
+            
+                <a href="../prepare-install-macos/clover-template.html">
+            
+                    
+                    OpenCore Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../prepare-install-macos/setting-up-input-devices.html">
+            
+                <a href="../prepare-install-macos/setting-up-input-devices.html">
+            
+                    
+                    Setting up Input Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../prepare-install-macos/disabling-touchid.html">
+            
+                <a href="../prepare-install-macos/disabling-touchid.html">
+            
+                    
+                    Disabling TouchID lookup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../prepare-install-macos/embedded-controller-ec.html">
+            
+                <a href="../prepare-install-macos/embedded-controller-ec.html">
+            
+                    
+                    Embedded Controller (EC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../prepare-install-macos/display-configuration.html">
+            
+                <a href="../prepare-install-macos/display-configuration.html">
+            
+                    
+                    Display Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../prepare-install-macos/usb-pre-setup.html">
+            
+                <a href="../prepare-install-macos/usb-pre-setup.html">
+            
+                    
+                    USB pre-setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../prepare-install-macos/pre-installation-review.html">
+            
+                <a href="../prepare-install-macos/pre-installation-review.html">
+            
+                    
+                    Pre-Installation Review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Installing</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../installing/installing-the-operating-system.html">
+            
+                <a href="../installing/installing-the-operating-system.html">
+            
+                    
+                    Installing the Operating System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../installing/troubleshooting.html">
+            
+                <a href="../installing/troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Post Installation</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="adding-clover-to-the-bios.html">
+            
+                <a href="adding-clover-to-the-bios.html">
+            
+                    
+                    Adding OpenCore to Your Boot Drive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.2" data-path="configuring-usb-ports.html">
+            
+                <a href="configuring-usb-ports.html">
+            
+                    
+                    Configuring USB Ports
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="enabling-wifi-and-bluetooth.html">
+            
+                <a href="enabling-wifi-and-bluetooth.html">
+            
+                    
+                    Enabling WIFI & Bluetooth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="setting-up-ethernet-adapters.html">
+            
+                <a href="setting-up-ethernet-adapters.html">
+            
+                    
+                    Setting up Ethernet Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="configuring-your-audio-device.html">
+            
+                <a href="configuring-your-audio-device.html">
+            
+                    
+                    Configuring your Audio Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Battery/Power Management</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../battery-power-management/locate-that-missing-battery.html">
+            
+                <a href="../battery-power-management/locate-that-missing-battery.html">
+            
+                    
+                    Locate that Missing Battery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../battery-power-management/correcting-sleep-problems.html">
+            
+                <a href="../battery-power-management/correcting-sleep-problems.html">
+            
+                    
+                    Correcting Sleep Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../battery-power-management/optimizing-battery-life.html">
+            
+                <a href="../battery-power-management/optimizing-battery-life.html">
+            
+                    
+                    Optimizing Battery Life
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Extras</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../extras/enabling-filevault.html">
+            
+                <a href="../extras/enabling-filevault.html">
+            
+                    
+                    Enabling FileVault
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../extras/display-rotation.html">
+            
+                <a href="../extras/display-rotation.html">
+            
+                    
+                    Display Rotation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../extras/dual-booting-with-bluetooth-devices.html">
+            
+                <a href="../extras/dual-booting-with-bluetooth-devices.html">
+            
+                    
+                    Dual booting​ with Bluetooth Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../extras/asussmc.html">
+            
+                <a href="../extras/asussmc.html">
+            
+                    
+                    ASUS Function Keys
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Configuring USB Ports</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="configuring-usb-ports">Configuring USB Ports</h1>
+<p>I agree..the need to configure USB ports does sound a little weird, but it is a necessity on a Hackintosh as Apple uses a very strict configuration for USB and the macOS kernel does not autodetect and configure ports for you. You may be thinking that you don&apos;t need it because your USB ports seem to work fine, but mapping ports can help resolve instant wake problems, and things like bluetooth and touch screens not working properly. One item of note, if you ever have to change your SMBIOS it will invalidate your USB map and you&apos;ll have to map your ports again.</p>
+<h2 id="understanding-port-limits">Understanding Port Limits</h2>
+<p>As mentioned previously, macOS has a very strict USB configuration by default, and that includes a hard limit of 15 USB ports. That doesn&apos;t sound like it&apos;s a big deal, but if your computer has USB 3.0 every 3.0 port uses 2 ports on the bus; a low speed port (HS) and a super speed port (SS). Your computer has both internal and external USB ports as well, so it&apos;s not as simple as just counting the ports you can see and doubling them. To correct this problem long enough to map the ports that you need, we need to add a few patches to the config.plist if they aren&apos;t already there. Once the port limit has been lifted and your ports have been mapped, disable the patches to prevent instability in macOS.</p>
+<h3 id="applying-the-port-limit-patches">Applying the Port Limit Patches</h3>
+<p><div class="alert alert-danger hints-alert"><div class="hints-icon"><i class="fa fa-exclamation-circle"></i></div><div class="hints-container"><p><strong>DO NOT</strong> use these as a permanent solution, they&apos;re only temporary fixes until you map all your USB ports.</p>
+</div></div></p>
+<p>Mount up your EFI partition if it isn&apos;t already and open your config.plist. Enable <code>XhciPortLimit</code> under Kernel -&gt; Quirks</p>
+<h2 id="information-about-port-types">Information About Port Types</h2>
+<p>There are only three port types that you should be concerned with. These types and their descriptions can be found in the table below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Port</th>
+<th style="text-align:left">Port description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Type 0</td>
+<td style="text-align:left">This is a standard external USB 2.0 port.</td>
+</tr>
+<tr>
+<td style="text-align:left">Type 3</td>
+<td style="text-align:left">This port is an external USB-A or USB-C 3.0 port.</td>
+</tr>
+<tr>
+<td style="text-align:left">Type 255</td>
+<td style="text-align:left">This is a port on the motherboard for internal devices.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="are-my-devices-internal-or-external">Are My Devices Internal or External?</h2>
+<p>Well, they&apos;re probably both actually. You would determine if it&apos;s an internal or external port by whether it is inside the computer, or outside as a port that you plug devices into. Some common examples can be found in the table below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Device</th>
+<th style="text-align:left">Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Thumb Drives</td>
+<td style="text-align:left">External</td>
+</tr>
+<tr>
+<td style="text-align:left">Bluetooth inside my computer (m.2 or Mini PCIe)</td>
+<td style="text-align:left">Internal</td>
+</tr>
+<tr>
+<td style="text-align:left">Bluetooth that I plug in</td>
+<td style="text-align:left">External</td>
+</tr>
+<tr>
+<td style="text-align:left">Touch Screen</td>
+<td style="text-align:left">Internal</td>
+</tr>
+<tr>
+<td style="text-align:left">Webcam</td>
+<td style="text-align:left">Internal</td>
+</tr>
+<tr>
+<td style="text-align:left">WIFI Dongle</td>
+<td style="text-align:left">External</td>
+</tr>
+<tr>
+<td style="text-align:left">SDCard Reader that I plug in</td>
+<td style="text-align:left">External</td>
+</tr>
+</tbody>
+</table>
+<p>Remember, internal devices are of type 255 and external devices depend on the type of port. If you don&apos;t know what kind of external ports you have, consult your laptop service manual or user guide.</p>
+<h2 id="inject-all-the-ports">Inject All The Ports!</h2>
+<p>A prerequisite to mapping your ports is injecting every port imagineable into your installation temporarily. That allows the mapping utility to see all of the ports available to your system. The kernel extension needed for this to work is called USBInjectAll, and it can be found in Rehabman&apos;s Bitbucket repository. Download the kext, and add it to C/k/O. You&apos;ll need to reboot before continuing.</p>
+<p><a href="https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/" target="_blank">Download USBInjectAll @ Bitbucket</a></p>
+<h2 id="mapping-usb-ports">Mapping USB Ports</h2>
+<p>Now that you&apos;re armed with knowledge about your USB devices and you&apos;ve fixed that pesky port limit, it&apos;s time to map your ports. So, what do we need to do to map the ports? Good question! For this, we need to use corpnewt&apos;s wonderful USBMap utility. Go ahead and download that now. It&apos;s important to read the utility&apos;s README for information on how to use the tool, and how to adjust your ports as described above.</p>
+<p><a href="https://github.com/corpnewt/USBMap" target="_blank">Visit USBMap @ Github</a></p>
+<p>After saving your changes, the USBMap tool will create several files and open a finder window. Take the USBMap.kext that you&apos;ve just created and copy it to C/k/O. Delete USBInjectAll, you won&apos;t need it any longer.</p>
+<p>After verifying the ports you need are mapped and working properly, disable the port limit patches.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="adding-clover-to-the-bios.html" class="navigation navigation-prev " aria-label="Previous page: Adding OpenCore to Your Boot Drive">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="enabling-wifi-and-bluetooth.html" class="navigation navigation-next " aria-label="Next page: Enabling WIFI & Bluetooth">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Configuring USB Ports","level":"6.2","depth":1,"next":{"title":"Enabling WIFI & Bluetooth","level":"6.3","depth":1,"path":"post-installation/enabling-wifi-and-bluetooth.md","ref":"post-installation/enabling-wifi-and-bluetooth.md","articles":[]},"previous":{"title":"Adding OpenCore to Your Boot Drive","level":"6.1","depth":1,"path":"post-installation/adding-clover-to-the-bios.md","ref":"post-installation/adding-clover-to-the-bios.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"post-installation/configuring-usb-ports.md","mtime":"2020-04-08T19:08:47.232Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-08T19:09:33.909Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,895 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>OpenCore Template · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="setting-up-input-devices.html" />
+    
+    
+    <link rel="prev" href="preparing-the-usb-media.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../a-guide-to-build-guides.html">
+            
+                <a href="../a-guide-to-build-guides.html">
+            
+                    
+                    A Guide to Build Guides
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Before you start</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../before-you-start/know-your-hardware.html">
+            
+                <a href="../before-you-start/know-your-hardware.html">
+            
+                    
+                    Know Your Hardware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../before-you-start/bios-configuration.html">
+            
+                <a href="../before-you-start/bios-configuration.html">
+            
+                    
+                    BIOS Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Necessary Skills & Terminology</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../useful-skills-terminology/a-little-unix-never-hurt-anyone.html">
+            
+                <a href="../useful-skills-terminology/a-little-unix-never-hurt-anyone.html">
+            
+                    
+                    A Little UNIX Never Hurt Anyone!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../useful-skills-terminology/just-enough-git.html">
+            
+                <a href="../useful-skills-terminology/just-enough-git.html">
+            
+                    
+                    Just Enough GIT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../useful-skills-terminology/whats-an-efi.html">
+            
+                <a href="../useful-skills-terminology/whats-an-efi.html">
+            
+                    
+                    What's an EFI?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../useful-skills-terminology/what-about-kexts.html">
+            
+                <a href="../useful-skills-terminology/what-about-kexts.html">
+            
+                    
+                    What about KEXTs?
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Installing macOS</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="preparing-the-usb-media.html">
+            
+                <a href="preparing-the-usb-media.html">
+            
+                    
+                    Preparing the USB Media
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.2" data-path="clover-template.html">
+            
+                <a href="clover-template.html">
+            
+                    
+                    OpenCore Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="setting-up-input-devices.html">
+            
+                <a href="setting-up-input-devices.html">
+            
+                    
+                    Setting up Input Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="disabling-touchid.html">
+            
+                <a href="disabling-touchid.html">
+            
+                    
+                    Disabling TouchID lookup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="embedded-controller-ec.html">
+            
+                <a href="embedded-controller-ec.html">
+            
+                    
+                    Embedded Controller (EC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="display-configuration.html">
+            
+                <a href="display-configuration.html">
+            
+                    
+                    Display Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="usb-pre-setup.html">
+            
+                <a href="usb-pre-setup.html">
+            
+                    
+                    USB pre-setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="pre-installation-review.html">
+            
+                <a href="pre-installation-review.html">
+            
+                    
+                    Pre-Installation Review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Installing</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../installing/installing-the-operating-system.html">
+            
+                <a href="../installing/installing-the-operating-system.html">
+            
+                    
+                    Installing the Operating System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../installing/troubleshooting.html">
+            
+                <a href="../installing/troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Post Installation</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../post-installation/adding-clover-to-the-bios.html">
+            
+                <a href="../post-installation/adding-clover-to-the-bios.html">
+            
+                    
+                    Adding OpenCore to Your Boot Drive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../post-installation/configuring-usb-ports.html">
+            
+                <a href="../post-installation/configuring-usb-ports.html">
+            
+                    
+                    Configuring USB Ports
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../post-installation/enabling-wifi-and-bluetooth.html">
+            
+                <a href="../post-installation/enabling-wifi-and-bluetooth.html">
+            
+                    
+                    Enabling WIFI & Bluetooth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../post-installation/setting-up-ethernet-adapters.html">
+            
+                <a href="../post-installation/setting-up-ethernet-adapters.html">
+            
+                    
+                    Setting up Ethernet Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../post-installation/configuring-your-audio-device.html">
+            
+                <a href="../post-installation/configuring-your-audio-device.html">
+            
+                    
+                    Configuring your Audio Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Battery/Power Management</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../battery-power-management/locate-that-missing-battery.html">
+            
+                <a href="../battery-power-management/locate-that-missing-battery.html">
+            
+                    
+                    Locate that Missing Battery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../battery-power-management/correcting-sleep-problems.html">
+            
+                <a href="../battery-power-management/correcting-sleep-problems.html">
+            
+                    
+                    Correcting Sleep Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../battery-power-management/optimizing-battery-life.html">
+            
+                <a href="../battery-power-management/optimizing-battery-life.html">
+            
+                    
+                    Optimizing Battery Life
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Extras</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../extras/enabling-filevault.html">
+            
+                <a href="../extras/enabling-filevault.html">
+            
+                    
+                    Enabling FileVault
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../extras/display-rotation.html">
+            
+                <a href="../extras/display-rotation.html">
+            
+                    
+                    Display Rotation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../extras/dual-booting-with-bluetooth-devices.html">
+            
+                <a href="../extras/dual-booting-with-bluetooth-devices.html">
+            
+                    
+                    Dual booting​ with Bluetooth Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../extras/asussmc.html">
+            
+                <a href="../extras/asussmc.html">
+            
+                    
+                    ASUS Function Keys
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >OpenCore Template</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="opencore-template">OpenCore Template</h1>
+<h2 id="the-configplist-in-a-nutshell">The Config.plist in a Nutshell</h2>
+<p>Before continuing, you need a bit of knowledge about the config.plist which is a structured text document (XML) that provides OpenCore with the instructions that it needs to customize your laptop to boot and use macOS. It is a complex, and sometimes daunting dictionary of key value pairs. There are a variety of tools available to help configure it, here are a few to help get you started.</p>
+<p><strong>ProperTree</strong> - This is a cross platform plist editor written by CorpNewt that works on Windows, Linux, and macOS. It&apos;s a very simple, but very powerful tool that simplifies changing parameters while also helping ensure you don&apos;t break formatting rules.</p>
+<p><a href="https://github.com/corpnewt/ProperTree" target="_blank">Download ProperTree from Github.</a></p>
+<p><strong>XCode</strong> - You probably don&apos;t want (Or need) to install an entire development suite for editing your plist, but it is an option so it&apos;s worth mentioning. If you&apos;re looking to take a tank to a knife fight, XCode can be installed through the App Store. It is also woth noting that Xcode has issues editing plists starting with Xcode 11.</p>
+<p><strong>PlistBuddy</strong> - This is a command line utility that&apos;s built into macOS. It&apos;s a great utility for making changes to plist files from scripts or the command line.</p>
+<pre><code class="lang-text">$ /usr/libexec/PlistBuddy --help
+</code></pre>
+<h2 id="making-your-own-configplist">Making your own Config.plist</h2>
+<p>OpenCore config files (and EFIs in general) tend to be very similar to Desktop ones. Because of this, I will link you to Hackintosh Slav&apos;s guide <em>again</em> to set up the Config.plist.</p>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>When following the guides below:</p>
+<ul>
+<li>DO NOT insert SSDT-EC. On the next page, we&apos;ll go over how to rename the EC already existing within your ACPI tables.</li>
+<li>Instead of using the imac models provided in the guide, use one of the models provided by the table below each link (Generally choose the one that matches your laptop closest)</li>
+</ul>
+</div></div></p>
+<p><div class="alert alert-danger hints-alert"><div class="hints-icon"><i class="fa fa-exclamation-circle"></i></div><div class="hints-container"><p>Remember that anytime you add a Kext, Driver, Tool, or SSDT, you need to add it to your Config.plist. The OC Snapshot tool from ProperTree can automatically add these for you.</p>
+</div></div></p>
+<h4 id="ivy-bridge"><a href="https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/intel-config.plist/ivy-bridge" target="_blank">Ivy Bridge</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Model</th>
+<th style="text-align:left">Graphics</th>
+<th style="text-align:left">Size</th>
+<th style="text-align:left">Year</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">MacBookPro9,1</td>
+<td style="text-align:left">HD 4000/GeForce GT 650M</td>
+<td style="text-align:left">15&quot;</td>
+<td style="text-align:left">2012</td>
+</tr>
+<tr>
+<td style="text-align:left">MacBookPro9,2</td>
+<td style="text-align:left">HD 4000</td>
+<td style="text-align:left">13&quot;</td>
+<td style="text-align:left">2012</td>
+</tr>
+<tr>
+<td style="text-align:left">MacBookPro10,1</td>
+<td style="text-align:left">HD 4000/GeForce T 650M</td>
+<td style="text-align:left">15&quot;</td>
+<td style="text-align:left">2012/13</td>
+</tr>
+<tr>
+<td style="text-align:left">MacBookPro10,2</td>
+<td style="text-align:left">HD 4000</td>
+<td style="text-align:left">13&quot;</td>
+<td style="text-align:left">2012/13</td>
+</tr>
+</tbody>
+</table>
+<h4 id="haswell"><a href="https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/intel-config.plist/haswell" target="_blank">Haswell</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Model</th>
+<th style="text-align:left">Graphics</th>
+<th style="text-align:left">Size</th>
+<th style="text-align:left">Year</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">MacBookPro11,1</td>
+<td style="text-align:left">Irs 5100</td>
+<td style="text-align:left">13&quot;</td>
+<td style="text-align:left">2013/14</td>
+</tr>
+<tr>
+<td style="text-align:left">MacBookPro11,2</td>
+<td style="text-align:left">Irs Pro 5200</td>
+<td style="text-align:left">15&quot;</td>
+<td style="text-align:left">2013/14</td>
+</tr>
+<tr>
+<td style="text-align:left">MacBookPro11,3</td>
+<td style="text-align:left">Irs Pro 5200/GeForce GT 750M</td>
+<td style="text-align:left">15&quot;</td>
+<td style="text-align:left">2013/14</td>
+</tr>
+<tr>
+<td style="text-align:left">MacBookPro11,4</td>
+<td style="text-align:left">Irs Pro M5200</td>
+<td style="text-align:left">15&quot;</td>
+<td style="text-align:left">2015</td>
+</tr>
+<tr>
+<td style="text-align:left">MacBookPro11,5</td>
+<td style="text-align:left">Irs Pro 5200/Radeon R9 M370x</td>
+<td style="text-align:left">15&quot;</td>
+<td style="text-align:left">2015</td>
+</tr>
+</tbody>
+</table>
+<h4 id="broadwell-uses-haswell-config"><a href="https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/intel-config.plist/haswell" target="_blank">Broadwell (Uses Haswell config)</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Model</th>
+<th style="text-align:left">Graphics</th>
+<th style="text-align:left">Size</th>
+<th style="text-align:left">Year</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">MacBookPro12,1</td>
+<td style="text-align:left">Iris 6100</td>
+<td style="text-align:left">13&quot;</td>
+<td style="text-align:left">2015</td>
+</tr>
+</tbody>
+</table>
+<h4 id="skylake"><a href="https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/intel-config.plist/skylake" target="_blank">Skylake</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Model</th>
+<th style="text-align:left">Graphics</th>
+<th style="text-align:left">Size</th>
+<th style="text-align:left">Year</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">MacBookPro13,1</td>
+<td style="text-align:left">Iris 540</td>
+<td style="text-align:left">13&quot;</td>
+<td style="text-align:left">2016</td>
+</tr>
+<tr>
+<td style="text-align:left">MacBookPro13,2</td>
+<td style="text-align:left">Iris 550</td>
+<td style="text-align:left">13&quot;</td>
+<td style="text-align:left">2016</td>
+</tr>
+<tr>
+<td style="text-align:left">MacBookPro13,3</td>
+<td style="text-align:left">HD 530/Radeon Pro 450</td>
+<td style="text-align:left">15&quot;</td>
+<td style="text-align:left">2016</td>
+</tr>
+</tbody>
+</table>
+<h4 id="kaby-lake"><a href="https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/intel-config.plist/kaby-lake" target="_blank">Kaby Lake</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Model</th>
+<th style="text-align:left">Graphics</th>
+<th style="text-align:left">Size</th>
+<th style="text-align:left">Year</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">MacBookPro14,1</td>
+<td style="text-align:left">Iris Plus 640</td>
+<td style="text-align:left">13&quot;</td>
+<td style="text-align:left">2017</td>
+</tr>
+<tr>
+<td style="text-align:left">MacBookPro14,2</td>
+<td style="text-align:left">Iris Plus 650</td>
+<td style="text-align:left">13&quot;</td>
+<td style="text-align:left">2017</td>
+</tr>
+<tr>
+<td style="text-align:left">MacBookPro14,3</td>
+<td style="text-align:left">HD 630/Radeon Pro 555</td>
+<td style="text-align:left">15&quot;</td>
+<td style="text-align:left">2017</td>
+</tr>
+</tbody>
+</table>
+<h4 id="coffee-lake"><a href="https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/intel-config.plist/coffee-lake" target="_blank">Coffee Lake</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Model</th>
+<th style="text-align:left">Graphics</th>
+<th style="text-align:left">Size</th>
+<th style="text-align:left">Year</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">MacBookPro15,1</td>
+<td style="text-align:left">UHD 630/Radeon Pro 555X</td>
+<td style="text-align:left">15&quot;</td>
+<td style="text-align:left">2018</td>
+</tr>
+<tr>
+<td style="text-align:left">MacBookPro15,2</td>
+<td style="text-align:left">Iris Plus 655</td>
+<td style="text-align:left">13&quot;</td>
+<td style="text-align:left">2018</td>
+</tr>
+<tr>
+<td style="text-align:left">MacBookPro15,3</td>
+<td style="text-align:left">UHD 630/Vega 16/20</td>
+<td style="text-align:left">15&quot;</td>
+<td style="text-align:left">2018</td>
+</tr>
+<tr>
+<td style="text-align:left">MacBookPro15,4</td>
+<td style="text-align:left">Iris Plus 645</td>
+<td style="text-align:left">13&quot;</td>
+<td style="text-align:left">2019</td>
+</tr>
+</tbody>
+</table>
+<h4 id="coffee-lake-refresh-14nm-"><a href="https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/intel-config.plist/coffee-lake" target="_blank">Coffee Lake Refresh (14nm +++++++++++++++++++)</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Model</th>
+<th style="text-align:left">Graphics</th>
+<th style="text-align:left">Size</th>
+<th style="text-align:left">Year</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">MacBookPro16,1</td>
+<td style="text-align:left">UHD 630/Radeon Pro 5300M</td>
+<td style="text-align:left">16&quot;</td>
+<td style="text-align:left">2019</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="preparing-the-usb-media.html" class="navigation navigation-prev " aria-label="Previous page: Preparing the USB Media">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="setting-up-input-devices.html" class="navigation navigation-next " aria-label="Next page: Setting up Input Devices">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"OpenCore Template","level":"4.2","depth":1,"next":{"title":"Setting up Input Devices","level":"4.3","depth":1,"path":"prepare-install-macos/setting-up-input-devices.md","ref":"prepare-install-macos/setting-up-input-devices.md","articles":[]},"previous":{"title":"Preparing the USB Media","level":"4.1","depth":1,"path":"prepare-install-macos/preparing-the-usb-media.md","ref":"prepare-install-macos/preparing-the-usb-media.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"prepare-install-macos/clover-template.md","mtime":"2020-04-08T19:08:47.232Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-08T19:09:33.909Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,706 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Configuring your Audio Device · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../battery-power-management/locate-that-missing-battery.html" />
+    
+    
+    <link rel="prev" href="setting-up-ethernet-adapters.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../a-guide-to-build-guides.html">
+            
+                <a href="../a-guide-to-build-guides.html">
+            
+                    
+                    A Guide to Build Guides
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Before you start</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../before-you-start/know-your-hardware.html">
+            
+                <a href="../before-you-start/know-your-hardware.html">
+            
+                    
+                    Know Your Hardware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../before-you-start/bios-configuration.html">
+            
+                <a href="../before-you-start/bios-configuration.html">
+            
+                    
+                    BIOS Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Necessary Skills & Terminology</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../useful-skills-terminology/a-little-unix-never-hurt-anyone.html">
+            
+                <a href="../useful-skills-terminology/a-little-unix-never-hurt-anyone.html">
+            
+                    
+                    A Little UNIX Never Hurt Anyone!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../useful-skills-terminology/just-enough-git.html">
+            
+                <a href="../useful-skills-terminology/just-enough-git.html">
+            
+                    
+                    Just Enough GIT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../useful-skills-terminology/whats-an-efi.html">
+            
+                <a href="../useful-skills-terminology/whats-an-efi.html">
+            
+                    
+                    What's an EFI?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../useful-skills-terminology/what-about-kexts.html">
+            
+                <a href="../useful-skills-terminology/what-about-kexts.html">
+            
+                    
+                    What about KEXTs?
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Installing macOS</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../prepare-install-macos/preparing-the-usb-media.html">
+            
+                <a href="../prepare-install-macos/preparing-the-usb-media.html">
+            
+                    
+                    Preparing the USB Media
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../prepare-install-macos/clover-template.html">
+            
+                <a href="../prepare-install-macos/clover-template.html">
+            
+                    
+                    OpenCore Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../prepare-install-macos/setting-up-input-devices.html">
+            
+                <a href="../prepare-install-macos/setting-up-input-devices.html">
+            
+                    
+                    Setting up Input Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../prepare-install-macos/disabling-touchid.html">
+            
+                <a href="../prepare-install-macos/disabling-touchid.html">
+            
+                    
+                    Disabling TouchID lookup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../prepare-install-macos/embedded-controller-ec.html">
+            
+                <a href="../prepare-install-macos/embedded-controller-ec.html">
+            
+                    
+                    Embedded Controller (EC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../prepare-install-macos/display-configuration.html">
+            
+                <a href="../prepare-install-macos/display-configuration.html">
+            
+                    
+                    Display Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../prepare-install-macos/usb-pre-setup.html">
+            
+                <a href="../prepare-install-macos/usb-pre-setup.html">
+            
+                    
+                    USB pre-setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../prepare-install-macos/pre-installation-review.html">
+            
+                <a href="../prepare-install-macos/pre-installation-review.html">
+            
+                    
+                    Pre-Installation Review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Installing</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../installing/installing-the-operating-system.html">
+            
+                <a href="../installing/installing-the-operating-system.html">
+            
+                    
+                    Installing the Operating System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../installing/troubleshooting.html">
+            
+                <a href="../installing/troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Post Installation</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="adding-clover-to-the-bios.html">
+            
+                <a href="adding-clover-to-the-bios.html">
+            
+                    
+                    Adding OpenCore to Your Boot Drive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="configuring-usb-ports.html">
+            
+                <a href="configuring-usb-ports.html">
+            
+                    
+                    Configuring USB Ports
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="enabling-wifi-and-bluetooth.html">
+            
+                <a href="enabling-wifi-and-bluetooth.html">
+            
+                    
+                    Enabling WIFI & Bluetooth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="setting-up-ethernet-adapters.html">
+            
+                <a href="setting-up-ethernet-adapters.html">
+            
+                    
+                    Setting up Ethernet Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.5" data-path="configuring-your-audio-device.html">
+            
+                <a href="configuring-your-audio-device.html">
+            
+                    
+                    Configuring your Audio Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Battery/Power Management</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../battery-power-management/locate-that-missing-battery.html">
+            
+                <a href="../battery-power-management/locate-that-missing-battery.html">
+            
+                    
+                    Locate that Missing Battery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../battery-power-management/correcting-sleep-problems.html">
+            
+                <a href="../battery-power-management/correcting-sleep-problems.html">
+            
+                    
+                    Correcting Sleep Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../battery-power-management/optimizing-battery-life.html">
+            
+                <a href="../battery-power-management/optimizing-battery-life.html">
+            
+                    
+                    Optimizing Battery Life
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Extras</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../extras/enabling-filevault.html">
+            
+                <a href="../extras/enabling-filevault.html">
+            
+                    
+                    Enabling FileVault
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../extras/display-rotation.html">
+            
+                <a href="../extras/display-rotation.html">
+            
+                    
+                    Display Rotation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../extras/dual-booting-with-bluetooth-devices.html">
+            
+                <a href="../extras/dual-booting-with-bluetooth-devices.html">
+            
+                    
+                    Dual booting​ with Bluetooth Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../extras/asussmc.html">
+            
+                <a href="../extras/asussmc.html">
+            
+                    
+                    ASUS Function Keys
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Configuring your Audio Device</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="configuring-your-audio-device">Configuring your Audio Device</h1>
+<p>Audio devices are much simpler to configure than they used to be thanks to the development of AppleALC. AppleALC is a kernel extension that provides native Apple audio capabilites. To use it, the first thing you will need to know is what audio codec your laptop uses. If you don&apos;t already know, or if you&apos;re unsure, you can use a Linux live USB to do a codec dump. A codec dump provides a treasure trove of information about your device and the paths it uses to connect things like internal amplifiers to speakers or headphones.</p>
+<h2 id="creating-a-codec-dump">Creating a Codec Dump</h2>
+<p>If you do need a codec dump for whatever reason, boot from your Linux live USB and find the nearest terminal or command line. The following command will display the details of your codec on screen with a pause so you can read it.</p>
+<pre><code class="lang-text">cat /proc/asound/card0/codec#0 | less
+</code></pre>
+<p>The first line should provide your codec. It will look something like this:</p>
+<pre><code class="lang-text">Codec: Realtek ALC294
+</code></pre>
+<p>If you would like to save the codec to a file so you can reference it again when you&apos;re back in macOS, cat it to a file instead and save the file to the boot partition of the USB drive, on another USB drive, or somewhere on your network.</p>
+<pre><code class="lang-text">cat /proc/asound/card0/codec#0 &gt; /mnt/MyOtherUSBDrive/codec.txt
+</code></pre>
+<p>Now that you&apos;re familiar with your codec, let&apos;s install AppleALC.</p>
+<h2 id="applealc-prerequisites">AppleALC Prerequisites</h2>
+<p>If you&apos;re dual booting with Windows or Linux, you should enable the Devices/Audio/ResetHDA property which will reset the audio device on startup to flush any configuration .</p>
+<h2 id="installing-applealc">Installing AppleALC</h2>
+<p>Installing AppleALC is simple. You just need to download the AppleALC kext from the project&apos;s release page and add the kext to OC/K. You can find it here. You may have it already if you installed it when making the USB. If you do add it, make sure to edit your config.plist</p>
+<p><a href="https://github.com/acidanthera/AppleALC" target="_blank">Download AppleALC @ Github</a></p>
+<p>Your new AppleALC kext path should look like it does in the tree below.</p>
+<pre><code class="lang-text">EFI
+&#x2514;&#x2500;&#x2500; OC
+    &#x2514;&#x2500;&#x2500; Kexts
+        &#x2514;&#x2500;&#x2500; AppleALC.kext
+</code></pre>
+<p>Before rebooting, let&apos;s configure it!</p>
+<h2 id="configuring-applealc">Configuring AppleALC</h2>
+<p>This is where things can get a little tricky, as just about every implementation of the same codec is different. Knowing your codec makes things somewhat easier as you can look it up in the AppleALC WIKI and find all of the layouts that could work with it.</p>
+<p><a href="https://github.com/acidanthera/AppleALC/wiki/Supported-codecs" target="_blank">AppleALC Supported Codecs</a></p>
+<p>If you don&apos;t find your codec listed, you might find that it&apos;s just a rebranded version of another so it wouldn&apos;t hurt to search for &quot;AppleALC {your codec}&quot;.</p>
+<p>Once you have a list of layouts, but you don&apos;t know which is the right one you can test them one by one. Just configure the layout id in config.plist with your favorite plist editor and reboot. If audio works, congratulations! Otherwise, repeat until you&apos;ve found it.</p>
+<p>Open up your plist editor and the config.plist, then browse to DeviceProperties/Add and set the alc-layout-id parameter to your layout id. It should look something like this.</p>
+<p><img src="../.gitbook/assets/screen-shot-2019-12-02-at-6.39.24-pm.png" alt=""></p>
+<h2 id="none-of-the-layout-ids-worked">None of the Layout IDs Worked!</h2>
+<p>Well, you still have some options although none of them will be fun. The first option would be to take that codec dump that we made earlier and build a new layout for your device, or you could try using VoodooHDA instead. Let&apos;s talk about both options.</p>
+<h3 id="creating-a-new-layout-for-applealc">Creating a New Layout for AppleALC</h3>
+<p>This nets the best benefit for you and for everyone else because you&apos;ll end up with native support and others with the same device can use it too. It&apos;s the most difficult option though. Here&apos;s some documentation to help get you started.</p>
+<p><a href="https://osy.gitbook.io/hac-mini-guide/details/hda-fix" target="_blank">HDA Fix - HaC Mini Hackintosh - by osy</a> (Great guide on how to make your own HDA patches)</p>
+<p><a href="https://github.com/acidanthera/AppleALC/wiki/Adding-codec-support" target="_blank">AppleALC: Adding Codec Support</a></p>
+<h3 id="using-voodoohda">Using VoodooHDA</h3>
+<p>VoodooHDA is an alternative to AppleALC, and it works pretty well but rather than adding native support, VoodooHDA provides its own audio solution. Installing it is pretty straightforward. Simply download the kext, preference pane, and settings loader and add them to your system. The kext goes in C/k/O, if you have AppleALC installed you&apos;ll want to remove it. Open (execute) the preferences pane and it should prompt you to install, if it doesn&apos;t drag it onto System Preferences and it&apos;ll install that way. The settings loader should be installed to Applications, and you should run it once to enable it. They can be downloaded here.</p>
+<p><a href="https://sourceforge.net/projects/voodoohda/" target="_blank">Download VoodooHDA @ SourceForge</a></p>
+<p>As with AppleALC, it should follow the same pattern in the tree.</p>
+<pre><code class="lang-text">EFI
+&#x2514;&#x2500;&#x2500; OC
+    &#x2514;&#x2500;&#x2500; Kexts
+        &#x2514;&#x2500;&#x2500; VoodooHDA.kext
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="setting-up-ethernet-adapters.html" class="navigation navigation-prev " aria-label="Previous page: Setting up Ethernet Adapters">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../battery-power-management/locate-that-missing-battery.html" class="navigation navigation-next " aria-label="Next page: Locate that Missing Battery">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Configuring your Audio Device","level":"6.5","depth":1,"next":{"title":"Locate that Missing Battery","level":"7.1","depth":1,"path":"battery-power-management/locate-that-missing-battery.md","ref":"battery-power-management/locate-that-missing-battery.md","articles":[]},"previous":{"title":"Setting up Ethernet Adapters","level":"6.4","depth":1,"path":"post-installation/setting-up-ethernet-adapters.md","ref":"post-installation/setting-up-ethernet-adapters.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"post-installation/configuring-your-audio-device.md","mtime":"2020-04-08T19:08:47.232Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-08T19:09:33.909Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    
+
+    </body>
+</html>
+

@@ -21,10 +21,11 @@ For more info, you can [read this guide,](https://khronokernel.github.io/EC-fix-
 #### [SSDTTime](https://github.com/corpnewt/SSDTTime)
 
 * Can be ran on either Windows or Linux
-  * If you don't have an internet connection on that device, or are using Python 2 (or iasl otherwise fails to download) you may need to download iASL.exe and acpidump.exe and put it in the `scripts` folder`.
-    * [macOS](https://bitbucket.org/RehabMan/acpica/downloads/iasl.zip)
-    * [Windows](https://acpica.org/sites/acpica/files/iasl-win-20180105.zip)
-    * [Linooox](http://amdosx.kellynet.nl/iasl.zip)
+* If you don't have an internet connection on that device, or are using Python 2 (or iasl otherwise fails to download) you may need to download `iASL` and put it in the `scripts` folder.
+  * [macOS](https://bitbucket.org/RehabMan/acpica/downloads/iasl.zip)
+  * [Windows](https://acpica.org/sites/acpica/files/iasl-win-20180105.zip)
+    * You also want `acpidump.exe` in the `sripts` folder as well.
+  * [Linooox](http://amdosx.kellynet.nl/iasl.zip)
 
 #### [acpidump.exe](https://acpica.org/sites/acpica/files/iasl-win-20180105.zip)
 

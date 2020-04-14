@@ -6,10 +6,10 @@ Input devices on laptops come in a few variants, each with its own set of quirks
 
 Most laptop keyboard and trackpads are PS/2 devices. You should only need the two listed below. These should cover most Synaptics touchpads used in recent laptops.
 
-* [VoodooInput Project Page](https://github.com/acidanthera/VoodooInput)
+* [VoodooInput Project Page](https://github.com/acidanthera/VoodooInput/releases)
   * Used by VoodooPS2 to emulate a Magic Trackpad
   * Should be listed first in your Config.plist as it is required for VoodooPS2Trackpad to load
-* [VoodooPS2Controller Project Page](https://github.com/acidanthera/VoodooPS2)
+* [VoodooPS2Controller Project Page](https://github.com/acidanthera/VoodooPS2/releases)
   * Actually is 4 kexts bundled into one kext package.
     * VoodooPS2Controller
     * VoodooPS2Keyboard
@@ -47,7 +47,7 @@ I2C touchpads are interesting in that they fully integrate into macOS and suppor
 
 Now that you've saved the file, you'll need to compile it. For that, we need to download maciASL.
 
-[maciASL Project @ Github](https://github.com/acidanthera/MaciASL)
+[maciASL Project @ Github](https://github.com/acidanthera/MaciASL/releases)
 
 Run maciASL, and open the SSDT-XOSI.dsl that you created previously. Save the file as a binary to OC/ACPI/SSDT-XOSI.aml. Note: When saving as a binary, maciASL will automatically compile the SSDT.
 
@@ -92,7 +92,7 @@ Using MaciASL, save this SSDT patch as a binary to OC/ACPI/SSDT-GPI0.aml
 
 With the hotpatching out of the way, now it's time to install VoodooI2C. Generally you only want to install VoodooI2C.kext and VoodooI2CHID.kext to C/k/O as this is the proper configuration for most devices regardless of manufacturer. Start there, and then come back after rebooting for a description of the kexts and what their functions are.
 
-[Download VoodooI2C @ Github](https://github.com/alexandred/VoodooI2C)
+[Download VoodooI2C @ Github](https://github.com/alexandred/VoodooI2C/releases)
 
 ### Kexts and Satellites
 

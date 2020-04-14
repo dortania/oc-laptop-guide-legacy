@@ -587,12 +587,12 @@
 <h2 id="voodoops2-keyboard-and-trackpad">VoodooPS2 (Keyboard and Trackpad)</h2>
 <p>Most laptop keyboard and trackpads are PS/2 devices. You should only need the two listed below. These should cover most Synaptics touchpads used in recent laptops.</p>
 <ul>
-<li><a href="https://github.com/acidanthera/VoodooInput" target="_blank">VoodooInput Project Page</a><ul>
+<li><a href="https://github.com/acidanthera/VoodooInput/releases" target="_blank">VoodooInput Project Page</a><ul>
 <li>Used by VoodooPS2 to emulate a Magic Trackpad</li>
 <li>Should be listed first in your Config.plist as it is required for VoodooPS2Trackpad to load</li>
 </ul>
 </li>
-<li><a href="https://github.com/acidanthera/VoodooPS2" target="_blank">VoodooPS2Controller Project Page</a><ul>
+<li><a href="https://github.com/acidanthera/VoodooPS2/releases" target="_blank">VoodooPS2Controller Project Page</a><ul>
 <li>Actually is 4 kexts bundled into one kext package.<ul>
 <li>VoodooPS2Controller</li>
 <li>VoodooPS2Keyboard</li>
@@ -625,7 +625,7 @@
 <p>I2C touchpads are interesting in that they fully integrate into macOS and support gestures and everything that a real Apple Trackpad supports, except force touch (obviously). Not all I2C touchpads are supported by I2C or without extra hotpatches to configure pinning. An unusual requirement for the trackpad to work is functional battery status reporting, so if you don&apos;t have that working yet skip to that section and then come back. Most though work fine with just two hotpatches that are pretty simple to install. Let&apos;s add them now. First, download SSDT-XOSI.dsl.</p>
 <p><a href="https://raw.githubusercontent.com/RehabMan/OS-X-Clover-Laptop-Config/master/hotpatch/SSDT-XOSI.dsl" target="_blank">Rehabman&apos;s SSDT-XOSI.dsl @ Github</a></p>
 <p>Now that you&apos;ve saved the file, you&apos;ll need to compile it. For that, we need to download maciASL.</p>
-<p><a href="https://github.com/acidanthera/MaciASL" target="_blank">maciASL Project @ Github</a></p>
+<p><a href="https://github.com/acidanthera/MaciASL/releases" target="_blank">maciASL Project @ Github</a></p>
 <p>Run maciASL, and open the SSDT-XOSI.dsl that you created previously. Save the file as a binary to OC/ACPI/SSDT-XOSI.aml. Note: When saving as a binary, maciASL will automatically compile the SSDT.</p>
 <h3 id="osi-to-xosi-rename">_OSI to XOSI Rename</h3>
 <p>Now that you&apos;ve added the XOSI SSDT patch, you need to add a patch to OpenCore. Open your config.plist with your plist editor of choice and add the following patch under ACPI/Patch. If you&apos;re using the guide template this rename already exists so just make sure it&apos;s enabled.</p>
@@ -680,7 +680,7 @@
 <p>Using MaciASL, save this SSDT patch as a binary to OC/ACPI/SSDT-GPI0.aml</p>
 <h2 id="installing-voodooi2c">Installing VoodooI2C</h2>
 <p>With the hotpatching out of the way, now it&apos;s time to install VoodooI2C. Generally you only want to install VoodooI2C.kext and VoodooI2CHID.kext to C/k/O as this is the proper configuration for most devices regardless of manufacturer. Start there, and then come back after rebooting for a description of the kexts and what their functions are.</p>
-<p><a href="https://github.com/alexandred/VoodooI2C" target="_blank">Download VoodooI2C @ Github</a></p>
+<p><a href="https://github.com/alexandred/VoodooI2C/releases" target="_blank">Download VoodooI2C @ Github</a></p>
 <h3 id="kexts-and-satellites">Kexts and Satellites</h3>
 <p>When configuring VoodooI2C, it is important to only apply the kexts that you need. Generally, most users will need VoodooI2C.kext and VoodooI2CHID.kext. The remaining satellites are for a small number of specific devices. Even if you have an Elan or Synaptics touchpad, you should try the HID kext first. If you do learn that you need a different satallite kext, remove the HID kext before applying it.</p>
 <ul>
@@ -831,7 +831,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Setting up Input Devices","level":"4.3","depth":1,"next":{"title":"Disabling TouchID lookup","level":"4.4","depth":1,"path":"prepare-install-macos/disabling-touchid.md","ref":"prepare-install-macos/disabling-touchid.md","articles":[]},"previous":{"title":"OpenCore Template","level":"4.2","depth":1,"path":"prepare-install-macos/clover-template.md","ref":"prepare-install-macos/clover-template.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"prepare-install-macos/setting-up-input-devices.md","mtime":"2020-04-13T15:42:48.184Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-13T15:43:35.023Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Setting up Input Devices","level":"4.3","depth":1,"next":{"title":"Disabling TouchID lookup","level":"4.4","depth":1,"path":"prepare-install-macos/disabling-touchid.md","ref":"prepare-install-macos/disabling-touchid.md","articles":[]},"previous":{"title":"OpenCore Template","level":"4.2","depth":1,"path":"prepare-install-macos/clover-template.md","ref":"prepare-install-macos/clover-template.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-default","-lunr","-search","search-plus","addcssjs","hints"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"night","family":"sans","size":2},"search-plus":{},"addcssjs":{"css":[],"js":[]},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"prepare-install-macos/setting-up-input-devices.md","mtime":"2020-04-14T20:12:08.275Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-14T20:12:57.895Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

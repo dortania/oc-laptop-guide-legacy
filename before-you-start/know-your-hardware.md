@@ -36,7 +36,7 @@ AMD CPUs and their associated iGPUs are unsupported in macOS. While it's possibl
 
 macOS Mojave doesn't support any Intel processors earlier than generation 3 core CPUs due to a lack of Metal support in the integrated GPU. It is possible to get these processors working with various patches and hacks but you are better off staying with earlier versions of macOS instead.
 
-You can also add to this list:
+The following CPUs won't work:
 
 * Pentiums
 * Celerons
@@ -44,15 +44,27 @@ You can also add to this list:
 
 ### WIFI cards
 
-Do you have an Intel, Atheros, Realtek, or Broadcom device that isn't a BCM94352Z, BCM943602BAED, or BCM94352HMB? Replace it with an m.2 or Mini PCIe device based one of those three cards. The Dell DW1560, DW1830, Lenovo 04X6020, and Azurewave BCM94352HMB are good choices. The DW1820A \_\*\*\_works on some desktop Hackintoshes but it is incompatible with laptop Hacks.
+Do you have an Intel, Atheros, Realtek, or Broadcom device that isn't a 
+
+* BCM94352Z
+* BCM943602BAED, or
+* BCM94352HMB
+
+Replace it with an m.2 or Mini PCIe device based one of those three cards. This will make WiFi possible. Do note, that installation of MacOS requires internet connection. You can boot without internet, but when you want to install MacOS then you'll need internet. Easiest is to use a wired connection to get the laptop going. If you do not have a wired ethernet connector in your laptop you need to get your WiFi working.
+
+The Dell DW1560, DW1830, Lenovo 04X6020, and Azurewave BCM94352HMB are good choices.
+
+The DW1820A \_\*\*\_works on some desktop Hackintoshes but it is incompatible with laptop Hacks.
 
 If you are installing an earlier version of macOS than Mojave, Atheros 94XX and 95XX Mini PCIe cards are supported. These cards can be used on Mojave by adding support back to macOS, but this configuration is not supported by this guide as this method could stop working at any time or could cause stability issues.
 
-Before purchasing make sure your Laptop doesn't have a whitelist that prevents the card from working. Yes, that's actually a thing. You will also need to make sure that the WIFI device is socketed and not soldered to the motherboard which has become a common theme among laptops over the last few years.
+Before purchasing make sure your Laptop doesn't have a whitelist that prevents the card from working. Yes, that's actually a thing. You will also need to make sure that the WIFI device is socketed and not soldered to the motherboard which has become a common theme among laptops over the last few years. I almost all cases you either need to consult the manual, take the laptop apart (recommended) or use the internet to get the information you need.
+
+Note: The internet can be very good resource to learn how to take your laptop apart with minimum risk of making damage.
 
 ### GPUs
 
-Does your laptop have an AMD or Nvidia GPU? You'll need to disable it and use the onboard Intel iGPU instead. 99% of laptop dGPUs use software mux switches which are not supported in macOS due to Apple's use of a hardware mux switch. Only on some RARE configurations, especially Workstation-grade laptops. But that is still experimental and very unstable for some devices.
+Does your laptop have an AMD/ATI or Nvidia GPU? You'll need to disable it and use the onboard Intel iGPU instead. 99% of laptop dGPUs use software mux switches which are not supported in macOS due to Apple's use of a hardware mux switch. Only on some RARE configurations, especially Workstation-grade laptops. <- FreedomDK: Sentence does not make quite sense.  But that is still experimental and very unstable for some devices.
 
 ### Built in SDCard Readers
 

@@ -64,7 +64,7 @@ Note: The internet can be very good resource to learn how to take your laptop ap
 
 ### GPUs
 
-Does your laptop have an AMD/ATI or Nvidia GPU? You'll need to disable it and use the onboard Intel iGPU instead. 99% of laptop dGPUs use software mux switches which are not supported in macOS due to Apple's use of a hardware mux switch. Only on some RARE configurations, especially Workstation-grade laptops. <- FreedomDK: Sentence does not make quite sense.  But that is still experimental and very unstable for some devices.
+Does your laptop have an AMD/ATI or Nvidia GPU? You'll need to disable it and use the onboard Intel iGPU instead. 99% of laptop dGPUs use software mux switches which are not supported in macOS due to Apple's use of a hardware mux switch. Some workstation laptops and other high-end laptops may have a hardware mux, though you will need to choose one GPU or the other to drive the internal screen as Apple's GPU switcher doesn't work here. But that is still experimental and very unstable for some devices.
 
 ### Built in SDCard Readers
 

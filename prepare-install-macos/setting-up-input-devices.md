@@ -4,18 +4,16 @@ Input devices on laptops come in a few variants, each with its own set of quirks
 
 ## VoodooPS2 \(Keyboard and Trackpad\)
 
-Most laptop keyboard and trackpads are PS/2 devices. You should only need the two listed below. These should cover most Synaptics touchpads used in recent laptops.
+Most laptop keyboard and trackpads are PS/2 devices. You only need one kexts for both of these. These should cover most Synaptics touchpads used in recent laptops.
 
-* [VoodooInput Project Page](https://github.com/acidanthera/VoodooInput/releases)
-  * Used by VoodooPS2 to emulate a Magic Trackpad
-  * Should be listed first in your Config.plist as it is required for VoodooPS2Trackpad to load
 * [VoodooPS2Controller Project Page](https://github.com/acidanthera/VoodooPS2/releases)
-  * Actually is 4 kexts bundled into one kext package.
+  * Actually is 5 kexts bundled into one kext package.
+    * VoodooInput
     * VoodooPS2Controller
     * VoodooPS2Keyboard
     * VoodooPS2Trackpad
     * VoodooPS2Mouse
-  * Make sure when adding this to your config.plist that all 4 of these appear
+  * Make sure when adding this to your config.plist that all 5 of these appear in the order above
 
 Download the two kexts and place them in your EFI as shown below.
 
@@ -23,7 +21,6 @@ Download the two kexts and place them in your EFI as shown below.
 EFI
 └── OpenCore
     └── Kexts
-        ├── VoodooInput.kext
         └── VoodooPS2Controller.kext
 ```
 
@@ -130,7 +127,7 @@ For this kext to properly load on your OpenCore setup, you must make sure that t
 1. VoodooI2CServices
 2. VoodooGPIO
 3. VoodooI2C
-4. 
+ 
 Example: Using VoodooI2C + VoodooI2CHID
 
 ```markup

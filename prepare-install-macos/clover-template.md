@@ -31,7 +31,7 @@ When following the guides below:
 Remember that anytime you add a Kext, Driver, Tool, or SSDT, you need to add it to your Config.plist. The OC Snapshot tool from ProperTree can automatically add these for you.
 {% endhint %}
 
-#### [Ivy Bridge](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/intel-config.plist/ivy-bridge)
+#### [Ivy Bridge](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/ivy-bridge.html)
 
 | Model | Graphics | Size | Year |
 | :--- | :--- | :--- | :--- |
@@ -40,7 +40,7 @@ Remember that anytime you add a Kext, Driver, Tool, or SSDT, you need to add it 
 | MacBookPro10,1 | HD 4000/GeForce T 650M | 15" | 2012/13 |
 | MacBookPro10,2 | HD 4000 | 13" | 2012/13 |
 
-#### [Haswell](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/intel-config.plist/haswell)
+#### [Haswell](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/haswell.html)
 
 | Model | Graphics | Size | Year |
 | :--- | :--- | :--- | :--- |
@@ -50,13 +50,13 @@ Remember that anytime you add a Kext, Driver, Tool, or SSDT, you need to add it 
 | MacBookPro11,4 | Irs Pro M5200 | 15" | 2015 |
 | MacBookPro11,5 | Irs Pro 5200/Radeon R9 M370x | 15" | 2015 |
 
-#### [Broadwell \(Uses Haswell config\)](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/intel-config.plist/haswell)
+#### [Broadwell \(Uses Haswell config\)](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/haswell.html)
 
 | Model | Graphics | Size | Year |
 | :--- | :--- | :--- | :--- |
 | MacBookPro12,1 | Iris 6100 | 13" | 2015 |
 
-#### [Skylake](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/intel-config.plist/skylake)
+#### [Skylake](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/skylake.html)
 
 | Model | Graphics | Size | Year |
 | :--- | :--- | :--- | :--- |
@@ -64,7 +64,7 @@ Remember that anytime you add a Kext, Driver, Tool, or SSDT, you need to add it 
 | MacBookPro13,2 | Iris 550 | 13" | 2016 |
 | MacBookPro13,3 | HD 530/Radeon Pro 450 | 15" | 2016 |
 
-#### [Kaby Lake](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/intel-config.plist/kaby-lake)
+#### [Kaby Lake](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/kaby-lake.html)
 
 | Model | Graphics | Size | Year |
 | :--- | :--- | :--- | :--- |
@@ -72,7 +72,7 @@ Remember that anytime you add a Kext, Driver, Tool, or SSDT, you need to add it 
 | MacBookPro14,2 | Iris Plus 650 | 13" | 2017 |
 | MacBookPro14,3 | HD 630/Radeon Pro 555 | 15" | 2017 |
 
-#### [Coffee Lake](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/intel-config.plist/coffee-lake)
+#### [Coffee Lake](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/coffee-lake.html)
 
 | Model | Graphics | Size | Year |
 | :--- | :--- | :--- | :--- |
@@ -81,7 +81,7 @@ Remember that anytime you add a Kext, Driver, Tool, or SSDT, you need to add it 
 | MacBookPro15,3 | UHD 630/Vega 16/20 | 15" | 2018 |
 | MacBookPro15,4 | Iris Plus 645 | 13" | 2019 |
 
-#### [Coffee Lake Refresh \(14nm +++++++++++++++++++\)](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/intel-config.plist/coffee-lake)
+#### [Coffee Lake Refresh \(14nm +++++++++++++++++++\)](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/coffee-lake.html)
 
 | Model | Graphics | Size | Year |
 | :--- | :--- | :--- | :--- |

@@ -35,10 +35,10 @@ For more info, you can [read this guide,](https://khronokernel.github.io/EC-fix-
 
 * This dumps your DSDT in `EFI/CLOVER/ACPI/origin`. This folder must exist bfeore you dump though.
 
-#### [acpidump.efi](https://github.com/khronokernel/Opencore-Vanilla-Desktop-Guide/tree/master/extra-files/acpidump.efi.zip)
+#### [acpidump.efi](https://github.com/dortania/OpenCore-Desktop-Guide/raw/master/extra-files/acpidump.efi.zip)
 
 * Add this to `EFI/OC/Tools` and in your config under `Misc -> Tools` with the argument: `-b -n DSDT -z`. Select this option in OpenCore's picker, then rename DSDT.dat to DSDT.aml. 
-* If OpenCore is having issues running acpidump, you can call it from the shell with [OpenCoreShell](https://github.com/acidanthera/OpenCoreShell/releases)\(reminder to add to both `EFI/OC/Tools` and in your config under `Misc -> Tools` \):
+* If OpenCore is having issues running acpidump, you can call it from the shell with OpenShell, which is bundled within [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases) (reminder to add to both `EFI/OC/Tools` and in your config under `Misc -> Tools`):
 
 ```text
 shell> fs0: // replace with proper drive

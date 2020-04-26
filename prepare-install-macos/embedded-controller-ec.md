@@ -111,9 +111,9 @@ As you can see from the table below, we'll be renaming our EC listed in the DSDT
 
 Add the rename as shown below:
 
-| Comment | String | Change XXXX to EC |
+| Comment | Type | Change XXXX to EC |
 | :--- | :--- | :--- |
-| Enabled | String | YES |
+| Enabled | Boolean | YES |
 | Count | Number | 0 |
 | Limit | Nuber | 0 |
 | Find | Data | xxxxxxxx |

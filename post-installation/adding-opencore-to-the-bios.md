@@ -69,7 +69,7 @@ That's it! Unmount your USB stick in Finder, and reboot without it. You may need
 
 ## Adding OpenCore to your BIOS
 
-Most newer computers will pick up Clover automatically, but if it doesn't appear as a bootable selection in your BIOS here's how to correct it.
+Most newer computers will pick up OpenCore automatically, but if it doesn't appear as a bootable selection in your BIOS here's how to correct it.
 
 ### **Quick Reference Guide**
 

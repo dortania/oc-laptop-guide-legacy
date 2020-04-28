@@ -33,7 +33,7 @@
 
 ## Post Installation
 
-* [Adding OpenCore to Your Boot Drive](post-installation/adding-clover-to-the-bios.md)
+* [Adding OpenCore to Your Boot Drive](post-installation/adding-opencore-to-the-bios.md)
 * [Configuring USB Ports](post-installation/configuring-usb-ports.md)
 * [Enabling WIFI & Bluetooth](post-installation/enabling-wifi-and-bluetooth.md)
 * [Setting up Ethernet Adapters](post-installation/setting-up-ethernet-adapters.md)

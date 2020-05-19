@@ -1,6 +1,6 @@
 # BIOS Configuration
 
-In order to boot macOS you have to make a few adjustments to your laptop's BIOS configuration for compatibility. Some of these settings may not appear in your BIOS, that's OK as many of them can also be corrected in OpenCore. If the parameter isn't found in your laptop's BIOS, just ignore it.
+In order to boot macOS you have to make a few adjustments to your laptop's BIOS configuration for compatibility. Some of these settings may not appear in your BIOS, that's OK as many of them can also be corrected in OpenCore. If the parameter isn't found in your laptop's BIOS, it can be helpfull to make a note. Lack of BIOS settings can in some cases be taken care of by settings in your config.plist and related files.
 
 For information on how to access your BIOS configuration, refer to your laptop's users manual.
 
@@ -8,17 +8,26 @@ For information on how to access your BIOS configuration, refer to your laptop's
 
 Disable it, or you won't be able to access OpenCore to boot macOS or the macOS installation media.
 
+Note: Secure Boot comes in different depending on you BIOS. Examples are Secure Boot, Secure Boot Control, Secure Boot Mode and the like. Read the manual in your laptop - in many you can find it online.
+
 ## Turn the TPM off
 
-If your computer has a TPM chip, you'll want to turn it off. macOS can't use it anyway.
+If your computer has a TPM chip, you'll want to turn it off. MacOS can't use it anyway.
+
+Note: TPM = Trusted Platform Management. In some BIOS's also seen as TPM Security (not to be mistaken for Secure Boot), TPM State, TPM Support, TCG Security Device(!) and the like. Again we highly recommend reading the manual for your laptop. 
+
 
 ## Disable VT-D
 
 VT-D is Intel's hardware based IO and device offload technology. It's incompatible with macOS and can cause boot issues, and kernel panics. If you have the option, you should turn it off.
 
-## Graphics DVMT-Prealloc
+Note: VT-D can be shown in many ways in your BIOS, such as Intel VT for Directed I/O, IO Virtualization and the like. With the risk of being reptitive: Read the manual to your laptop.
+
+## Graphics DVMT-Preallocation
 
 This is the initial memory used for your Intel GPU. By default it's usually 32MB, but for macOS it should be set to 64MB. If you don't have this option in your BIOS it can be patched later.
+
+Note: In BIOS can be stated as IGD - DVMT, Graphics Memory, DVMT/FIXED and similar. Check your manual if in doubt.
 
 ## SATA/AHCI/RAID
 

@@ -8,7 +8,7 @@ Before continuing, you need a bit of knowledge about the config.plist which is a
 
 [Download ProperTree from Github.](https://github.com/corpnewt/ProperTree)
 
-**XCode** - You probably don't want \(Or need\) to install an entire development suite for editing your plist, but it is an option so it's worth mentioning. If you're looking to take a tank to a knife fight, XCode can be installed through the App Store. It is also woth noting that Xcode has issues editing plists starting with Xcode 11.
+**XCode** - You probably don't want \(or need\) to install an entire development suite for editing your plist, but it is an option so it's worth mentioning. If you're looking to take a tank to a knife fight, XCode can be installed through the App Store. It is also worth noting that Xcode has issues editing plists starting with Xcode 11.
 
 **PlistBuddy** - This is a command line utility that's built into macOS. It's a great utility for making changes to plist files from scripts or the command line.
 

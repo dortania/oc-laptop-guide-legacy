@@ -1,5 +1,5 @@
 # Getting Started
-
+* **Please note that the guide is closed and it has been moved somewhere else. Although the information here may be helpful, it will be OUTDATED SOON so I highly RECOMMEND you o go to up-to-date guide here: [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)**
 ## Why OpenCore?
 
 Many guides out there use Clover - and for good reason. It's been around for many years and there is a large knowledge base around it. Recently though, Clover has been showing glaring pitfalls - many of which OpenCore solves. Starting with release 5092, Clover does not inject ethernet/wifi kexts when going into the installer, making the internet installation method impossible. Additionally, laptops sometimes will refuse to boot with Clover.
